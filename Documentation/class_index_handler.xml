@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_index_handler" kind="class" language="C++" prot="public">
+    <compoundname>IndexHandler</compoundname>
+    <includes refid="indexhandler_8h" local="no">indexhandler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_index_handler_1aa30663ff8e3b52b43ce35ebb2d12752c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> *</type>
+        <definition>IndexInterface* IndexHandler::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="35" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_index_handler_1a27748387661142a2eb545be6f0499996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IndexHandler::IndexHandler</definition>
+        <argsstring>()</argsstring>
+        <name>IndexHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="19" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_handler_1ad787ca8cf83345ecfe332d2c3b8f8009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IndexHandler::~IndexHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~IndexHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="20" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_handler_1ae50be3bec7e5ad3ede66110535043e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IndexHandler::IndexHandler</definition>
+        <argsstring>(bool asHashTable)</argsstring>
+        <name>IndexHandler</name>
+        <param>
+          <type>bool</type>
+          <declname>asHashTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="21" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_handler_1a3fe9b3c1b3df7eea7e4ae590df4a4339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexHandler::read_file</definition>
+        <argsstring>(string filePath)</argsstring>
+        <name>read_file</name>
+        <param>
+          <type>string</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="28" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_handler_1acee974285412a635c3c31fe86b9e0fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexHandler::run_queries</definition>
+        <argsstring>(string query)</argsstring>
+        <name>run_queries</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="30" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_handler_1a417830272cfc725f6966c7a0a0ceae1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexHandler::clear_index</definition>
+        <argsstring>()</argsstring>
+        <name>clear_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>AVL Node implementation for the AVL Tree structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="63">
+        <label>string</label>
+      </node>
+      <node id="58">
+        <label>IndexInterface</label>
+        <link refid="class_index_interface"/>
+        <childnode refid="59" relation="usage">
+          <edgelabel>infoForIDs</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>letters</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>parser</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>ext</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>TermBucket</label>
+        <link refid="class_term_bucket"/>
+        <childnode refid="62" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="62">
+        <label>Term</label>
+        <link refid="class_term"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>IndexHandler</label>
+        <link refid="class_index_handler"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>vector&lt; PageInfo * &gt;</label>
+      </node>
+      <node id="60">
+        <label>HashTableIndex</label>
+        <link refid="class_hash_table_index"/>
+        <childnode refid="61" relation="usage">
+          <edgelabel>buckets</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>DocParser</label>
+        <link refid="class_doc_parser"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>currContent</edgelabel>
+          <edgelabel>currContributorNameOrIP</edgelabel>
+          <edgelabel>currWord</edgelabel>
+          <edgelabel>currTitle</edgelabel>
+          <edgelabel>currTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" line="17" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h" bodystart="16" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_index_handler_1a417830272cfc725f6966c7a0a0ceae1d" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>clear_index</name></member>
+      <member refid="class_index_handler_1aa30663ff8e3b52b43ce35ebb2d12752c" prot="private" virt="non-virtual"><scope>IndexHandler</scope><name>index</name></member>
+      <member refid="class_index_handler_1a27748387661142a2eb545be6f0499996" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>IndexHandler</name></member>
+      <member refid="class_index_handler_1ae50be3bec7e5ad3ede66110535043e15" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>IndexHandler</name></member>
+      <member refid="class_index_handler_1a3fe9b3c1b3df7eea7e4ae590df4a4339" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>read_file</name></member>
+      <member refid="class_index_handler_1acee974285412a635c3c31fe86b9e0fb8" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>run_queries</name></member>
+      <member refid="class_index_handler_1ad787ca8cf83345ecfe332d2c3b8f8009" prot="public" virt="non-virtual"><scope>IndexHandler</scope><name>~IndexHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

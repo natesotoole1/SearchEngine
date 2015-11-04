@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="classrapidxml_1_1file" kind="class" language="C++" prot="public">
+    <compoundname>rapidxml::file</compoundname>
+    <includes refid="rapidxml__utils_8hpp" local="no">rapidxml_utils.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class Ch</type>
+        <defval>char</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrapidxml_1_1file_1a60c4a72a55bbf4dbcca07f251a09cddf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; Ch &gt;</type>
+        <definition>std::vector&lt;Ch&gt; rapidxml::file&lt; Ch &gt;::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="86" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrapidxml_1_1file_1ae881a3cab1fe7152d45c92a8d7606cb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::file&lt; Ch &gt;::file</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>file</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads file into the memory. Data will be automatically destroyed by the destructor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename to load. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="28" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="28" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1file_1a90707ccd991cc392dcf4bef37eed9d1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::file&lt; Ch &gt;::file</definition>
+        <argsstring>(std::basic_istream&lt; Ch &gt; &amp;stream)</argsstring>
+        <name>file</name>
+        <param>
+          <type>std::basic_istream&lt; Ch &gt; &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads file into the memory. Data will be automatically destroyed by the destructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to load from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1file_1af1c71d65862c7af14e4708e32a80c1de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::file&lt; Ch &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets file data. <simplesect kind="return"><para>Pointer to data of file. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="65" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1file_1aceb8f5ebd577c946a74b1ea3e2e0c576" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Ch *</type>
+        <definition>const Ch* rapidxml::file&lt; Ch &gt;::data</definition>
+        <argsstring>() const </argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets file data. <simplesect kind="return"><para>Pointer to data of file. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="72" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1file_1a20191d167c6e00a88a44ca9a3a54e1c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t rapidxml::file&lt; Ch &gt;::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets file data size. <simplesect kind="return"><para>Size of file data, in characters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="79" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents data loaded from a file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" line="22" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_utils.hpp" bodystart="21" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classrapidxml_1_1file_1af1c71d65862c7af14e4708e32a80c1de" prot="public" virt="non-virtual"><scope>rapidxml::file</scope><name>data</name></member>
+      <member refid="classrapidxml_1_1file_1aceb8f5ebd577c946a74b1ea3e2e0c576" prot="public" virt="non-virtual"><scope>rapidxml::file</scope><name>data</name></member>
+      <member refid="classrapidxml_1_1file_1ae881a3cab1fe7152d45c92a8d7606cb3" prot="public" virt="non-virtual"><scope>rapidxml::file</scope><name>file</name></member>
+      <member refid="classrapidxml_1_1file_1a90707ccd991cc392dcf4bef37eed9d1f" prot="public" virt="non-virtual"><scope>rapidxml::file</scope><name>file</name></member>
+      <member refid="classrapidxml_1_1file_1a60c4a72a55bbf4dbcca07f251a09cddf" prot="private" virt="non-virtual"><scope>rapidxml::file</scope><name>m_data</name></member>
+      <member refid="classrapidxml_1_1file_1a20191d167c6e00a88a44ca9a3a54e1c5" prot="public" virt="non-virtual"><scope>rapidxml::file</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

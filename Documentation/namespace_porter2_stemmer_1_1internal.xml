@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="namespace_porter2_stemmer_1_1internal" kind="namespace" language="C++">
+    <compoundname>Porter2Stemmer::internal</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a4419080bc3b64aca4998a732e9f99d84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Porter2Stemmer::internal::firstNonVowelAfterVowel</definition>
+        <argsstring>(const std::string &amp;word, size_t start)</argsstring>
+        <name>firstNonVowelAfterVowel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a2d7e133e04950f30c9b3a2935be7c802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Porter2Stemmer::internal::getStartR1</definition>
+        <argsstring>(const std::string &amp;word)</argsstring>
+        <name>getStartR1</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a87bb0a5733b6267185b7951349477070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Porter2Stemmer::internal::getStartR2</definition>
+        <argsstring>(const std::string &amp;word, size_t startR1)</argsstring>
+        <name>getStartR2</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1add0f2aec57b66845cb78e98844bb4205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::changeY</definition>
+        <argsstring>(std::string &amp;word)</argsstring>
+        <name>changeY</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1ae689551ae90968445d4ab1a60ffc805c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step0</definition>
+        <argsstring>(std::string &amp;word)</argsstring>
+        <name>step0</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1af0acc908e606cd6e2917bf2ed31d5fe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::step1A</definition>
+        <argsstring>(std::string &amp;word)</argsstring>
+        <name>step1A</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1af4cffda4b443475c766407d60eac03dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step1B</definition>
+        <argsstring>(std::string &amp;word, size_t startR1)</argsstring>
+        <name>step1B</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1abc52eb93a0acc99087ca62bb2a4e647e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step1C</definition>
+        <argsstring>(std::string &amp;word)</argsstring>
+        <name>step1C</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a8bde57d3eeee683082f53cd7a9a0a2f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step2</definition>
+        <argsstring>(std::string &amp;word, size_t startR1)</argsstring>
+        <name>step2</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a8ea5872c398ea38fb5ff359879613a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step3</definition>
+        <argsstring>(std::string &amp;word, size_t startR1, size_t startR2)</argsstring>
+        <name>step3</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a46c7932444166421508feab27b1addfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step4</definition>
+        <argsstring>(std::string &amp;word, size_t startR2)</argsstring>
+        <name>step4</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1ad53abf614a24cba562dba83857f42091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Porter2Stemmer::internal::step5</definition>
+        <argsstring>(std::string &amp;word, size_t startR1, size_t startR2)</argsstring>
+        <name>step5</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR1</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>startR2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a15dc6085d05bf8e2ee691ef08e0fae29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::isShort</definition>
+        <argsstring>(const std::string &amp;word)</argsstring>
+        <name>isShort</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a7c20680dfe258c8050c8225d97b2e160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::special</definition>
+        <argsstring>(std::string &amp;word)</argsstring>
+        <name>special</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a63d428e12b7b2aeea945c24afe44d1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::isVowel</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>isVowel</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="74" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.cpp" bodystart="452" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a72ec1ef1732191be64f203bbe0e4397d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::isVowelY</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>isVowelY</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="76" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.cpp" bodystart="446" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1a08785aaf007de16789d1cbc50a6d72b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::endsWith</definition>
+        <argsstring>(const std::string &amp;word, const std::string &amp;str)</argsstring>
+        <name>endsWith</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1aca68167dfec7979b35d5bc732d2c6ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::endsInDouble</definition>
+        <argsstring>(const std::string &amp;word)</argsstring>
+        <name>endsInDouble</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1aff7926ca225a004069d681b88826a73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::replaceIfExists</definition>
+        <argsstring>(std::string &amp;word, const std::string &amp;suffix, const std::string &amp;replacement, size_t start)</argsstring>
+        <name>replaceIfExists</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>suffix</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>replacement</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1acb88f8cc716be69a9c19818473614d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::isValidLIEnding</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>isValidLIEnding</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="86" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.cpp" bodystart="490" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_porter2_stemmer_1_1internal_1ade420031f6e4e4a9f432c82b7f54420b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Porter2Stemmer::internal::containsVowel</definition>
+        <argsstring>(const std::string &amp;word, size_t start, size_t end)</argsstring>
+        <name>containsVowel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="88" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/porter2_stemmer.h" line="45" column="1"/>
+  </compounddef>
+</doxygen>

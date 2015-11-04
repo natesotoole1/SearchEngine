@@ -1,0 +1,22 @@
+#ifndef ALPHAAVL_H
+#define ALPHAAVL_H
+#include <string>
+#include "avltreeindex.h"
+
+using namespace std;
+class AlphaAVL
+{
+public:
+    AlphaAVL();
+    string getLetter();
+    void setLetter(string);
+    void setTrue();
+    bool getCreated();
+    bool created;
+    string letter;
+    AVLTreeIndex tree;
+
+};
+
+
+#endif // ALPHAAVL_H

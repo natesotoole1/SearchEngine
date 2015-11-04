@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="rapidxml__iterators_8hpp" kind="file" language="C++">
+    <compoundname>rapidxml_iterators.hpp</compoundname>
+    <includes refid="rapidxml_8hpp" local="yes">rapidxml.hpp</includes>
+    <incdepgraph>
+      <node id="892">
+        <label>cassert</label>
+      </node>
+      <node id="894">
+        <label>exception</label>
+      </node>
+      <node id="890">
+        <label>rapidxml.hpp</label>
+        <link refid="rapidxml_8hpp"/>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="889">
+        <label>rapidxml_iterators.hpp</label>
+        <link refid="rapidxml_iterators.hpp"/>
+        <childnode refid="890" relation="include">
+        </childnode>
+      </node>
+      <node id="893">
+        <label>new</label>
+      </node>
+      <node id="891">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrapidxml_1_1node__iterator" prot="public">rapidxml::node_iterator</innerclass>
+    <innerclass refid="classrapidxml_1_1attribute__iterator" prot="public">rapidxml::attribute_iterator</innerclass>
+    <innernamespace refid="namespacerapidxml">rapidxml</innernamespace>
+    <briefdescription>
+<para>This file contains rapidxml iterators. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RAPIDXML_ITERATORS_HPP_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAPIDXML_ITERATORS_HPP_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2006,<sp/>2009<sp/>Marcin<sp/>Kalicinski</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>1.13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Revision<sp/>$DateTime:<sp/>2009/05/13<sp/>01:46:17<sp/>$</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rapidxml_8hpp" kindref="compound">rapidxml.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerapidxml" kindref="compound">rapidxml</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Ch&gt;</highlight></codeline>
+<codeline lineno="16" refid="classrapidxml_1_1node__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classrapidxml_1_1node__iterator_1ade6310119ed1f72c94830e006fac69b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/><ref refid="classrapidxml_1_1node__iterator_1ade6310119ed1f72c94830e006fac69b7" kindref="member">value_type</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classrapidxml_1_1node__iterator_1ad7fabbcb7d3d9e4e220299c5475b9e9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/>&amp;<ref refid="classrapidxml_1_1node__iterator_1ad7fabbcb7d3d9e4e220299c5475b9e9c" kindref="member">reference</ref>;</highlight></codeline>
+<codeline lineno="22" refid="classrapidxml_1_1node__iterator_1a65dca8bca2b9c29f635b9ad0bdeeecb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/>*<ref refid="classrapidxml_1_1node__iterator_1a65dca8bca2b9c29f635b9ad0bdeeecb9" kindref="member">pointer</ref>;</highlight></codeline>
+<codeline lineno="23" refid="classrapidxml_1_1node__iterator_1a5bdc462b980a52c5fa2d99ac9f4f4bff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::ptrdiff_t<sp/><ref refid="classrapidxml_1_1node__iterator_1a5bdc462b980a52c5fa2d99ac9f4f4bff" kindref="member">difference_type</ref>;</highlight></codeline>
+<codeline lineno="24" refid="classrapidxml_1_1node__iterator_1a8e82d75f768e17bf7349d010ee26c037" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::bidirectional_iterator_tag<sp/><ref refid="classrapidxml_1_1node__iterator_1a8e82d75f768e17bf7349d010ee26c037" kindref="member">iterator_category</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="classrapidxml_1_1node__iterator_1a4e1244b9e9e1d2b5129235806d1e31ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator_1a4e1244b9e9e1d2b5129235806d1e31ad" kindref="member">node_iterator</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>(0)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classrapidxml_1_1node__iterator_1a94c3da59b54e4bd003e226cc35b3c266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator_1a94c3da59b54e4bd003e226cc35b3c266" kindref="member">node_iterator</ref>(<ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>(node-&gt;first_node())</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="classrapidxml_1_1node__iterator_1ab31fe5bc1fd01fee8a2b31c3e42d78ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference<sp/><ref refid="classrapidxml_1_1node__iterator_1ab31fe5bc1fd01fee8a2b31c3e42d78ed" kindref="member">operator *</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classrapidxml_1_1node__iterator_1a9b3e7d58c4a628524914932e0663ddfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer<sp/><ref refid="classrapidxml_1_1node__iterator_1a9b3e7d58c4a628524914932e0663ddfb" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="43"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classrapidxml_1_1node__iterator_1a8d6b184a76b2ec8a8b5e90bc013c80ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref>&amp;<sp/><ref refid="classrapidxml_1_1node__iterator_1a8d6b184a76b2ec8a8b5e90bc013c80ed" kindref="member">operator++</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref><sp/>=<sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>-&gt;next_sibling();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classrapidxml_1_1node__iterator_1ad01b4e43e348a330984833fd4924d0f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref><sp/><ref refid="classrapidxml_1_1node__iterator_1ad01b4e43e348a330984833fd4924d0f2" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref><sp/>tmp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classrapidxml_1_1node__iterator_1ace52107ecd1bcf02e49619e86206e3a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref>&amp;<sp/><ref refid="classrapidxml_1_1node__iterator_1ace52107ecd1bcf02e49619e86206e3a3" kindref="member">operator--</ref>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref><sp/>&amp;&amp;<sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>-&gt;previous_sibling());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref><sp/>=<sp/>m_node-&gt;previous_sibling();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classrapidxml_1_1node__iterator_1a4ca35716bb7865f199a137b063af6080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref><sp/><ref refid="classrapidxml_1_1node__iterator_1a4ca35716bb7865f199a137b063af6080" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator</ref><sp/>tmp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classrapidxml_1_1node__iterator_1a5cb8a3b0d65a1a2517995e986a4debfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator_1a5cb8a3b0d65a1a2517995e986a4debfd" kindref="member">operator ==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator&lt;Ch&gt;</ref><sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref><sp/>==<sp/>rhs.<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classrapidxml_1_1node__iterator_1a20f1e25347d7e3856694f18597f7c8e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator_1a20f1e25347d7e3856694f18597f7c8e2" kindref="member">operator !=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator" kindref="compound">node_iterator&lt;Ch&gt;</ref><sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref><sp/>!=<sp/>rhs.<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/>*<ref refid="classrapidxml_1_1node__iterator_1adeb3cd87d8ea08aa56d14166146fa291" kindref="member">m_node</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Ch&gt;</highlight></codeline>
+<codeline lineno="94" refid="classrapidxml_1_1attribute__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classrapidxml_1_1attribute__iterator_1ad4280d358828ad9c3eb1a787decb162e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute&lt;Ch&gt;</ref><sp/><ref refid="classrapidxml_1_1attribute__iterator_1ad4280d358828ad9c3eb1a787decb162e" kindref="member">value_type</ref>;</highlight></codeline>
+<codeline lineno="100" refid="classrapidxml_1_1attribute__iterator_1a097343e44557de14de86b470d3f917d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute&lt;Ch&gt;</ref><sp/>&amp;<ref refid="classrapidxml_1_1attribute__iterator_1a097343e44557de14de86b470d3f917d9" kindref="member">reference</ref>;</highlight></codeline>
+<codeline lineno="101" refid="classrapidxml_1_1attribute__iterator_1a69acc2e60270d6a062c03c9cb1cf2aa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute&lt;Ch&gt;</ref><sp/>*<ref refid="classrapidxml_1_1attribute__iterator_1a69acc2e60270d6a062c03c9cb1cf2aa7" kindref="member">pointer</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classrapidxml_1_1attribute__iterator_1accfd6d8527d32b427496b42f71a2e37a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::ptrdiff_t<sp/><ref refid="classrapidxml_1_1attribute__iterator_1accfd6d8527d32b427496b42f71a2e37a" kindref="member">difference_type</ref>;</highlight></codeline>
+<codeline lineno="103" refid="classrapidxml_1_1attribute__iterator_1a97ac5d8b98f5b03c68cc566f5ac0a9e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::bidirectional_iterator_tag<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a97ac5d8b98f5b03c68cc566f5ac0a9e0" kindref="member">iterator_category</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="classrapidxml_1_1attribute__iterator_1a30a82132793bc59d4e7b20f5be6237b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a30a82132793bc59d4e7b20f5be6237b9" kindref="member">attribute_iterator</ref>()</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>(0)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613" kindref="member">attribute_iterator</ref>(<ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node&lt;Ch&gt;</ref><sp/>*node)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>(node-&gt;first_attribute())</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="classrapidxml_1_1attribute__iterator_1a5d8616bdd2d41119e2f342d77b4f56f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reference<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a5d8616bdd2d41119e2f342d77b4f56f9" kindref="member">operator *</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classrapidxml_1_1attribute__iterator_1a0975adffe3d178c0ac83652b9ab78791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a0975adffe3d178c0ac83652b9ab78791" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="122"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classrapidxml_1_1attribute__iterator_1afe7d15a4a1b228f97f1d4ebd4f3f6cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref>&amp;<sp/><ref refid="classrapidxml_1_1attribute__iterator_1afe7d15a4a1b228f97f1d4ebd4f3f6cca" kindref="member">operator++</ref>()</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref><sp/>=<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>-&gt;next_attribute();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref><sp/>tmp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classrapidxml_1_1attribute__iterator_1af22f1ad3c11d3269b43b49e29b89d7d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref>&amp;<sp/><ref refid="classrapidxml_1_1attribute__iterator_1af22f1ad3c11d3269b43b49e29b89d7d1" kindref="member">operator--</ref>()</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref><sp/>&amp;&amp;<sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>-&gt;previous_attribute());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref><sp/>=<sp/>m_attribute-&gt;previous_attribute();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref><sp/><ref refid="classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f" kindref="member">operator--</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref><sp/>tmp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d" kindref="member">operator ==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator&lt;Ch&gt;</ref><sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref><sp/>==<sp/>rhs.<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88" kindref="member">operator !=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator&lt;Ch&gt;</ref><sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref><sp/>!=<sp/>rhs.<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute&lt;Ch&gt;</ref><sp/>*<ref refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" kindref="member">m_attribute</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp"/>
+  </compounddef>
+</doxygen>

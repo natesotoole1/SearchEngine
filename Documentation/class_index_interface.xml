@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_index_interface" kind="class" language="C++" prot="public">
+    <compoundname>IndexInterface</compoundname>
+    <derivedcompoundref refid="class_a_v_l_tree_interface" prot="public" virt="non-virtual">AVLTreeInterface</derivedcompoundref>
+    <derivedcompoundref refid="class_hash_table_interface" prot="public" virt="non-virtual">HashTableInterface</derivedcompoundref>
+    <includes refid="indexinterface_8h" local="no">indexinterface.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" prot="protected" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string IndexInterface::ext</definition>
+        <argsstring></argsstring>
+        <name>ext</name>
+        <initializer>= &quot;.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="70" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_hash_table_index" kindref="compound">HashTableIndex</ref> *</type>
+        <definition>HashTableIndex* IndexInterface::letters</definition>
+        <argsstring></argsstring>
+        <name>letters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="73" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_page_info" kindref="compound">PageInfo</ref> * &gt;</type>
+        <definition>vector&lt;PageInfo*&gt; IndexInterface::infoForIDs</definition>
+        <argsstring></argsstring>
+        <name>infoForIDs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="76" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_doc_parser" kindref="compound">DocParser</ref> &amp;</type>
+        <definition>DocParser&amp; IndexInterface::parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="78" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_index_interface_1a2df695d2b504f2e53a0bfdd6bfee31da" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IndexInterface::totalPages</definition>
+        <argsstring></argsstring>
+        <name>totalPages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="80" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IndexInterface::totalWordsInCorpus</definition>
+        <argsstring></argsstring>
+        <name>totalWordsInCorpus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="81" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_index_interface_1a7b1e7eae7faa652d2f63efeecf0ca2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IndexInterface::IndexInterface</definition>
+        <argsstring>()</argsstring>
+        <name>IndexInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a3927fabe77a7da5845dc0495b2c1c2b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>IndexInterface::~IndexInterface</definition>
+        <argsstring>()</argsstring>
+        <name>~IndexInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="45" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a7f082789ce91eaaacc10a5c841b62cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::append_page_info</definition>
+        <argsstring>(PageInfo *currInfo)</argsstring>
+        <name>append_page_info</name>
+        <param>
+          <type><ref refid="class_page_info" kindref="compound">PageInfo</ref> *</type>
+          <declname>currInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="48" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double IndexInterface::calc_tdidf</definition>
+        <argsstring>(int pageID, int freq, int spread)</argsstring>
+        <name>calc_tdidf</name>
+        <param>
+          <type>int</type>
+          <declname>pageID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>spread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="68" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::display_result</definition>
+        <argsstring>(int rank, int pageID, double tdidf)</argsstring>
+        <name>display_result</name>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pageID</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tdidf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="50" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a3d784385e028557312ef15d59574f9ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::display_page_content</definition>
+        <argsstring>(int pageID)</argsstring>
+        <name>display_page_content</name>
+        <param>
+          <type>int</type>
+          <declname>pageID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::incr_total_words_on_page</definition>
+        <argsstring>(int currID, int incr)</argsstring>
+        <name>incr_total_words_on_page</name>
+        <param>
+          <type>int</type>
+          <declname>currID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>incr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::read_file</definition>
+        <argsstring>(string filePath)</argsstring>
+        <name>read_file</name>
+        <param>
+          <type>string</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="53" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::read_persistence_files</definition>
+        <argsstring>()</argsstring>
+        <name>read_persistence_files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="54" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexInterface::read_pers_file</definition>
+        <argsstring>(int index)</argsstring>
+        <name>read_pers_file</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="55" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="94" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1aa83b7083d107869e3519c5862bc71d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IndexInterface::add_term_to_ii</definition>
+        <argsstring>(int letterIndex, Term *term)</argsstring>
+        <name>add_term_to_ii</name>
+        <reimplementedby refid="class_a_v_l_tree_interface_1a2ff7466f1fd70ce6391330c04749fec7">add_term_to_ii</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>letterIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="57" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/hashtableinterface.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1ad7b88501f360ccfad0c1ee08d793ca25" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IndexInterface::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplementedby refid="class_a_v_l_tree_interface_1a748ffc895fb64aab3e2afac287f80630">clear</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="58" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/hashtableinterface.cpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a851f0396f0b390cc9aa8cde270afffc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+        <definition>Term * IndexInterface::find_term</definition>
+        <argsstring>(string term)</argsstring>
+        <name>find_term</name>
+        <reimplementedby refid="class_a_v_l_tree_interface_1a35ee941b125e65cf0b5783a687503d83">find_term</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="60" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/hashtableinterface.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a0b4ec5fcc32c08959cffad3a3141dd4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IndexInterface::write_persistence_files</definition>
+        <argsstring>()</argsstring>
+        <name>write_persistence_files</name>
+        <reimplementedby refid="class_a_v_l_tree_interface_1abd7f70746611a3982dc07a1b1880e7b5">write_persistence_files</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="61" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/hashtableinterface.cpp" bodystart="19" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IndexInterface::index_for_letter</definition>
+        <argsstring>(char letter)</argsstring>
+        <name>index_for_letter</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="63" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_page_info" kindref="compound">PageInfo</ref> *</type>
+        <definition>PageInfo * IndexInterface::info_for_pageID</definition>
+        <argsstring>(int pageID)</argsstring>
+        <name>info_for_pageID</name>
+        <param>
+          <type>int</type>
+          <declname>pageID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="64" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IndexInterface::get_totalWordsInCorpus</definition>
+        <argsstring>()</argsstring>
+        <name>get_totalWordsInCorpus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="66" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="148" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IndexInterface::get_totalPages</definition>
+        <argsstring>()</argsstring>
+        <name>get_totalPages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="67" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.cpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>AVL Node implementation for the AVL Tree structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>AVLTreeInterface</label>
+        <link refid="class_a_v_l_tree_interface"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>HashTableInterface</label>
+        <link refid="class_hash_table_interface"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>IndexInterface</label>
+        <link refid="class_index_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="73">
+        <label>string</label>
+      </node>
+      <node id="68">
+        <label>IndexInterface</label>
+        <link refid="class_index_interface"/>
+        <childnode refid="69" relation="usage">
+          <edgelabel>infoForIDs</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>letters</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="usage">
+          <edgelabel>parser</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>ext</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>TermBucket</label>
+        <link refid="class_term_bucket"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Term</label>
+        <link refid="class_term"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="72" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>vector&lt; PageInfo * &gt;</label>
+      </node>
+      <node id="70">
+        <label>HashTableIndex</label>
+        <link refid="class_hash_table_index"/>
+        <childnode refid="71" relation="usage">
+          <edgelabel>buckets</edgelabel>
+        </childnode>
+      </node>
+      <node id="74">
+        <label>DocParser</label>
+        <link refid="class_doc_parser"/>
+        <childnode refid="68" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>currContent</edgelabel>
+          <edgelabel>currContributorNameOrIP</edgelabel>
+          <edgelabel>currWord</edgelabel>
+          <edgelabel>currTitle</edgelabel>
+          <edgelabel>currTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="72" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/indexinterface.h" bodystart="40" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_index_interface_1aa83b7083d107869e3519c5862bc71d0a" prot="public" virt="virtual"><scope>IndexInterface</scope><name>add_term_to_ii</name></member>
+      <member refid="class_index_interface_1a7f082789ce91eaaacc10a5c841b62cd4" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>append_page_info</name></member>
+      <member refid="class_index_interface_1a8195aee88cd593c2e6ca2e2c48cbd068" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>calc_tdidf</name></member>
+      <member refid="class_index_interface_1ad7b88501f360ccfad0c1ee08d793ca25" prot="public" virt="virtual"><scope>IndexInterface</scope><name>clear</name></member>
+      <member refid="class_index_interface_1a3d784385e028557312ef15d59574f9ed" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>display_page_content</name></member>
+      <member refid="class_index_interface_1a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>display_result</name></member>
+      <member refid="class_index_interface_1acd76893126e9fd5dc63cb4ea8f56265c" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>ext</name></member>
+      <member refid="class_index_interface_1a851f0396f0b390cc9aa8cde270afffc9" prot="public" virt="virtual"><scope>IndexInterface</scope><name>find_term</name></member>
+      <member refid="class_index_interface_1af9edc24ac00bdf2c0e06384f890a1d8a" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>get_totalPages</name></member>
+      <member refid="class_index_interface_1a8a0132ad6e84c4340061496c615f581c" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>get_totalWordsInCorpus</name></member>
+      <member refid="class_index_interface_1a5734b1488a787d47984bf97ffa5aff8d" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>incr_total_words_on_page</name></member>
+      <member refid="class_index_interface_1a9a7539d9c7a48bf4d4fbe43961c0547f" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>index_for_letter</name></member>
+      <member refid="class_index_interface_1a7b1e7eae7faa652d2f63efeecf0ca2de" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>IndexInterface</name></member>
+      <member refid="class_index_interface_1a2af7d88c3b2701be9164ba9f4a3bddb3" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>info_for_pageID</name></member>
+      <member refid="class_index_interface_1a8400a62750faa69ff35308ff731d9ee5" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>infoForIDs</name></member>
+      <member refid="class_index_interface_1a8511509bb58da989f705ba75fd5dde2d" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>letters</name></member>
+      <member refid="class_index_interface_1a42b0d9eccd309185ed92976f72908bb9" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>parser</name></member>
+      <member refid="class_index_interface_1a229f1eb93f38d85d78e64e579c46c98a" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>read_file</name></member>
+      <member refid="class_index_interface_1a0ca6250b71da3983ca31afdf3ee6dd88" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>read_pers_file</name></member>
+      <member refid="class_index_interface_1aebcf89c2fd27b815b697c8e9d29e0c3a" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>read_persistence_files</name></member>
+      <member refid="class_index_interface_1a2df695d2b504f2e53a0bfdd6bfee31da" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>totalPages</name></member>
+      <member refid="class_index_interface_1ab607b430e78528cdb8bb79ba4afa91d2" prot="protected" virt="non-virtual"><scope>IndexInterface</scope><name>totalWordsInCorpus</name></member>
+      <member refid="class_index_interface_1a0b4ec5fcc32c08959cffad3a3141dd4e" prot="public" virt="virtual"><scope>IndexInterface</scope><name>write_persistence_files</name></member>
+      <member refid="class_index_interface_1a3927fabe77a7da5845dc0495b2c1c2b2" prot="public" virt="non-virtual"><scope>IndexInterface</scope><name>~IndexInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

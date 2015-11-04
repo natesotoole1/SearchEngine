@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="classrapidxml_1_1attribute__iterator" kind="class" language="C++" prot="public">
+    <compoundname>rapidxml::attribute_iterator</compoundname>
+    <includes refid="rapidxml__iterators_8hpp" local="no">rapidxml_iterators.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>Ch</declname>
+        <defname>Ch</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrapidxml_1_1attribute__iterator_1ad4280d358828ad9c3eb1a787decb162e" prot="public" static="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt;</type>
+        <definition>typedef xml_attribute&lt;Ch&gt; rapidxml::attribute_iterator&lt; Ch &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="99" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrapidxml_1_1attribute__iterator_1a097343e44557de14de86b470d3f917d9" prot="public" static="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; &amp;</type>
+        <definition>typedef xml_attribute&lt;Ch&gt;&amp; rapidxml::attribute_iterator&lt; Ch &gt;::reference</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="100" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrapidxml_1_1attribute__iterator_1a69acc2e60270d6a062c03c9cb1cf2aa7" prot="public" static="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>typedef xml_attribute&lt;Ch&gt;* rapidxml::attribute_iterator&lt; Ch &gt;::pointer</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="101" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrapidxml_1_1attribute__iterator_1accfd6d8527d32b427496b42f71a2e37a" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>typedef std::ptrdiff_t rapidxml::attribute_iterator&lt; Ch &gt;::difference_type</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="102" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrapidxml_1_1attribute__iterator_1a97ac5d8b98f5b03c68cc566f5ac0a9e0" prot="public" static="no">
+        <type>std::bidirectional_iterator_tag</type>
+        <definition>typedef std::bidirectional_iterator_tag rapidxml::attribute_iterator&lt; Ch &gt;::iterator_category</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="103" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" prot="private" static="no" mutable="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>xml_attribute&lt;Ch&gt;* rapidxml::attribute_iterator&lt; Ch &gt;::m_attribute</definition>
+        <argsstring></argsstring>
+        <name>m_attribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="167" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a30a82132793bc59d4e7b20f5be6237b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::attribute_iterator&lt; Ch &gt;::attribute_iterator</definition>
+        <argsstring>()</argsstring>
+        <name>attribute_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="105" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::attribute_iterator&lt; Ch &gt;::attribute_iterator</definition>
+        <argsstring>(xml_node&lt; Ch &gt; *node)</argsstring>
+        <name>attribute_iterator</name>
+        <param>
+          <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt; Ch &gt; *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="110" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a5d8616bdd2d41119e2f342d77b4f56f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator_1a097343e44557de14de86b470d3f917d9" kindref="member">reference</ref></type>
+        <definition>reference rapidxml::attribute_iterator&lt; Ch &gt;::operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="115" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a0975adffe3d178c0ac83652b9ab78791" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator_1a69acc2e60270d6a062c03c9cb1cf2aa7" kindref="member">pointer</ref></type>
+        <definition>pointer rapidxml::attribute_iterator&lt; Ch &gt;::operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="121" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1afe7d15a4a1b228f97f1d4ebd4f3f6cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref> &amp;</type>
+        <definition>attribute_iterator&amp; rapidxml::attribute_iterator&lt; Ch &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="127" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="127" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref></type>
+        <definition>attribute_iterator rapidxml::attribute_iterator&lt; Ch &gt;::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="134" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1af22f1ad3c11d3269b43b49e29b89d7d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref> &amp;</type>
+        <definition>attribute_iterator&amp; rapidxml::attribute_iterator&lt; Ch &gt;::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="141" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="141" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref></type>
+        <definition>attribute_iterator rapidxml::attribute_iterator&lt; Ch &gt;::operator--</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="148" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="148" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rapidxml::attribute_iterator&lt; Ch &gt;::operator==</definition>
+        <argsstring>(const attribute_iterator&lt; Ch &gt; &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref>&lt; Ch &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="155" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rapidxml::attribute_iterator&lt; Ch &gt;::operator!=</definition>
+        <argsstring>(const attribute_iterator&lt; Ch &gt; &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classrapidxml_1_1attribute__iterator" kindref="compound">attribute_iterator</ref>&lt; Ch &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="160" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="160" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Iterator of child attributes of <ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" line="95" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml_iterators.hpp" bodystart="94" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classrapidxml_1_1attribute__iterator_1a30a82132793bc59d4e7b20f5be6237b9" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>attribute_iterator</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>attribute_iterator</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1accfd6d8527d32b427496b42f71a2e37a" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>difference_type</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a97ac5d8b98f5b03c68cc566f5ac0a9e0" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>iterator_category</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a2b4de1b0d86015beeae10e9997438c7a" prot="private" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>m_attribute</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator!=</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a5d8616bdd2d41119e2f342d77b4f56f9" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator*</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1afe7d15a4a1b228f97f1d4ebd4f3f6cca" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator++</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator++</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1af22f1ad3c11d3269b43b49e29b89d7d1" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator--</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator--</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a0975adffe3d178c0ac83652b9ab78791" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator-&gt;</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>operator==</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a69acc2e60270d6a062c03c9cb1cf2aa7" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>pointer</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1a097343e44557de14de86b470d3f917d9" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>reference</name></member>
+      <member refid="classrapidxml_1_1attribute__iterator_1ad4280d358828ad9c3eb1a787decb162e" prot="public" virt="non-virtual"><scope>rapidxml::attribute_iterator</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

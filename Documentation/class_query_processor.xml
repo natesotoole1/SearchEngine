@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_query_processor" kind="class" language="C++" prot="public">
+    <compoundname>QueryProcessor</compoundname>
+    <includes refid="queryprocessor_8h" local="no">queryprocessor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_query_processor_1ab0f6ff6ab22675a201902135bab6809e" prot="private" static="no" mutable="no">
+        <type><ref refid="queryprocessor_8h_1a9f5987488750d1e716874ca2c5cdf09b" kindref="member">relevancyMap</ref></type>
+        <definition>relevancyMap QueryProcessor::results</definition>
+        <argsstring></argsstring>
+        <name>results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_processor_1a443576fbb0c7749c7b69ccbd69f0eb58" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="queryprocessor_8h_1af6bb738cbffd79f25704719c38165579" kindref="member">resultPair</ref> &gt;</type>
+        <definition>vector&lt;resultPair&gt; QueryProcessor::sortedResults</definition>
+        <argsstring></argsstring>
+        <name>sortedResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="50" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_query_processor_1af0fe42043ab2eb42da9f911d842fbed5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
+        <definition>IndexInterface&amp; QueryProcessor::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_query_processor_1ac4bebae67b0c08004f26f55957428574" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QueryProcessor::~QueryProcessor</definition>
+        <argsstring>()</argsstring>
+        <name>~QueryProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="29" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1aadd890a58f45e11fc3eeaeb3ed34e7b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QueryProcessor::QueryProcessor</definition>
+        <argsstring>(IndexInterface &amp;theIndex)</argsstring>
+        <name>QueryProcessor</name>
+        <param>
+          <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
+          <declname>theIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="30" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1a95136769b295bc5a56d83a476260ed60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::answer_query</definition>
+        <argsstring>(istringstream &amp;query, bool intersection)</argsstring>
+        <name>answer_query</name>
+        <param>
+          <type>istringstream &amp;</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>intersection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="32" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="135" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1a3e93e0a00cd935ee71497623c8e6d4ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::display_best_fifteen_results</definition>
+        <argsstring>()</argsstring>
+        <name>display_best_fifteen_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="34" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="25" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1ae59525962d93a0087fee0afd689ce1e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::initiate_query</definition>
+        <argsstring>(string query)</argsstring>
+        <name>initiate_query</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="38" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="203" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1ae1f3fdd94b58ac3016ab04873145fec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::init_relev_map</definition>
+        <argsstring>(Term *term)</argsstring>
+        <name>init_relev_map</name>
+        <param>
+          <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="40" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="75" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1a29d1767fe229ea175488976673463dcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::intersection_incr_relev_map</definition>
+        <argsstring>(Term *term)</argsstring>
+        <name>intersection_incr_relev_map</name>
+        <param>
+          <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="83" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1aa00880b1308428b29cdc32741f82f4fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::union_incr_relev_map</definition>
+        <argsstring>(Term *term)</argsstring>
+        <name>union_incr_relev_map</name>
+        <param>
+          <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="42" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="112" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_query_processor_1abb0fce31c633a5c0ae571f144f8f36f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QueryProcessor::sort_results</definition>
+        <argsstring>()</argsstring>
+        <name>sort_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.cpp" bodystart="232" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>gets the queries for each search created in <ref refid="class_interface" kindref="compound">Interface</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="100">
+        <label>QueryProcessor</label>
+        <link refid="class_query_processor"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>sortedResults</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>string</label>
+      </node>
+      <node id="101">
+        <label>IndexInterface</label>
+        <link refid="class_index_interface"/>
+        <childnode refid="102" relation="usage">
+          <edgelabel>infoForIDs</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>letters</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>parser</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>ext</edgelabel>
+        </childnode>
+      </node>
+      <node id="104">
+        <label>TermBucket</label>
+        <link refid="class_term_bucket"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Term</label>
+        <link refid="class_term"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="105" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>vector&lt; PageInfo * &gt;</label>
+      </node>
+      <node id="103">
+        <label>HashTableIndex</label>
+        <link refid="class_hash_table_index"/>
+        <childnode refid="104" relation="usage">
+          <edgelabel>buckets</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
+        <label>DocParser</label>
+        <link refid="class_doc_parser"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>currContent</edgelabel>
+          <edgelabel>currContributorNameOrIP</edgelabel>
+          <edgelabel>currWord</edgelabel>
+          <edgelabel>currTitle</edgelabel>
+          <edgelabel>currTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="105" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
+      </node>
+      <node id="108">
+        <label>vector&lt; resultPair &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" line="26" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/queryprocessor.h" bodystart="25" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_query_processor_1a95136769b295bc5a56d83a476260ed60" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>answer_query</name></member>
+      <member refid="class_query_processor_1a3e93e0a00cd935ee71497623c8e6d4ad" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>display_best_fifteen_results</name></member>
+      <member refid="class_query_processor_1af0fe42043ab2eb42da9f911d842fbed5" prot="private" virt="non-virtual"><scope>QueryProcessor</scope><name>index</name></member>
+      <member refid="class_query_processor_1ae1f3fdd94b58ac3016ab04873145fec7" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>init_relev_map</name></member>
+      <member refid="class_query_processor_1ae59525962d93a0087fee0afd689ce1e3" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>initiate_query</name></member>
+      <member refid="class_query_processor_1a29d1767fe229ea175488976673463dcb" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>intersection_incr_relev_map</name></member>
+      <member refid="class_query_processor_1aadd890a58f45e11fc3eeaeb3ed34e7b4" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>QueryProcessor</name></member>
+      <member refid="class_query_processor_1ab0f6ff6ab22675a201902135bab6809e" prot="private" virt="non-virtual"><scope>QueryProcessor</scope><name>results</name></member>
+      <member refid="class_query_processor_1abb0fce31c633a5c0ae571f144f8f36f7" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>sort_results</name></member>
+      <member refid="class_query_processor_1a443576fbb0c7749c7b69ccbd69f0eb58" prot="private" virt="non-virtual"><scope>QueryProcessor</scope><name>sortedResults</name></member>
+      <member refid="class_query_processor_1aa00880b1308428b29cdc32741f82f4fc" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>union_incr_relev_map</name></member>
+      <member refid="class_query_processor_1ac4bebae67b0c08004f26f55957428574" prot="public" virt="non-virtual"><scope>QueryProcessor</scope><name>~QueryProcessor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

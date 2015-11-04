@@ -1,0 +1,58 @@
+\hypertarget{docparser_8h}{}\section{docparser.\+h File Reference}
+\label{docparser_8h}\index{docparser.\+h@{docparser.\+h}}
+{\ttfamily \#include $<$rapidxml.\+hpp$>$}\\*
+{\ttfamily \#include $<$rapidxml\+\_\+print.\+hpp$>$}\\*
+{\ttfamily \#include $<$rapidxml\+\_\+utils.\+hpp$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\\*
+{\ttfamily \#include \char`\"{}indexinterface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pageinfo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}porter2\+\_\+stemmer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_doc_parser}{Doc\+Parser}
+\begin{DoxyCompactList}\small\item\em Uses rapidxml to parse throught the wiki\+Dump. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unordered\+\_\+map$<$ int, int $>$ \hyperlink{docparser_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map}
+\item 
+typedef unordered\+\_\+map$<$ string, string $>$ \hyperlink{docparser_8h_aa63707b94c556a8d9df334f564b61b0b}{stop\+Word\+Map}
+\item 
+typedef unordered\+\_\+map$<$ string, \hyperlink{avltreeinterface_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map} $>$ \hyperlink{docparser_8h_a9b942645c404d380838be4078b0199d9}{term\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{docparser_8h_ac7fad9cbc31a9f84be7a06624781f335}{is\+\_\+not\+\_\+alpha} (char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{docparser_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{}\index{docparser.\+h@{docparser.\+h}!page\+Map@{page\+Map}}
+\index{page\+Map@{page\+Map}!docparser.\+h@{docparser.\+h}}
+\subsubsection[{page\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef unordered\+\_\+map$<$int, int$>$ {\bf page\+Map}}\label{docparser_8h_afdba5c4962a1c0abdda6ca3e414a9a45}
+\hypertarget{docparser_8h_aa63707b94c556a8d9df334f564b61b0b}{}\index{docparser.\+h@{docparser.\+h}!stop\+Word\+Map@{stop\+Word\+Map}}
+\index{stop\+Word\+Map@{stop\+Word\+Map}!docparser.\+h@{docparser.\+h}}
+\subsubsection[{stop\+Word\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef unordered\+\_\+map$<$string, string$>$ {\bf stop\+Word\+Map}}\label{docparser_8h_aa63707b94c556a8d9df334f564b61b0b}
+\hypertarget{docparser_8h_a9b942645c404d380838be4078b0199d9}{}\index{docparser.\+h@{docparser.\+h}!term\+Map@{term\+Map}}
+\index{term\+Map@{term\+Map}!docparser.\+h@{docparser.\+h}}
+\subsubsection[{term\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef unordered\+\_\+map$<$string, {\bf page\+Map}$>$ {\bf term\+Map}}\label{docparser_8h_a9b942645c404d380838be4078b0199d9}
+
+
+\subsection{Function Documentation}
+\hypertarget{docparser_8h_ac7fad9cbc31a9f84be7a06624781f335}{}\index{docparser.\+h@{docparser.\+h}!is\+\_\+not\+\_\+alpha@{is\+\_\+not\+\_\+alpha}}
+\index{is\+\_\+not\+\_\+alpha@{is\+\_\+not\+\_\+alpha}!docparser.\+h@{docparser.\+h}}
+\subsubsection[{is\+\_\+not\+\_\+alpha}]{\setlength{\rightskip}{0pt plus 5cm}int is\+\_\+not\+\_\+alpha (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{docparser_8h_ac7fad9cbc31a9f84be7a06624781f335}

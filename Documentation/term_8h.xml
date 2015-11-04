@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="term_8h" kind="file" language="C++">
+    <compoundname>term.h</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes refid="indexinterface_8h" local="yes">indexinterface.h</includes>
+    <includedby refid="indexinterface_8h" local="yes">indexinterface.h</includedby>
+    <includedby refid="avltreeindex_8h" local="yes">avltreeindex.h</includedby>
+    <includedby refid="hashtableindex_8h" local="yes">hashtableindex.h</includedby>
+    <includedby refid="termbucket_8h" local="yes">termbucket.h</includedby>
+    <includedby refid="hashtableinterface_8h" local="yes">hashtableinterface.h</includedby>
+    <includedby refid="queryprocessor_8h" local="yes">queryprocessor.h</includedby>
+    <includedby refid="avltreeinterface_8h" local="yes">avltreeinterface.h</includedby>
+    <includedby refid="term_8cpp" local="yes">term.cpp</includedby>
+    <incdepgraph>
+      <node id="995">
+        <label>term.h</label>
+        <link refid="term.h"/>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="1002">
+        <label>indexinterface.h</label>
+        <link refid="indexinterface_8h"/>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>functional</label>
+      </node>
+      <node id="1024">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+      </node>
+      <node id="1017">
+        <label>iterator</label>
+      </node>
+      <node id="1012">
+        <label>cassert</label>
+      </node>
+      <node id="1009">
+        <label>docparser.h</label>
+        <link refid="docparser_8h"/>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1020" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+        <childnode refid="1024" relation="include">
+        </childnode>
+      </node>
+      <node id="1019">
+        <label>stdexcept</label>
+      </node>
+      <node id="1015">
+        <label>rapidxml_print.hpp</label>
+        <link refid="rapidxml__print_8hpp"/>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="998">
+        <label>string</label>
+      </node>
+      <node id="1014">
+        <label>exception</label>
+      </node>
+      <node id="996">
+        <label>fstream</label>
+      </node>
+      <node id="1016">
+        <label>ostream</label>
+      </node>
+      <node id="1010">
+        <label>rapidxml.hpp</label>
+        <link refid="rapidxml_8hpp"/>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+      </node>
+      <node id="1022">
+        <label>pageinfo.h</label>
+        <link refid="pageinfo_8h"/>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="1018">
+        <label>rapidxml_utils.hpp</label>
+        <link refid="rapidxml__utils_8hpp"/>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+      </node>
+      <node id="1006">
+        <label>pthread.h</label>
+      </node>
+      <node id="1001">
+        <label>vector</label>
+      </node>
+      <node id="1013">
+        <label>new</label>
+      </node>
+      <node id="1000">
+        <label>utility</label>
+      </node>
+      <node id="1007">
+        <label>sstream</label>
+      </node>
+      <node id="1025">
+        <label>time.h</label>
+      </node>
+      <node id="1005">
+        <label>math.h</label>
+      </node>
+      <node id="1011">
+        <label>cstdlib</label>
+      </node>
+      <node id="1020">
+        <label>cctype</label>
+      </node>
+      <node id="997">
+        <label>iostream</label>
+      </node>
+      <node id="999">
+        <label>unordered_map</label>
+      </node>
+      <node id="1021">
+        <label>chrono</label>
+      </node>
+      <node id="1008">
+        <label>thread</label>
+      </node>
+      <node id="1003">
+        <label>algorithm</label>
+      </node>
+      <node id="1023">
+        <label>porter2_stemmer.h</label>
+        <link refid="porter2__stemmer_8h"/>
+        <childnode refid="1001" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1026">
+        <label>term.h</label>
+        <link refid="term.h"/>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1046" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1048" relation="include">
+        </childnode>
+      </node>
+      <node id="1027">
+        <label>indexinterface.h</label>
+        <link refid="indexinterface_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+      </node>
+      <node id="1032">
+        <label>indexhandler.h</label>
+        <link refid="indexhandler_8h"/>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+      </node>
+      <node id="1038">
+        <label>hashtableinterface.h</label>
+        <link refid="hashtableinterface_8h"/>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+      </node>
+      <node id="1030">
+        <label>avltreeinterface.h</label>
+        <link refid="avltreeinterface_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+      </node>
+      <node id="1048">
+        <label>term.cpp</label>
+        <link refid="term_8cpp"/>
+      </node>
+      <node id="1036">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1037">
+        <label>docparser.h</label>
+        <link refid="docparser_8h"/>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+      </node>
+      <node id="1042">
+        <label>docparser.cpp</label>
+        <link refid="docparser_8cpp"/>
+      </node>
+      <node id="1047">
+        <label>termbucket.cpp</label>
+        <link refid="termbucket_8cpp"/>
+      </node>
+      <node id="1039">
+        <label>hashtableinterface.cpp</label>
+        <link refid="hashtableinterface_8cpp"/>
+      </node>
+      <node id="1031">
+        <label>avltreeinterface.cpp</label>
+        <link refid="avltreeinterface_8cpp"/>
+      </node>
+      <node id="1040">
+        <label>queryprocessor.h</label>
+        <link refid="queryprocessor_8h"/>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+      </node>
+      <node id="1035">
+        <label>interface.cpp</label>
+        <link refid="interface_8cpp"/>
+      </node>
+      <node id="1043">
+        <label>indexinterface.cpp</label>
+        <link refid="indexinterface_8cpp"/>
+      </node>
+      <node id="1046">
+        <label>termbucket.h</label>
+        <link refid="termbucket_8h"/>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1047" relation="include">
+        </childnode>
+      </node>
+      <node id="1034">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+      </node>
+      <node id="1029">
+        <label>avltreeindex.cpp</label>
+        <link refid="avltreeindex_8cpp"/>
+      </node>
+      <node id="1044">
+        <label>hashtableindex.h</label>
+        <link refid="hashtableindex_8h"/>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1045" relation="include">
+        </childnode>
+      </node>
+      <node id="1033">
+        <label>indexhandler.cpp</label>
+        <link refid="indexhandler_8cpp"/>
+      </node>
+      <node id="1041">
+        <label>queryprocessor.cpp</label>
+        <link refid="queryprocessor_8cpp"/>
+      </node>
+      <node id="1028">
+        <label>avltreeindex.h</label>
+        <link refid="avltreeindex_8h"/>
+        <childnode refid="1029" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+      </node>
+      <node id="1045">
+        <label>hashtableindex.cpp</label>
+        <link refid="hashtableindex_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_term" prot="public">Term</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="term_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" prot="public" static="no">
+        <type>unordered_map&lt; int, int &gt;</type>
+        <definition>typedef unordered_map&lt;int, int&gt; pageMap</definition>
+        <argsstring></argsstring>
+        <name>pageMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="15" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="term_8h_1af4400159d8a0a2894541b3d38edabf6c" prot="public" static="no">
+        <type>unordered_map&lt; int, double &gt;</type>
+        <definition>typedef unordered_map&lt;int, double&gt; tdidfMap</definition>
+        <argsstring></argsstring>
+        <name>tdidfMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/term.h" line="16" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/term.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TERM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TERM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="indexinterface_8h" kindref="compound">indexinterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="term_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;int,<sp/>int&gt;<sp/><ref refid="term_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref>;</highlight></codeline>
+<codeline lineno="16" refid="term_8h_1af4400159d8a0a2894541b3d38edabf6c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unordered_map&lt;int,<sp/>double&gt;<sp/><ref refid="term_8h_1af4400159d8a0a2894541b3d38edabf6c" kindref="member">tdidfMap</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_index_interface" kindref="compound">IndexInterface</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_term" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_term" kindref="compound">Term</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_term" kindref="compound">Term</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theName);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theName,<sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref>&amp;<sp/>theAprns);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_pageAprn(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>freq,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_spread_and_totalFreq();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_tdidfs(<ref refid="class_index_interface" kindref="compound">IndexInterface</ref>&amp;<sp/>index);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>incrm_aprn_for_pageID(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currID);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/>get_pageAprns();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>get_name();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>*<sp/>get_next();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_spread();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_totalFreq();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_tdidf_for_page(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageID);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_next(<ref refid="class_term" kindref="compound">Term</ref>*<sp/>theNext);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write_term(ofstream&amp;<sp/>persistence);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Holds<sp/>the<sp/>IDs<sp/>of<sp/>pages<sp/>on<sp/>which<sp/>it<sp/>appeared.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="avltreeinterface_8h_1afdba5c4962a1c0abdda6ca3e414a9a45" kindref="member">pageMap</ref><sp/><ref refid="class_term_1a8e3efcdc519a46da74930a8a4dba9398" kindref="member">pageAprns</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_term_1a1ea7886ca15ad219ce8751bc30099483" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>linked<sp/>list<sp/>functionality<sp/>of<sp/>each<sp/>TermBucket.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>used<sp/>in<sp/>HashTableIndex.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_term_1a32dadebc2046b21eb097d56795a977a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_term" kindref="compound">Term</ref>*<sp/><ref refid="class_term_1a32dadebc2046b21eb097d56795a977a4" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>unique<sp/>documents<sp/>on<sp/>which<sp/>the<sp/>term<sp/>has<sp/>appeared.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1abb3f8b30ce0f7cb8a64b84084b822e43" kindref="member">spread</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="term_8h_1af4400159d8a0a2894541b3d38edabf6c" kindref="member">tdidfMap</ref><sp/><ref refid="class_term_1a8a6d9637da60e1200bb91b5108c601b5" kindref="member">tdidfs</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_term_1a075587aedd4009c7c207dc3fdd5b33cd" kindref="member">totalFreq</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TERM_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/term.h"/>
+  </compounddef>
+</doxygen>

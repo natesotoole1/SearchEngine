@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_doc_parser" kind="class" language="C++" prot="public">
+    <compoundname>DocParser</compoundname>
+    <includes refid="docparser_8h" local="no">docparser.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" prot="private" static="no" mutable="no">
+        <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
+        <definition>IndexInterface&amp; DocParser::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="63" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1a089705924f6a28afb59064526b4b7f4f" prot="private" static="no" mutable="no">
+        <type><ref refid="docparser_8h_1aa63707b94c556a8d9df334f564b61b0b" kindref="member">stopWordMap</ref></type>
+        <definition>stopWordMap DocParser::stopWords</definition>
+        <argsstring></argsstring>
+        <name>stopWords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="65" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1ace9019a4f9ede433886adaa0656e6e3b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DocParser::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="67" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1a03b27a633885e614c94635eb2f66d404" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DocParser::currWord</definition>
+        <argsstring></argsstring>
+        <name>currWord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="70" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1aaf8b70c4ddd9637f3e700f42a88fb641" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DocParser::currContent</definition>
+        <argsstring></argsstring>
+        <name>currContent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="71" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1acf0aedb227a48a682d1ff238d1d6614d" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DocParser::currContributorNameOrIP</definition>
+        <argsstring></argsstring>
+        <name>currContributorNameOrIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="72" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1a642bcf2a542abd6b386c1445e937e4cd" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DocParser::currTimestamp</definition>
+        <argsstring></argsstring>
+        <name>currTimestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="73" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string DocParser::currTitle</definition>
+        <argsstring></argsstring>
+        <name>currTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="74" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" prot="private" static="no" mutable="no">
+        <type><ref refid="class_term" kindref="compound">Term</ref> *</type>
+        <definition>Term* DocParser::found</definition>
+        <argsstring></argsstring>
+        <name>found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="75" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_doc_parser_1a637fc4d565eaf2927ee9b88bbe23e3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DocParser::~DocParser</definition>
+        <argsstring>()</argsstring>
+        <name>~DocParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="40" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1a086f00e54fca8038c85c0e235948d75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DocParser::DocParser</definition>
+        <argsstring>(IndexInterface &amp;theIndex)</argsstring>
+        <name>DocParser</name>
+        <param>
+          <type><ref refid="class_index_interface" kindref="compound">IndexInterface</ref> &amp;</type>
+          <declname>theIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="41" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="3" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1a1b127af53e8af16f393b64f46c307d3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string DocParser::clean_term</definition>
+        <argsstring>(string term)</argsstring>
+        <name>clean_term</name>
+        <param>
+          <type>string</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="43" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1ad92d1a6da7d413abd27ee18a6ed20a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DocParser::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="44" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1a7addc81ac337c2688bb9e9d8197db2fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DocParser::index_for_letter</definition>
+        <argsstring>(char letter)</argsstring>
+        <name>index_for_letter</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="49" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1a48cd3949baca573b9be0b4ba24b9c79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DocParser::read_page</definition>
+        <argsstring>(xml_node&lt;&gt; *currNode, bool readText)</argsstring>
+        <name>read_page</name>
+        <param>
+          <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt;&gt; *</type>
+          <declname>currNode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>readText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="51" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="58" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1af28153ebf0ee2fe97c2942c04c915adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DocParser::read_text</definition>
+        <argsstring>(xml_node&lt;&gt; *currNode)</argsstring>
+        <name>read_text</name>
+        <param>
+          <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt;&gt; *</type>
+          <declname>currNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="52" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="97" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1ad7b5809e4efd3e2bae781c1cb491ab29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DocParser::init_file_page_infos</definition>
+        <argsstring>(xml_node&lt;&gt; *currNode, bool readText)</argsstring>
+        <name>init_file_page_infos</name>
+        <param>
+          <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt;&gt; *</type>
+          <declname>currNode</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>readText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="54" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="142" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DocParser::read_file</definition>
+        <argsstring>(string filePath)</argsstring>
+        <name>read_file</name>
+        <param>
+          <type>string</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="56" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="158" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doc_parser_1ad30c49de12ed45eaf2594c4718789c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DocParser::is_stop_word</definition>
+        <argsstring>(string term)</argsstring>
+        <name>is_stop_word</name>
+        <param>
+          <type>string</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="58" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.cpp" bodystart="188" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Uses rapidxml to parse throught the wikiDump. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="36">
+        <label>string</label>
+      </node>
+      <node id="31">
+        <label>IndexInterface</label>
+        <link refid="class_index_interface"/>
+        <childnode refid="32" relation="usage">
+          <edgelabel>infoForIDs</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>letters</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>parser</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>ext</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>TermBucket</label>
+        <link refid="class_term_bucket"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Term</label>
+        <link refid="class_term"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>vector&lt; PageInfo * &gt;</label>
+      </node>
+      <node id="33">
+        <label>HashTableIndex</label>
+        <link refid="class_hash_table_index"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>buckets</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>DocParser</label>
+        <link refid="class_doc_parser"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>currContent</edgelabel>
+          <edgelabel>currContributorNameOrIP</edgelabel>
+          <edgelabel>currWord</edgelabel>
+          <edgelabel>currTitle</edgelabel>
+          <edgelabel>currTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>found</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/docparser.h" line="38" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/docparser.h" bodystart="37" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_doc_parser_1a1b127af53e8af16f393b64f46c307d3a" prot="public" virt="non-virtual"><scope>DocParser</scope><name>clean_term</name></member>
+      <member refid="class_doc_parser_1ad92d1a6da7d413abd27ee18a6ed20a30" prot="public" virt="non-virtual"><scope>DocParser</scope><name>clear</name></member>
+      <member refid="class_doc_parser_1ace9019a4f9ede433886adaa0656e6e3b" prot="private" virt="non-virtual"><scope>DocParser</scope><name>count</name></member>
+      <member refid="class_doc_parser_1aaf8b70c4ddd9637f3e700f42a88fb641" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currContent</name></member>
+      <member refid="class_doc_parser_1acf0aedb227a48a682d1ff238d1d6614d" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currContributorNameOrIP</name></member>
+      <member refid="class_doc_parser_1a642bcf2a542abd6b386c1445e937e4cd" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currTimestamp</name></member>
+      <member refid="class_doc_parser_1a8348dc55e8aa858bbc5becc02d4e53bf" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currTitle</name></member>
+      <member refid="class_doc_parser_1a03b27a633885e614c94635eb2f66d404" prot="private" virt="non-virtual"><scope>DocParser</scope><name>currWord</name></member>
+      <member refid="class_doc_parser_1a086f00e54fca8038c85c0e235948d75a" prot="public" virt="non-virtual"><scope>DocParser</scope><name>DocParser</name></member>
+      <member refid="class_doc_parser_1adb6f140f5f0972129201a0f7fe4be541" prot="private" virt="non-virtual"><scope>DocParser</scope><name>found</name></member>
+      <member refid="class_doc_parser_1ad0e840d5c92edbe2c8f28406a5c3f008" prot="private" virt="non-virtual"><scope>DocParser</scope><name>index</name></member>
+      <member refid="class_doc_parser_1a7addc81ac337c2688bb9e9d8197db2fc" prot="public" virt="non-virtual"><scope>DocParser</scope><name>index_for_letter</name></member>
+      <member refid="class_doc_parser_1ad7b5809e4efd3e2bae781c1cb491ab29" prot="public" virt="non-virtual"><scope>DocParser</scope><name>init_file_page_infos</name></member>
+      <member refid="class_doc_parser_1ad30c49de12ed45eaf2594c4718789c3e" prot="public" virt="non-virtual"><scope>DocParser</scope><name>is_stop_word</name></member>
+      <member refid="class_doc_parser_1a45860ee7fb0b956c4342cd4a815818de" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_file</name></member>
+      <member refid="class_doc_parser_1a48cd3949baca573b9be0b4ba24b9c79d" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_page</name></member>
+      <member refid="class_doc_parser_1af28153ebf0ee2fe97c2942c04c915adc" prot="public" virt="non-virtual"><scope>DocParser</scope><name>read_text</name></member>
+      <member refid="class_doc_parser_1a089705924f6a28afb59064526b4b7f4f" prot="private" virt="non-virtual"><scope>DocParser</scope><name>stopWords</name></member>
+      <member refid="class_doc_parser_1a637fc4d565eaf2927ee9b88bbe23e3cb" prot="public" virt="non-virtual"><scope>DocParser</scope><name>~DocParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

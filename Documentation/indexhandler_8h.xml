@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="indexhandler_8h" kind="file" language="C++">
+    <compoundname>indexhandler.h</compoundname>
+    <includes refid="avltreeinterface_8h" local="yes">avltreeinterface.h</includes>
+    <includes refid="hashtableindex_8h" local="yes">hashtableindex.h</includes>
+    <includes refid="hashtableinterface_8h" local="yes">hashtableinterface.h</includes>
+    <includes refid="indexinterface_8h" local="yes">indexinterface.h</includes>
+    <includes refid="queryprocessor_8h" local="yes">queryprocessor.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="avltreeinterface_8h" local="yes">avltreeinterface.h</includedby>
+    <includedby refid="indexhandler_8cpp" local="yes">indexhandler.cpp</includedby>
+    <includedby refid="interface_8h" local="yes">interface.h</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <incdepgraph>
+      <node id="481">
+        <label>term.h</label>
+        <link refid="term_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>indexinterface.h</label>
+        <link refid="indexinterface_8h"/>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>functional</label>
+      </node>
+      <node id="479">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>iterator</label>
+      </node>
+      <node id="450">
+        <label>indexhandler.h</label>
+        <link refid="indexhandler.h"/>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="487">
+        <label>hashtableinterface.h</label>
+        <link refid="hashtableinterface_8h"/>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>avltreeinterface.h</label>
+        <link refid="avltreeinterface_8h"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>cassert</label>
+      </node>
+      <node id="464">
+        <label>docparser.h</label>
+        <link refid="docparser_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>stdexcept</label>
+      </node>
+      <node id="470">
+        <label>rapidxml_print.hpp</label>
+        <link refid="rapidxml__print_8hpp"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>string</label>
+      </node>
+      <node id="469">
+        <label>exception</label>
+      </node>
+      <node id="454">
+        <label>fstream</label>
+      </node>
+      <node id="471">
+        <label>ostream</label>
+      </node>
+      <node id="465">
+        <label>rapidxml.hpp</label>
+        <link refid="rapidxml_8hpp"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>pageinfo.h</label>
+        <link refid="pageinfo_8h"/>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="473">
+        <label>rapidxml_utils.hpp</label>
+        <link refid="rapidxml__utils_8hpp"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>pthread.h</label>
+      </node>
+      <node id="488">
+        <label>queryprocessor.h</label>
+        <link refid="queryprocessor_8h"/>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+      </node>
+      <node id="484">
+        <label>cstdio</label>
+      </node>
+      <node id="462">
+        <label>vector</label>
+      </node>
+      <node id="468">
+        <label>new</label>
+      </node>
+      <node id="482">
+        <label>utility</label>
+      </node>
+      <node id="459">
+        <label>sstream</label>
+      </node>
+      <node id="486">
+        <label>termbucket.h</label>
+        <link refid="termbucket_8h"/>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>time.h</label>
+      </node>
+      <node id="457">
+        <label>math.h</label>
+      </node>
+      <node id="466">
+        <label>cstdlib</label>
+      </node>
+      <node id="485">
+        <label>hashtableindex.h</label>
+        <link refid="hashtableindex_8h"/>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>cctype</label>
+      </node>
+      <node id="456">
+        <label>iostream</label>
+      </node>
+      <node id="463">
+        <label>unordered_map</label>
+      </node>
+      <node id="483">
+        <label>avltreeindex.h</label>
+        <link refid="avltreeindex_8h"/>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>chrono</label>
+      </node>
+      <node id="461">
+        <label>thread</label>
+      </node>
+      <node id="453">
+        <label>algorithm</label>
+      </node>
+      <node id="478">
+        <label>porter2_stemmer.h</label>
+        <link refid="porter2__stemmer_8h"/>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="489">
+        <label>indexhandler.h</label>
+        <link refid="indexhandler.h"/>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+      </node>
+      <node id="490">
+        <label>avltreeinterface.h</label>
+        <link refid="avltreeinterface_8h"/>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+      <node id="495">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="491">
+        <label>avltreeinterface.cpp</label>
+        <link refid="avltreeinterface_8cpp"/>
+      </node>
+      <node id="494">
+        <label>interface.cpp</label>
+        <link refid="interface_8cpp"/>
+      </node>
+      <node id="493">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+      </node>
+      <node id="492">
+        <label>indexhandler.cpp</label>
+        <link refid="indexhandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_index_handler" prot="public">IndexHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INDEXHANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INDEXHANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="avltreeinterface_8h" kindref="compound">avltreeinterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtableindex_8h" kindref="compound">hashtableindex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtableinterface_8h" kindref="compound">hashtableinterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="indexinterface_8h" kindref="compound">indexinterface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queryprocessor_8h" kindref="compound">queryprocessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_index_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_index_handler" kindref="compound">IndexHandler</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_handler" kindref="compound">IndexHandler</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_index_handler" kindref="compound">IndexHandler</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_handler" kindref="compound">IndexHandler</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>asHashTable);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inits<sp/>all<sp/>PageInfo<sp/>objects<sp/>from<sp/>the<sp/>current<sp/>file.<sp/><sp/>Since<sp/>the<sp/>persistence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>file<sp/>has<sp/>already<sp/>been<sp/>written,<sp/>if<sp/>the<sp/>filePath<sp/>is<sp/>&quot;WikiBooks.xml&quot;,<sp/>it<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>instead<sp/>load<sp/>data<sp/>for<sp/>each<sp/>term<sp/>from<sp/>the<sp/>persistence<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read_file(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filePath);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>run_queries(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear_index();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="class_index_handler_1aa30663ff8e3b52b43ce35ebb2d12752c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_index_interface" kindref="compound">IndexInterface</ref>*<sp/><ref refid="class_index_handler_1aa30663ff8e3b52b43ce35ebb2d12752c" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>INDEXHANDLER_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/indexhandler.h"/>
+  </compounddef>
+</doxygen>

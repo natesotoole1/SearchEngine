@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="structrapidxml_1_1xml__document_1_1attribute__name__pred" kind="struct" language="C++" prot="private">
+    <compoundname>rapidxml::xml_document::attribute_name_pred</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structrapidxml_1_1xml__document_1_1attribute__name__pred_1a2cf003483847dfabcf0c83877818a4c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char rapidxml::xml_document&lt; Ch &gt;::attribute_name_pred::test</definition>
+        <argsstring>(Ch ch)</argsstring>
+        <name>test</name>
+        <param>
+          <type>Ch</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="1448" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="1448" bodyend="1451"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="1447" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="1446" bodyend="1452"/>
+    <listofallmembers>
+      <member refid="structrapidxml_1_1xml__document_1_1attribute__name__pred_1a2cf003483847dfabcf0c83877818a4c5" prot="public" virt="non-virtual"><scope>rapidxml::xml_document::attribute_name_pred</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,335 @@
+\hypertarget{class_interface}{}\section{Interface Class Reference}
+\label{class_interface}\index{Interface@{Interface}}
+
+
+\hyperlink{class_interface}{Interface} is the User \hyperlink{class_interface}{Interface}.  
+
+
+
+
+{\ttfamily \#include $<$interface.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a182ad83393eb72b7db55f0e65d4a0ad6}{choose\+\_\+structure} ()
+\begin{DoxyCompactList}\small\item\em allows the user before anything runs to choose the data structure \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a2c7d25d68192d1dd451be039922b2b46}{set\+\_\+mode} ()
+\begin{DoxyCompactList}\small\item\em gets either interactive or maintenance mode \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_ac7d71f89f09c5367e9d998291526acfc}{get\+\_\+command} ()
+\begin{DoxyCompactList}\small\item\em gets the command inputed \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_ae2e80336e351baf5c266bd85bb4f9281}{re\+\_\+command} ()
+\begin{DoxyCompactList}\small\item\em called when command is over and checks if person would like to perform another \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_aa1d2750e9c624107fcde02b8d69eb69a}{command} (string, string)
+\begin{DoxyCompactList}\small\item\em checks command for different modes \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a043b8fe5fb3a2ca4603c7592d8c7d0e2}{search} ()
+\begin{DoxyCompactList}\small\item\em gets the query from the user input \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a57532e2ede5d40e3595427f4129517b9}{run\+\_\+\+A\+V\+L} ()
+\begin{DoxyCompactList}\small\item\em creates A\+V\+L \hyperlink{class_interface}{Interface} \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a53dd2dc9fcb214f40b4031f7854cffe3}{run\+\_\+hash} ()
+\begin{DoxyCompactList}\small\item\em creates Hash \hyperlink{class_interface}{Interface} \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a7384173d1857ae65156b58913ec31d1c}{run\+\_\+maintenance} ()
+\begin{DoxyCompactList}\small\item\em if mode == 1, run maintenance mode \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_abf4ac54601aad5f8cb929a7649a8b935}{add\+\_\+file\+\_\+to\+\_\+index} (string)
+\begin{DoxyCompactList}\small\item\em add file to index with the given file path \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a19dbc4e711b5341ca2f81de689c6d5ee}{clear\+\_\+index} ()
+\begin{DoxyCompactList}\small\item\em clears index of whichever data struture is created \end{DoxyCompactList}\item 
+string \hyperlink{class_interface_ab1c8e554ab1de3e19c4bcd09682b701a}{to\+Lower\+Case} (string)
+\begin{DoxyCompactList}\small\item\em turns words to lower case \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a48828fb2f7d1ce9cc3fe8f8bcf1a87b7}{run\+\_\+interactive} ()
+\begin{DoxyCompactList}\small\item\em runs interactive mode with the ability to search run avl and hash table \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a7ba995236d529ab0aee1229eb94b793d}{quit} ()
+\begin{DoxyCompactList}\small\item\em called when person no longer wants to create commands \end{DoxyCompactList}\item 
+void \hyperlink{class_interface_a3c7464353b37ffe8962db67c421fe30a}{permission\+Denied} (string)
+\begin{DoxyCompactList}\small\item\em command invalid \end{DoxyCompactList}\item 
+string \hyperlink{class_interface_a2bee39caa585218f975c1310093dd124}{get\+\_\+file\+Path} ()
+\begin{DoxyCompactList}\small\item\em gets file path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{class_interface_a2dca5f7e2ddb5d7bf82c9eaf8f3a17eb}{wiki\+Path}
+\begin{DoxyCompactList}\small\item\em initializes wikibooks.\+xml as the initial path \end{DoxyCompactList}\item 
+int \hyperlink{class_interface_a272ffd81b79f689429ef27b6e8345fcf}{mode}
+\begin{DoxyCompactList}\small\item\em for setmode function \end{DoxyCompactList}\item 
+bool \hyperlink{class_interface_abd6ccab6c911d4beaaa8531036a92413}{built}
+\begin{DoxyCompactList}\small\item\em checks if index is built \end{DoxyCompactList}\item 
+bool \hyperlink{class_interface_acd8a62dd37c5774058cbaee915b0d9fe}{end\+Search}
+\begin{DoxyCompactList}\small\item\em ends search \end{DoxyCompactList}\item 
+bool \hyperlink{class_interface_a81680e55e0deb21de6e1c7d802ccf2b8}{end\+Program}
+\begin{DoxyCompactList}\small\item\em ends program \end{DoxyCompactList}\item 
+string \hyperlink{class_interface_a913b1344fae6395837321a94cc9f05dc}{ds\+Built}
+\item 
+string \hyperlink{class_interface_a1898f75ce60e62537678004d2dd5b627}{mode\+Str}
+\item 
+string \hyperlink{class_interface_a10aa4deaad9c9a974ae522771f95a274}{cmd}
+\item 
+string \hyperlink{class_interface_a6dd99aca069dbc1054642d4c855b2c42}{asr}
+\begin{DoxyCompactList}\small\item\em strings used during the command statements \end{DoxyCompactList}\item 
+\hyperlink{class_index_handler}{Index\+Handler} \hyperlink{class_interface_a596b02db00f1f13e0955444504c3752c}{handler}
+\begin{DoxyCompactList}\small\item\em called when the index is created \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_interface}{Interface} is the User \hyperlink{class_interface}{Interface}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}{}\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\subsubsection[{Interface}]{\setlength{\rightskip}{0pt plus 5cm}Interface\+::\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}
+
+
+constructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_interface_abf4ac54601aad5f8cb929a7649a8b935}{}\index{Interface@{Interface}!add\+\_\+file\+\_\+to\+\_\+index@{add\+\_\+file\+\_\+to\+\_\+index}}
+\index{add\+\_\+file\+\_\+to\+\_\+index@{add\+\_\+file\+\_\+to\+\_\+index}!Interface@{Interface}}
+\subsubsection[{add\+\_\+file\+\_\+to\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::add\+\_\+file\+\_\+to\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}\label{class_interface_abf4ac54601aad5f8cb929a7649a8b935}
+
+
+add file to index with the given file path 
+
+\hypertarget{class_interface_a182ad83393eb72b7db55f0e65d4a0ad6}{}\index{Interface@{Interface}!choose\+\_\+structure@{choose\+\_\+structure}}
+\index{choose\+\_\+structure@{choose\+\_\+structure}!Interface@{Interface}}
+\subsubsection[{choose\+\_\+structure}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::choose\+\_\+structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a182ad83393eb72b7db55f0e65d4a0ad6}
+
+
+allows the user before anything runs to choose the data structure 
+
+\hypertarget{class_interface_a19dbc4e711b5341ca2f81de689c6d5ee}{}\index{Interface@{Interface}!clear\+\_\+index@{clear\+\_\+index}}
+\index{clear\+\_\+index@{clear\+\_\+index}!Interface@{Interface}}
+\subsubsection[{clear\+\_\+index}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::clear\+\_\+index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a19dbc4e711b5341ca2f81de689c6d5ee}
+
+
+clears index of whichever data struture is created 
+
+\hypertarget{class_interface_aa1d2750e9c624107fcde02b8d69eb69a}{}\index{Interface@{Interface}!command@{command}}
+\index{command@{command}!Interface@{Interface}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::command (
+\begin{DoxyParamCaption}
+\item[{string}]{cmd, }
+\item[{string}]{asr}
+\end{DoxyParamCaption}
+)}\label{class_interface_aa1d2750e9c624107fcde02b8d69eb69a}
+
+
+checks command for different modes 
+
+\hypertarget{class_interface_ac7d71f89f09c5367e9d998291526acfc}{}\index{Interface@{Interface}!get\+\_\+command@{get\+\_\+command}}
+\index{get\+\_\+command@{get\+\_\+command}!Interface@{Interface}}
+\subsubsection[{get\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::get\+\_\+command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_ac7d71f89f09c5367e9d998291526acfc}
+
+
+gets the command inputed 
+
+\hypertarget{class_interface_a2bee39caa585218f975c1310093dd124}{}\index{Interface@{Interface}!get\+\_\+file\+Path@{get\+\_\+file\+Path}}
+\index{get\+\_\+file\+Path@{get\+\_\+file\+Path}!Interface@{Interface}}
+\subsubsection[{get\+\_\+file\+Path}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::get\+\_\+file\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a2bee39caa585218f975c1310093dd124}
+
+
+gets file path 
+
+\hypertarget{class_interface_a3c7464353b37ffe8962db67c421fe30a}{}\index{Interface@{Interface}!permission\+Denied@{permission\+Denied}}
+\index{permission\+Denied@{permission\+Denied}!Interface@{Interface}}
+\subsubsection[{permission\+Denied}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::permission\+Denied (
+\begin{DoxyParamCaption}
+\item[{string}]{w}
+\end{DoxyParamCaption}
+)}\label{class_interface_a3c7464353b37ffe8962db67c421fe30a}
+
+
+command invalid 
+
+\hypertarget{class_interface_a7ba995236d529ab0aee1229eb94b793d}{}\index{Interface@{Interface}!quit@{quit}}
+\index{quit@{quit}!Interface@{Interface}}
+\subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::quit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a7ba995236d529ab0aee1229eb94b793d}
+
+
+called when person no longer wants to create commands 
+
+\hypertarget{class_interface_ae2e80336e351baf5c266bd85bb4f9281}{}\index{Interface@{Interface}!re\+\_\+command@{re\+\_\+command}}
+\index{re\+\_\+command@{re\+\_\+command}!Interface@{Interface}}
+\subsubsection[{re\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::re\+\_\+command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_ae2e80336e351baf5c266bd85bb4f9281}
+
+
+called when command is over and checks if person would like to perform another 
+
+\hypertarget{class_interface_a57532e2ede5d40e3595427f4129517b9}{}\index{Interface@{Interface}!run\+\_\+\+A\+V\+L@{run\+\_\+\+A\+V\+L}}
+\index{run\+\_\+\+A\+V\+L@{run\+\_\+\+A\+V\+L}!Interface@{Interface}}
+\subsubsection[{run\+\_\+\+A\+V\+L}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::run\+\_\+\+A\+V\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a57532e2ede5d40e3595427f4129517b9}
+
+
+creates A\+V\+L \hyperlink{class_interface}{Interface} 
+
+\hypertarget{class_interface_a53dd2dc9fcb214f40b4031f7854cffe3}{}\index{Interface@{Interface}!run\+\_\+hash@{run\+\_\+hash}}
+\index{run\+\_\+hash@{run\+\_\+hash}!Interface@{Interface}}
+\subsubsection[{run\+\_\+hash}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::run\+\_\+hash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a53dd2dc9fcb214f40b4031f7854cffe3}
+
+
+creates Hash \hyperlink{class_interface}{Interface} 
+
+\hypertarget{class_interface_a48828fb2f7d1ce9cc3fe8f8bcf1a87b7}{}\index{Interface@{Interface}!run\+\_\+interactive@{run\+\_\+interactive}}
+\index{run\+\_\+interactive@{run\+\_\+interactive}!Interface@{Interface}}
+\subsubsection[{run\+\_\+interactive}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::run\+\_\+interactive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a48828fb2f7d1ce9cc3fe8f8bcf1a87b7}
+
+
+runs interactive mode with the ability to search run avl and hash table 
+
+\hypertarget{class_interface_a7384173d1857ae65156b58913ec31d1c}{}\index{Interface@{Interface}!run\+\_\+maintenance@{run\+\_\+maintenance}}
+\index{run\+\_\+maintenance@{run\+\_\+maintenance}!Interface@{Interface}}
+\subsubsection[{run\+\_\+maintenance}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::run\+\_\+maintenance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a7384173d1857ae65156b58913ec31d1c}
+
+
+if mode == 1, run maintenance mode 
+
+\hypertarget{class_interface_a043b8fe5fb3a2ca4603c7592d8c7d0e2}{}\index{Interface@{Interface}!search@{search}}
+\index{search@{search}!Interface@{Interface}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::search (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a043b8fe5fb3a2ca4603c7592d8c7d0e2}
+
+
+gets the query from the user input 
+
+\hypertarget{class_interface_a2c7d25d68192d1dd451be039922b2b46}{}\index{Interface@{Interface}!set\+\_\+mode@{set\+\_\+mode}}
+\index{set\+\_\+mode@{set\+\_\+mode}!Interface@{Interface}}
+\subsubsection[{set\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}void Interface\+::set\+\_\+mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interface_a2c7d25d68192d1dd451be039922b2b46}
+
+
+gets either interactive or maintenance mode 
+
+\hypertarget{class_interface_ab1c8e554ab1de3e19c4bcd09682b701a}{}\index{Interface@{Interface}!to\+Lower\+Case@{to\+Lower\+Case}}
+\index{to\+Lower\+Case@{to\+Lower\+Case}!Interface@{Interface}}
+\subsubsection[{to\+Lower\+Case}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::to\+Lower\+Case (
+\begin{DoxyParamCaption}
+\item[{string}]{w}
+\end{DoxyParamCaption}
+)}\label{class_interface_ab1c8e554ab1de3e19c4bcd09682b701a}
+
+
+turns words to lower case 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_interface_a6dd99aca069dbc1054642d4c855b2c42}{}\index{Interface@{Interface}!asr@{asr}}
+\index{asr@{asr}!Interface@{Interface}}
+\subsubsection[{asr}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::asr\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a6dd99aca069dbc1054642d4c855b2c42}
+
+
+strings used during the command statements 
+
+\hypertarget{class_interface_abd6ccab6c911d4beaaa8531036a92413}{}\index{Interface@{Interface}!built@{built}}
+\index{built@{built}!Interface@{Interface}}
+\subsubsection[{built}]{\setlength{\rightskip}{0pt plus 5cm}bool Interface\+::built\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_abd6ccab6c911d4beaaa8531036a92413}
+
+
+checks if index is built 
+
+\hypertarget{class_interface_a10aa4deaad9c9a974ae522771f95a274}{}\index{Interface@{Interface}!cmd@{cmd}}
+\index{cmd@{cmd}!Interface@{Interface}}
+\subsubsection[{cmd}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::cmd\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a10aa4deaad9c9a974ae522771f95a274}
+\hypertarget{class_interface_a913b1344fae6395837321a94cc9f05dc}{}\index{Interface@{Interface}!ds\+Built@{ds\+Built}}
+\index{ds\+Built@{ds\+Built}!Interface@{Interface}}
+\subsubsection[{ds\+Built}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::ds\+Built\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a913b1344fae6395837321a94cc9f05dc}
+\hypertarget{class_interface_a81680e55e0deb21de6e1c7d802ccf2b8}{}\index{Interface@{Interface}!end\+Program@{end\+Program}}
+\index{end\+Program@{end\+Program}!Interface@{Interface}}
+\subsubsection[{end\+Program}]{\setlength{\rightskip}{0pt plus 5cm}bool Interface\+::end\+Program\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a81680e55e0deb21de6e1c7d802ccf2b8}
+
+
+ends program 
+
+\hypertarget{class_interface_acd8a62dd37c5774058cbaee915b0d9fe}{}\index{Interface@{Interface}!end\+Search@{end\+Search}}
+\index{end\+Search@{end\+Search}!Interface@{Interface}}
+\subsubsection[{end\+Search}]{\setlength{\rightskip}{0pt plus 5cm}bool Interface\+::end\+Search\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_acd8a62dd37c5774058cbaee915b0d9fe}
+
+
+ends search 
+
+\hypertarget{class_interface_a596b02db00f1f13e0955444504c3752c}{}\index{Interface@{Interface}!handler@{handler}}
+\index{handler@{handler}!Interface@{Interface}}
+\subsubsection[{handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Index\+Handler} Interface\+::handler\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a596b02db00f1f13e0955444504c3752c}
+
+
+called when the index is created 
+
+\hypertarget{class_interface_a272ffd81b79f689429ef27b6e8345fcf}{}\index{Interface@{Interface}!mode@{mode}}
+\index{mode@{mode}!Interface@{Interface}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}int Interface\+::mode\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a272ffd81b79f689429ef27b6e8345fcf}
+
+
+for setmode function 
+
+\hypertarget{class_interface_a1898f75ce60e62537678004d2dd5b627}{}\index{Interface@{Interface}!mode\+Str@{mode\+Str}}
+\index{mode\+Str@{mode\+Str}!Interface@{Interface}}
+\subsubsection[{mode\+Str}]{\setlength{\rightskip}{0pt plus 5cm}string Interface\+::mode\+Str\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a1898f75ce60e62537678004d2dd5b627}
+\hypertarget{class_interface_a2dca5f7e2ddb5d7bf82c9eaf8f3a17eb}{}\index{Interface@{Interface}!wiki\+Path@{wiki\+Path}}
+\index{wiki\+Path@{wiki\+Path}!Interface@{Interface}}
+\subsubsection[{wiki\+Path}]{\setlength{\rightskip}{0pt plus 5cm}const string Interface\+::wiki\+Path\hspace{0.3cm}{\ttfamily [private]}}\label{class_interface_a2dca5f7e2ddb5d7bf82c9eaf8f3a17eb}
+
+
+initializes wikibooks.\+xml as the initial path 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_8h}{interface.\+h}\item 
+\hyperlink{interface_8cpp}{interface.\+cpp}\end{DoxyCompactItemize}

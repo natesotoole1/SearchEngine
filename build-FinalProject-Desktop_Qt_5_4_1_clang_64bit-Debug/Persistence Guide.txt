@@ -1,0 +1,8 @@
+All lines will have the form…
+! <Term name> <pageID> <freq> <pageID2> <freq2> …
+
+Example:
+! build 7 4
+! carrots 0 3 1 4 2 3
+
+There is one line for each term.

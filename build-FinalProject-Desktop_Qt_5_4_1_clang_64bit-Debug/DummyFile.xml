@@ -1,0 +1,214 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+    <siteinfo>
+        <sitename>Wikibooks</sitename>
+        <dbname>enwikibooks</dbname>
+        <base>http://en.wikibooks.org/wiki/Main_Page</base>
+        <generator>MediaWiki 1.25wmf20</generator>
+        <case>first-letter</case>
+        <namespaces>
+            <namespace key="-2" case="first-letter">Media</namespace>
+            <namespace key="-1" case="first-letter">Special</namespace>
+            <namespace key="0" case="first-letter" />
+            <namespace key="1" case="first-letter">Talk</namespace>
+            <namespace key="2" case="first-letter">User</namespace>
+            <namespace key="3" case="first-letter">User talk</namespace>
+            <namespace key="4" case="first-letter">Wikibooks</namespace>
+            <namespace key="5" case="first-letter">Wikibooks talk</namespace>
+            <namespace key="6" case="first-letter">File</namespace>
+            <namespace key="7" case="first-letter">File talk</namespace>
+            <namespace key="8" case="first-letter">MediaWiki</namespace>
+            <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+            <namespace key="10" case="first-letter">Template</namespace>
+            <namespace key="11" case="first-letter">Template talk</namespace>
+            <namespace key="12" case="first-letter">Help</namespace>
+            <namespace key="13" case="first-letter">Help talk</namespace>
+            <namespace key="14" case="first-letter">Category</namespace>
+            <namespace key="15" case="first-letter">Category talk</namespace>
+            <namespace key="102" case="first-letter">Cookbook</namespace>
+            <namespace key="103" case="first-letter">Cookbook talk</namespace>
+            <namespace key="108" case="first-letter">Transwiki</namespace>
+            <namespace key="109" case="first-letter">Transwiki talk</namespace>
+            <namespace key="110" case="first-letter">Wikijunior</namespace>
+            <namespace key="111" case="first-letter">Wikijunior talk</namespace>
+            <namespace key="112" case="first-letter">Subject</namespace>
+            <namespace key="113" case="first-letter">Subject talk</namespace>
+            <namespace key="828" case="first-letter">Module</namespace>
+            <namespace key="829" case="first-letter">Module talk</namespace>
+        </namespaces>
+    </siteinfo>
+    <page>
+        <title>Main Page</title>
+        <ns>0</ns>
+        <id>1</id>
+        <revision>
+            <id>2497805</id>
+            <parentid>2373587</parentid>
+            <timestamp>2013-03-06T15:30:54Z</timestamp>
+            <contributor>
+                <username>Pi zero</username>
+                <id>75960</id>
+            </contributor>
+            <comment>seems more appropriate</comment>
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text xml:space="preserve">&lt;div style=&quot;width:100%; margin:0px; padding:0px 5px 5px 5px;&quot;&gt;
+                &lt;div style=&quot;clear:both; text-align:center; font-size:95%; margin:0em 1em 0em 1em;&quot;&gt;
+                &lt;div id=&quot;mf-overview&quot;&gt;[[Wikibooks:Welcome|Overview]] •&lt;/div&gt;
+                [[Using Wikibooks]] •
+                [[Wikibooks:Reading room|Questions]] •
+                [[Help:Contents|Help]] •
+                [[Wikibooks:Card Catalog Office|Browse]]
+                &lt;/div&gt;
+                &lt;div style=&quot;width:50%; float:right; font-size:95%;&quot;&gt;
+                &lt;div style=&quot;float:right; width:30%;&quot;&gt;
+                * [[Subject:Science|Science]]
+                * [[Subject:Social sciences|Social sciences]]
+                * '''[[Subject:Books by subject|All subjects]]'''
+                &lt;/div&gt;
+                &lt;div style=&quot;float:right; width:30%;&quot;&gt;
+                * [[Subject:Languages|Languages]]
+                * [[Subject:Mathematics|Mathematics]]
+                * [[Subject:Miscellaneous|Miscellaneous]]
+                &lt;/div&gt;
+                &lt;div style=&quot;float:right; width:30%;&quot;&gt;
+                * [[Subject:Computing|Computing]]
+                * [[Subject:Engineering|Engineering]]
+                * [[Subject:Humanities|Humanities]]
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;width:40%; text-align:center;&quot;&gt;
+                &lt;div style=&quot;font-size:162%; padding:0.1em;&quot;&gt;[[Wikibooks:Welcome|Welcome]] to [[Wikibooks:What is Wikibooks|Wikibooks]],&lt;/div&gt;
+                &lt;div style=&quot;font-size:95%; margin-top:0.2em;&quot;&gt;the open-content textbooks collection that [[Help:Contributing|anyone can edit]].&lt;/div&gt;
+                &lt;div id=&quot;pagecount&quot; style=&quot;font-size:85%;&quot;&gt;[[Subject:Books by subject|{{formatnum:{{NUMBEROFBOOKS}}}} books]] with [[Special:Allpages|{{NUMBEROFARTICLES}} pages]]&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;clear:both; margin:25px 0px 0px 0px; padding:0px;&quot;&gt;
+                {| id=&quot;mp-content&quot; style=&quot;width:100%; border-spacing:10px 0px;&quot;
+                | style=&quot;width:33%; padding:10px; vertical-align:top; background-color:#ddddff;&quot; | {{:Main Page/Featured}}
+                | style=&quot;width:33%; padding:10px; vertical-align:top; background-color:#ddddff;&quot; | {{:Main Page/Wikijunior}}
+                | style=&quot;width:33%; padding:10px; vertical-align:top; background-color:#ddddff;&quot; | {{:Main Page/Recipe}}
+                |}
+                &lt;/div&gt;
+                &lt;/div&gt;
+                
+                {{:Main Page/Sisters}}
+                
+                [[Category:Main page| ]]</text>
+            <sha1>ls63cb69di8i31p5qikhx6xxot5jcfw</sha1>
+        </revision>
+    </page>
+    <page>
+        <title>User:Toby Bartels</title>
+        <ns>2</ns>
+        <id>3</id>
+        <revision>
+            <id>2010226</id>
+            <parentid>1312964</parentid>
+            <timestamp>2010-12-30T23:13:58Z</timestamp>
+            <contributor>
+                <username>Toby Bartels</username>
+                <id>4</id>
+            </contributor>
+            <minor />
+            <comment>Fix URI.</comment>
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text xml:space="preserve">I'm [http://tobybartels.name/ Toby Bartels].</text>
+            <sha1>0gkpggijneqw3uo8wpegsp3syggw049</sha1>
+        </revision>
+    </page>
+    <page>
+        <title>User:Schewek</title>
+        <ns>2</ns>
+        <id>4</id>
+        <revision>
+            <id>1747578</id>
+            <parentid>152202</parentid>
+            <timestamp>2010-03-31T02:54:23Z</timestamp>
+            <contributor>
+                <username>Schewek</username>
+                <id>5</id>
+            </contributor>
+            <minor />
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text xml:space="preserve">My interests here at the Textbook-Wiki are in the natural sciences.
+                
+                I made my prior wiki-experiences mainly as [http://de.wikipedia.org/wiki/Benutzer:Schewek Schewek at the German language Wikipedia].</text>
+            <sha1>4dskrnzouas0ypazmfcx6vw7xg5v1zl</sha1>
+        </revision>
+    </page>
+    <page>
+        <title>Organic Chemistry/Cover</title>
+        <ns>0</ns>
+        <id>5</id>
+        <revision>
+            <id>2247133</id>
+            <parentid>2247132</parentid>
+            <timestamp>2012-01-06T07:39:33Z</timestamp>
+            <contributor>
+                <username>QuiteUnusual</username>
+                <id>134830</id>
+            </contributor>
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text xml:space="preserve">&lt;center&gt;Welcome to the world's foremost open content&lt;br&gt;&lt;big&gt;&lt;big&gt;&lt;big&gt;'''Organic Chemistry Textbook'''&lt;/big&gt;&lt;/big&gt;&lt;/big&gt;&lt;br&gt;on the web!&lt;/center&gt;
+                
+                {| cellpadding=&quot;5&quot;
+                |-
+                | &lt;noinclude&gt;&lt;big&gt;'''[[Organic Chemistry|Go&amp;nbsp;to&amp;nbsp;contents&amp;nbsp;&gt;&gt;]]'''&lt;/big&gt; &lt;/noinclude&gt;
+                | [[Image:Ethane3D.png]]
+                | This '''free''' online text is intended to become a ''complete replacement'' for your printed book.
+                |}
+                
+                == The Study of Organic Chemistry ==
+                Organic chemistry is primarily devoted to the unique properties of the carbon atom and its compounds.  These compounds play a critical role in biology and ecology, Earth sciences and geology, physics, industry, medicine and &amp;mdash; of course &amp;mdash; chemistry.  At first glance, the new material that organic chemistry brings to the table may seem complicated and daunting, but all it takes is concentration and perseverance.  Millions of students before you have successfully passed this course and you can too!
+                
+                This field of chemistry is based less on formulas and more on reactions between various molecules under different conditions. Whereas a typical general chemistry question may ask a student to compute an answer with an equation from the chapter that they memorized, a more typical organic chemistry question is along the lines of &quot;what product will form when substance X is treated with solution Y and bombarded by light&quot;. The key to learning organic chemistry is to ''understand'' it rather than cram it in the night before a test.  It is all well and good to memorize the mechanism of Michael addition, but a superior accomplishment would be the ability to explain ''why'' such a reaction would take place.
+                
+                As in all things, it is easier to build up a body of new knowledge on a foundation of solid prior knowledge.  Students will be well served by much of the knowledge brought to this subject from the subject of [[General Chemistry]].  Concepts with particular importance to organic chemists are covalent bonding, Molecular Orbit theory, VSEPR Modeling, understanding acid/base chemistry vis-a-vis pKa values, and even trends of the periodic table.  This is by no means a comprehensive list of the knowledge you should have gained already in order to fully understand the subject of organic chemistry, but it should give you some idea of the things you need to know to succeed in an organic chemistry test or course.
+                
+                Organic Chemistry is one of the subjects which are varying useful and close to our daily life. We always try to figure out some of the unknown mysteries of our daily life through our factious  thinking habit, which generates superstitions. Through the help of chemistry we can help ourselves to get out of this kind of superstition.
+                We always try to find the ultimate truth through our own convenience. In the ancient past we had struggled to make things to go as per our need. In that context we have found fire, house, food, transportation, etc…
+                
+                Now the burning question is: &quot;how can chemistry help our daily life?&quot;  To find the answer of this questions, we have to know the subject thoroughly.  Let us start it from now.
+                
+                {{BookCat}}</text>
+            <sha1>iqg0y77ledcchyilr4y5k95bnmhfbma</sha1>
+        </revision>
+    </page>
+    <page>
+        <title>Organic Chemistry/Foundational concepts of organic chemistry</title>
+        <ns>0</ns>
+        <id>7</id>
+        <revision>
+            <id>1925731</id>
+            <parentid>1925728</parentid>
+            <timestamp>2010-09-02T06:08:27Z</timestamp>
+            <contributor>
+                <username>Jomegat</username>
+                <id>12605</id>
+            </contributor>
+            <minor />
+            <comment>Reverted edits by [[Special:Contributions/119.152.89.121|119.152.89.121]] ([[User talk:119.152.89.121|talk]]) to last revision by [[User:Whiteknight|Whiteknight]]</comment>
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text xml:space="preserve">The purpose of this section is to review topics from freshman [[General Chemistry|chemistry]] and build the foundation for further studies in organic chemistry.
+                
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/History of organic chemistry|History of organic chemistry]] {{stage short|100%|Jan 12, 2005}}
+                #[[Organic chemistry/Foundational concepts of organic chemistry/Atomic structure|Atomic structure]] {{stage short|100%|Jan 12, 2005}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Electronegativity|Electronegativity]] {{stage short|100%|April 28, 2006}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Bonding|Bonding]] {{stage short|100%|April 28, 2006}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Electron dot structures|Electron dot structures]] {{stage short|100%|April 28, 2006}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Visualization|Visualization]]{{stage short|75%|November 12, 2006}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Resonance|Resonance]] {{stage short|100%|April 28, 2006}}
+                #[[Organic Chemistry/Foundational concepts of organic chemistry/Acids and bases|Acids and bases]] {{stage short|100%|April 28, 2006}}
+                #[[Organic_Chemistry/Foundational_concepts_of_organic_chemistry/Nomenclature|Nomenclature]] {{stage short|100%|Nov 25, 2006}}
+                
+                ----
+                [[Image:Go To Organic Chemistry Contents .png]] | [[Organic Chemistry/Alkanes|Alkanes &gt;&gt;]]
+                
+                {{BookCat}}</text>
+            <sha1>13uxf6qw4x9wgkeiv8rva3vy3ftz8x9</sha1>
+        </revision>
+    </page>
+</mediawiki>

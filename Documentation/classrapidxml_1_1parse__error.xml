@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="classrapidxml_1_1parse__error" kind="class" language="C++" prot="public">
+    <compoundname>rapidxml::parse_error</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <includes refid="rapidxml_8hpp" local="no">rapidxml.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrapidxml_1_1parse__error_1a41bffadc72eec238cf4b7d14c10c16ca" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* rapidxml::parse_error::m_what</definition>
+        <argsstring></argsstring>
+        <name>m_what</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="101" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1parse__error_1aa5a164653ac347adddf47b264620d80f" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* rapidxml::parse_error::m_where</definition>
+        <argsstring></argsstring>
+        <name>m_where</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="102" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrapidxml_1_1parse__error_1aea12a301271c393fb627b368fb9f35c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::parse_error::parse_error</definition>
+        <argsstring>(const char *what, void *where)</argsstring>
+        <name>parse_error</name>
+        <param>
+          <type>const char *</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+<para>Constructs parse error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="77" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1parse__error_1a7665c88639e7466ee1de388a4f85e6fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* rapidxml::parse_error::what</definition>
+        <argsstring>() const </argsstring>
+        <name>what</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets human readable description of error. <simplesect kind="return"><para>Pointer to null terminated description of the error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="85" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1parse__error_1a3a0ab9e586c1d2b437c340f6622fbec6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Ch</type>
+          </param>
+        </templateparamlist>
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::parse_error::where</definition>
+        <argsstring>() const </argsstring>
+        <name>where</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets pointer to character data where error happened. Ch should be the same as char type of <ref refid="classrapidxml_1_1xml__document" kindref="compound">xml_document</ref> that produced the error. <simplesect kind="return"><para>Pointer to location within the parsed string where error occured. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="94" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Parse error exception. This exception is thrown by the parser when an error occurs. Use <ref refid="classrapidxml_1_1parse__error_1a7665c88639e7466ee1de388a4f85e6fe" kindref="member">what()</ref> function to get human-readable error message. Use <ref refid="classrapidxml_1_1parse__error_1a3a0ab9e586c1d2b437c340f6622fbec6" kindref="member">where()</ref> function to get a pointer to position within source text where error was detected. <linebreak/>
+<linebreak/>
+ If throwing exceptions by the parser is undesirable, it can be disabled by defining RAPIDXML_NO_EXCEPTIONS macro before <ref refid="rapidxml_8hpp" kindref="compound">rapidxml.hpp</ref> is included. This will cause the parser to call rapidxml::parse_error_handler() function instead of throwing an exception. This function must be defined by the user. <linebreak/>
+<linebreak/>
+ This class derives from <computeroutput>std::exception</computeroutput> class. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="96">
+        <label>std::exception</label>
+      </node>
+      <node id="95">
+        <label>rapidxml::parse_error</label>
+        <link refid="classrapidxml_1_1parse__error"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="98">
+        <label>std::exception</label>
+      </node>
+      <node id="97">
+        <label>rapidxml::parse_error</label>
+        <link refid="classrapidxml_1_1parse__error"/>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="72" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="71" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classrapidxml_1_1parse__error_1a41bffadc72eec238cf4b7d14c10c16ca" prot="private" virt="non-virtual"><scope>rapidxml::parse_error</scope><name>m_what</name></member>
+      <member refid="classrapidxml_1_1parse__error_1aa5a164653ac347adddf47b264620d80f" prot="private" virt="non-virtual"><scope>rapidxml::parse_error</scope><name>m_where</name></member>
+      <member refid="classrapidxml_1_1parse__error_1aea12a301271c393fb627b368fb9f35c1" prot="public" virt="non-virtual"><scope>rapidxml::parse_error</scope><name>parse_error</name></member>
+      <member refid="classrapidxml_1_1parse__error_1a7665c88639e7466ee1de388a4f85e6fe" prot="public" virt="virtual"><scope>rapidxml::parse_error</scope><name>what</name></member>
+      <member refid="classrapidxml_1_1parse__error_1a3a0ab9e586c1d2b437c340f6622fbec6" prot="public" virt="non-virtual"><scope>rapidxml::parse_error</scope><name>where</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

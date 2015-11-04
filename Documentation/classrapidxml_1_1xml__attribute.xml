@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="classrapidxml_1_1xml__attribute" kind="class" language="C++" prot="public">
+    <compoundname>rapidxml::xml_attribute</compoundname>
+    <basecompoundref refid="classrapidxml_1_1xml__base" prot="public" virt="non-virtual">rapidxml::xml_base&lt; Ch &gt;</basecompoundref>
+    <includes refid="rapidxml_8hpp" local="no">rapidxml.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>Ch</declname>
+        <defname>Ch</defname>
+        <defval>char</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classrapidxml_1_1xml__attribute_1aa7e464ce3fe512598ff8dda47291941f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class xml_node&lt; Ch &gt;</definition>
+        <argsstring></argsstring>
+        <name>xml_node&lt; Ch &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="788" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="801" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrapidxml_1_1xml__attribute_1a204438287a5ad384405584726a1d8559" prot="private" static="no" mutable="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>xml_attribute&lt;Ch&gt;* rapidxml::xml_attribute&lt; Ch &gt;::m_prev_attribute</definition>
+        <argsstring></argsstring>
+        <name>m_prev_attribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="873" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="873" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1xml__attribute_1a3254e4b040a9b71c6b6d1c27ec03352a" prot="private" static="no" mutable="no">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>xml_attribute&lt;Ch&gt;* rapidxml::xml_attribute&lt; Ch &gt;::m_next_attribute</definition>
+        <argsstring></argsstring>
+        <name>m_next_attribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="874" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="874" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrapidxml_1_1xml__attribute_1a26be291103917d3e8de110d46dd83816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rapidxml::xml_attribute&lt; Ch &gt;::xml_attribute</definition>
+        <argsstring>()</argsstring>
+        <name>xml_attribute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an empty attribute with the specified type. Consider using <ref refid="classrapidxml_1_1memory__pool" kindref="compound">memory_pool</ref> of appropriate <ref refid="classrapidxml_1_1xml__document" kindref="compound">xml_document</ref> if allocating attributes manually. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="810" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="810" bodyend="812"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__attribute_1a8b6d31d899e27f01bde35b53d98496ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1xml__document" kindref="compound">xml_document</ref>&lt; Ch &gt; *</type>
+        <definition>xml_document&lt;Ch&gt;* rapidxml::xml_attribute&lt; Ch &gt;::document</definition>
+        <argsstring>() const </argsstring>
+        <name>document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets document of which attribute is a child. <simplesect kind="return"><para>Pointer to document that contains this attribute, or 0 if there is no parent document. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="819" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="819" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__attribute_1ae3547cc30b201fd6d7b98c04dda26f89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>xml_attribute&lt;Ch&gt;* rapidxml::xml_attribute&lt; Ch &gt;::previous_attribute</definition>
+        <argsstring>(const Ch *name=0, std::size_t name_size=0, bool case_sensitive=true) const </argsstring>
+        <name>previous_attribute</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>name_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>case_sensitive</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets previous attribute, optionally matching attribute name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of attribute to find, or 0 to return previous attribute regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>case_sensitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to found attribute, or 0 if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="836" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="836" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__attribute_1a56c08d7c96203286c889a43849328a86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1xml__attribute" kindref="compound">xml_attribute</ref>&lt; Ch &gt; *</type>
+        <definition>xml_attribute&lt;Ch&gt;* rapidxml::xml_attribute&lt; Ch &gt;::next_attribute</definition>
+        <argsstring>(const Ch *name=0, std::size_t name_size=0, bool case_sensitive=true) const </argsstring>
+        <name>next_attribute</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>name_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>case_sensitive</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets next attribute, optionally matching attribute name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of attribute to find, or 0 to return next attribute regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>case_sensitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to found attribute, or 0 if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="856" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="856" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a9a09739310469995db078ebd0da3ed45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::xml_base&lt; Ch &gt;::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets name of the node. Interpretation of name depends on type of node. Note that name will not be zero-terminated if <ref refid="namespacerapidxml_1af3fc88ba6bee33482a2db81b1da36ea1" kindref="member">rapidxml::parse_no_string_terminators</ref> option was selected during parse. <linebreak/>
+<linebreak/>
+ Use <ref refid="classrapidxml_1_1xml__base_1a7e7f98b3d01e1eab8dc1ca69aad9af84" kindref="member">name_size()</ref> function to determine length of the name. <simplesect kind="return"><para>Name of node, or empty string if node has no name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="673" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="673" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rapidxml::xml_base&lt; Ch &gt;::name</definition>
+        <argsstring>(const Ch *name, std::size_t size)</argsstring>
+        <name>name</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets name of node to a non zero-terminated string. See ownership_of_strings. <linebreak/>
+<linebreak/>
+ Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use <ref refid="classrapidxml_1_1memory__pool" kindref="compound">memory_pool</ref> of the document to allocate the string - on destruction of the document the string will be automatically freed. <linebreak/>
+<linebreak/>
+ Size of name must be specified separately, because name does not have to be zero terminated. Use <ref refid="classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d" kindref="member">name(const Ch *)</ref> function to have the length automatically calculated (string must be zero terminated). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of node to set. Does not have to be zero terminated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of name, in characters. This does not include zero terminator, if one is present. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="721" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="721" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rapidxml::xml_base&lt; Ch &gt;::name</definition>
+        <argsstring>(const Ch *name)</argsstring>
+        <name>name</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets name of node to a zero-terminated string. See also ownership_of_strings and <ref refid="classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce" kindref="member">xml_node::name(const Ch *, std::size_t)</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of node to set. Must be zero terminated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="730" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="730" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a7e7f98b3d01e1eab8dc1ca69aad9af84" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t rapidxml::xml_base&lt; Ch &gt;::name_size</definition>
+        <argsstring>() const </argsstring>
+        <name>name_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets size of node name, not including terminator character. This function works correctly irrespective of whether name is or is not zero terminated. <simplesect kind="return"><para>Size of node name, in characters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="681" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="681" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1adcdaccff61c665f039d9344e447b7445" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::xml_base&lt; Ch &gt;::value</definition>
+        <argsstring>() const </argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets value of node. Interpretation of value depends on type of node. Note that value will not be zero-terminated if <ref refid="namespacerapidxml_1af3fc88ba6bee33482a2db81b1da36ea1" kindref="member">rapidxml::parse_no_string_terminators</ref> option was selected during parse. <linebreak/>
+<linebreak/>
+ Use <ref refid="classrapidxml_1_1xml__base_1a9fcf201ed0915ac18dd43b0b5dcfaf32" kindref="member">value_size()</ref> function to determine length of the value. <simplesect kind="return"><para>Value of node, or empty string if node has no value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="692" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="692" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rapidxml::xml_base&lt; Ch &gt;::value</definition>
+        <argsstring>(const Ch *value, std::size_t size)</argsstring>
+        <name>value</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets value of node to a non zero-terminated string. See ownership_of_strings. <linebreak/>
+<linebreak/>
+ Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use <ref refid="classrapidxml_1_1memory__pool" kindref="compound">memory_pool</ref> of the document to allocate the string - on destruction of the document the string will be automatically freed. <linebreak/>
+<linebreak/>
+ Size of value must be specified separately, because it does not have to be zero terminated. Use <ref refid="classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623" kindref="member">value(const Ch *)</ref> function to have the length automatically calculated (string must be zero terminated). <linebreak/>
+<linebreak/>
+ If an element has a child node of type node_data, it will take precedence over element value when printing. If you want to manipulate data of elements using values, use parser flag <ref refid="namespacerapidxml_1ac2d21ef14a4e8936b94aca5d38b1a74d" kindref="member">rapidxml::parse_no_data_nodes</ref> to prevent creation of data nodes by the parser. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of node to set. Does not have to be zero terminated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of value, in characters. This does not include zero terminator, if one is present. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="751" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="751" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rapidxml::xml_base&lt; Ch &gt;::value</definition>
+        <argsstring>(const Ch *value)</argsstring>
+        <name>value</name>
+        <param>
+          <type>const Ch *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets value of node to a zero-terminated string. See also ownership_of_strings and <ref refid="classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9" kindref="member">xml_node::value(const Ch *, std::size_t)</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vame of node to set. Must be zero terminated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="760" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="760" bodyend="763"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a9fcf201ed0915ac18dd43b0b5dcfaf32" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t rapidxml::xml_base&lt; Ch &gt;::value_size</definition>
+        <argsstring>() const </argsstring>
+        <name>value_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets size of node value, not including terminator character. This function works correctly irrespective of whether value is or is not zero terminated. <simplesect kind="return"><para>Size of node value, in characters. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="700" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="700" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1a7f31ae930f93852830234db1ae59c4c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt; Ch &gt; *</type>
+        <definition>xml_node&lt;Ch&gt;* rapidxml::xml_base&lt; Ch &gt;::parent</definition>
+        <argsstring>() const </argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets node parent. <simplesect kind="return"><para>Pointer to parent node, or 0 if there is no parent. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="770" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="770" bodyend="773"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classrapidxml_1_1xml__base_1afd9851ed43e14619db0d7075ef8e9e8a" prot="protected" static="no" mutable="no">
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::xml_base&lt; Ch &gt;::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="784" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="784" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1xml__base_1a278a1ea63b0b70219b946cec47fa00ea" prot="protected" static="no" mutable="no">
+        <type>Ch *</type>
+        <definition>Ch* rapidxml::xml_base&lt; Ch &gt;::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="785" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="785" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1xml__base_1a5a8c76a7274b4180213796422c4df76f" prot="protected" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t rapidxml::xml_base&lt; Ch &gt;::m_name_size</definition>
+        <argsstring></argsstring>
+        <name>m_name_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="786" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="786" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1xml__base_1aa3a49d8ceddb8a8d7edb773a2226b89c" prot="protected" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t rapidxml::xml_base&lt; Ch &gt;::m_value_size</definition>
+        <argsstring></argsstring>
+        <name>m_value_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="787" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="787" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrapidxml_1_1xml__base_1a90d5f660f078f66563fd7b2d8387ccb0" prot="protected" static="no" mutable="no">
+        <type><ref refid="classrapidxml_1_1xml__node" kindref="compound">xml_node</ref>&lt; Ch &gt; *</type>
+        <definition>xml_node&lt;Ch&gt;* rapidxml::xml_base&lt; Ch &gt;::m_parent</definition>
+        <argsstring></argsstring>
+        <name>m_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="788" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="788" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classrapidxml_1_1xml__base_1ad96ff6b1e41dab3ff60b9bc4df769a75" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Ch *</type>
+        <definition>static Ch* rapidxml::xml_base&lt; Ch &gt;::nullstr</definition>
+        <argsstring>()</argsstring>
+        <name>nullstr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="778" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="778" bodyend="782"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class representing attribute node of XML document. Each attribute has name and value strings, which are available through <ref refid="classrapidxml_1_1xml__base_1a9a09739310469995db078ebd0da3ed45" kindref="member">name()</ref> and <ref refid="classrapidxml_1_1xml__base_1adcdaccff61c665f039d9344e447b7445" kindref="member">value()</ref> functions (inherited from <ref refid="classrapidxml_1_1xml__base" kindref="compound">xml_base</ref>). Note that after parse, both name and value of attribute will point to interior of source text used for parsing. Thus, this text must persist in memory for the lifetime of attribute. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character type to use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="129">
+        <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__attribute"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>rapidxml::xml_base&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="131">
+        <label>rapidxml::xml_attribute&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__attribute"/>
+        <childnode refid="132" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>rapidxml::xml_base&lt; Ch &gt;</label>
+        <link refid="classrapidxml_1_1xml__base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" line="138" column="1" bodyfile="/Users/NateOToole/FinalProject/FinalProject/rapidxml.hpp" bodystart="138" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classrapidxml_1_1xml__attribute_1a8b6d31d899e27f01bde35b53d98496ec" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>document</name></member>
+      <member refid="classrapidxml_1_1xml__base_1afd9851ed43e14619db0d7075ef8e9e8a" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_name</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a5a8c76a7274b4180213796422c4df76f" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_name_size</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1a3254e4b040a9b71c6b6d1c27ec03352a" prot="private" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_next_attribute</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a90d5f660f078f66563fd7b2d8387ccb0" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_parent</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1a204438287a5ad384405584726a1d8559" prot="private" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_prev_attribute</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a278a1ea63b0b70219b946cec47fa00ea" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_value</name></member>
+      <member refid="classrapidxml_1_1xml__base_1aa3a49d8ceddb8a8d7edb773a2226b89c" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>m_value_size</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a9a09739310469995db078ebd0da3ed45" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>name</name></member>
+      <member refid="classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>name</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>name</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a7e7f98b3d01e1eab8dc1ca69aad9af84" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>name_size</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1a56c08d7c96203286c889a43849328a86" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>next_attribute</name></member>
+      <member refid="classrapidxml_1_1xml__base_1ad96ff6b1e41dab3ff60b9bc4df769a75" prot="protected" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>nullstr</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a7f31ae930f93852830234db1ae59c4c4" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>parent</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1ae3547cc30b201fd6d7b98c04dda26f89" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>previous_attribute</name></member>
+      <member refid="classrapidxml_1_1xml__base_1adcdaccff61c665f039d9344e447b7445" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>value</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>value</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>value</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a9fcf201ed0915ac18dd43b0b5dcfaf32" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>value_size</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1a26be291103917d3e8de110d46dd83816" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>xml_attribute</name></member>
+      <member refid="classrapidxml_1_1xml__base_1a23e7f7aac02d17a0a01afb597e4b966b" prot="public" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>xml_base</name></member>
+      <member refid="classrapidxml_1_1xml__attribute_1aa7e464ce3fe512598ff8dda47291941f" prot="private" virt="non-virtual"><scope>rapidxml::xml_attribute</scope><name>xml_node&lt; Ch &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="pageinfo_8h" kind="file" language="C++">
+    <compoundname>pageinfo.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="docparser_8h" local="yes">docparser.h</includedby>
+    <includedby refid="indexinterface_8h" local="yes">indexinterface.h</includedby>
+    <includedby refid="pageinfo_8cpp" local="yes">pageinfo.cpp</includedby>
+    <incdepgraph>
+      <node id="718">
+        <label>string</label>
+      </node>
+      <node id="717">
+        <label>pageinfo.h</label>
+        <link refid="pageinfo.h"/>
+        <childnode refid="718" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="731">
+        <label>term.h</label>
+        <link refid="term_8h"/>
+        <childnode refid="721" relation="include">
+        </childnode>
+        <childnode refid="722" relation="include">
+        </childnode>
+        <childnode refid="732" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+        <childnode refid="740" relation="include">
+        </childnode>
+      </node>
+      <node id="721">
+        <label>indexinterface.h</label>
+        <link refid="indexinterface_8h"/>
+        <childnode refid="722" relation="include">
+        </childnode>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="731" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+        <childnode refid="741" relation="include">
+        </childnode>
+      </node>
+      <node id="726">
+        <label>indexhandler.h</label>
+        <link refid="indexhandler_8h"/>
+        <childnode refid="724" relation="include">
+        </childnode>
+        <childnode refid="727" relation="include">
+        </childnode>
+        <childnode refid="728" relation="include">
+        </childnode>
+        <childnode refid="730" relation="include">
+        </childnode>
+      </node>
+      <node id="733">
+        <label>hashtableinterface.h</label>
+        <link refid="hashtableinterface_8h"/>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="734" relation="include">
+        </childnode>
+      </node>
+      <node id="724">
+        <label>avltreeinterface.h</label>
+        <link refid="avltreeinterface_8h"/>
+        <childnode refid="725" relation="include">
+        </childnode>
+        <childnode refid="726" relation="include">
+        </childnode>
+      </node>
+      <node id="743">
+        <label>pageinfo.cpp</label>
+        <link refid="pageinfo_8cpp"/>
+      </node>
+      <node id="740">
+        <label>term.cpp</label>
+        <link refid="term_8cpp"/>
+      </node>
+      <node id="730">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="720">
+        <label>docparser.h</label>
+        <link refid="docparser_8h"/>
+        <childnode refid="721" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="742" relation="include">
+        </childnode>
+      </node>
+      <node id="742">
+        <label>docparser.cpp</label>
+        <link refid="docparser_8cpp"/>
+      </node>
+      <node id="737">
+        <label>termbucket.cpp</label>
+        <link refid="termbucket_8cpp"/>
+      </node>
+      <node id="719">
+        <label>pageinfo.h</label>
+        <link refid="pageinfo.h"/>
+        <childnode refid="720" relation="include">
+        </childnode>
+        <childnode refid="721" relation="include">
+        </childnode>
+        <childnode refid="743" relation="include">
+        </childnode>
+      </node>
+      <node id="734">
+        <label>hashtableinterface.cpp</label>
+        <link refid="hashtableinterface_8cpp"/>
+      </node>
+      <node id="725">
+        <label>avltreeinterface.cpp</label>
+        <link refid="avltreeinterface_8cpp"/>
+      </node>
+      <node id="738">
+        <label>queryprocessor.h</label>
+        <link refid="queryprocessor_8h"/>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="728" relation="include">
+        </childnode>
+        <childnode refid="739" relation="include">
+        </childnode>
+      </node>
+      <node id="729">
+        <label>interface.cpp</label>
+        <link refid="interface_8cpp"/>
+      </node>
+      <node id="741">
+        <label>indexinterface.cpp</label>
+        <link refid="indexinterface_8cpp"/>
+      </node>
+      <node id="736">
+        <label>termbucket.h</label>
+        <link refid="termbucket_8h"/>
+        <childnode refid="732" relation="include">
+        </childnode>
+        <childnode refid="737" relation="include">
+        </childnode>
+      </node>
+      <node id="728">
+        <label>interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="729" relation="include">
+        </childnode>
+        <childnode refid="730" relation="include">
+        </childnode>
+      </node>
+      <node id="723">
+        <label>avltreeindex.cpp</label>
+        <link refid="avltreeindex_8cpp"/>
+      </node>
+      <node id="732">
+        <label>hashtableindex.h</label>
+        <link refid="hashtableindex_8h"/>
+        <childnode refid="726" relation="include">
+        </childnode>
+        <childnode refid="733" relation="include">
+        </childnode>
+        <childnode refid="735" relation="include">
+        </childnode>
+      </node>
+      <node id="727">
+        <label>indexhandler.cpp</label>
+        <link refid="indexhandler_8cpp"/>
+      </node>
+      <node id="739">
+        <label>queryprocessor.cpp</label>
+        <link refid="queryprocessor_8cpp"/>
+      </node>
+      <node id="722">
+        <label>avltreeindex.h</label>
+        <link refid="avltreeindex_8h"/>
+        <childnode refid="723" relation="include">
+        </childnode>
+        <childnode refid="724" relation="include">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>hashtableindex.cpp</label>
+        <link refid="hashtableindex_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_page_info" prot="public">PageInfo</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PAGEINFO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAGEINFO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_page_info" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_page_info" kindref="compound">PageInfo</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_page_info" kindref="compound">PageInfo</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_page_info" kindref="compound">PageInfo</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_page_info" kindref="compound">PageInfo</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theContent,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theContributor,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theTimestamp,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theTitle);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>get_content();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>get_contributor();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>get_timestamp();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>get_title();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_totalWords();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_content(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theContent);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_contributor(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theInfo);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_timestamp(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theTimestamp);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_title(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>theTitle);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>incr_totalWords(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>incr);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_totalWords(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>theTotal);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_page_info_1a41470b013a300fe2ba52c7caae33e7b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_page_info_1a41470b013a300fe2ba52c7caae33e7b3" kindref="member">content</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_page_info_1ab82a31135a4d68130b132fcf0503b317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_page_info_1ab82a31135a4d68130b132fcf0503b317" kindref="member">contributorNameOrIP</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_page_info_1a10e7ce551d454c4bf3ca50c4cad5496b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_page_info_1a10e7ce551d454c4bf3ca50c4cad5496b" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_page_info_1adc9cfe7cc103f083fab4f3575eb073e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_page_info_1adc9cfe7cc103f083fab4f3575eb073e1" kindref="member">title</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_page_info_1aca7e985b3d5879e5bbe030b63a523393" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_page_info_1aca7e985b3d5879e5bbe030b63a523393" kindref="member">totalWords</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>PAGEINFO_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/NateOToole/FinalProject/FinalProject/pageinfo.h"/>
+  </compounddef>
+</doxygen>

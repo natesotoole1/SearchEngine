@@ -1,0 +1,211 @@
+\hypertarget{class_term}{}\section{Term Class Reference}
+\label{class_term}\index{Term@{Term}}
+
+
+\hyperlink{class_term}{Term} creates the terms for the persistent index creates a page map of aprns to get relevancy.  
+
+
+
+
+{\ttfamily \#include $<$term.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_term_a6943005db5b7e5ca84afcb54a5862d42}{Term} ()
+\item 
+\hyperlink{class_term_af684aafab11ec6442aed0866b4973afc}{$\sim$\+Term} ()
+\item 
+\hyperlink{class_term_aa67dd812957ad124bb6306960dd8709c}{Term} (string the\+Name)
+\item 
+\hyperlink{class_term_ae97a04d16b87ac6bebe1057481f962c8}{Term} (string the\+Name, \hyperlink{avltreeinterface_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map} \&the\+Aprns)
+\item 
+void \hyperlink{class_term_a30b1bfc816bf5a495937476bf56fd567}{add\+\_\+page\+Aprn} (int freq, int page\+I\+D)
+\item 
+void \hyperlink{class_term_a2cd7415c99700d9b038517207e1d2738}{init\+\_\+spread\+\_\+and\+\_\+total\+Freq} ()
+\item 
+void \hyperlink{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}{init\+\_\+tdidfs} (\hyperlink{class_index_interface}{Index\+Interface} \&index)
+\item 
+void \hyperlink{class_term_a40b76759d6a08c027142527f86d85256}{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D} (int curr\+I\+D)
+\item 
+\hyperlink{avltreeinterface_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map} \hyperlink{class_term_a3f33daab2cf50371f191c75656aabb66}{get\+\_\+page\+Aprns} ()
+\item 
+string \hyperlink{class_term_aba11aacf87334a460aae98148699dc46}{get\+\_\+name} ()
+\item 
+\hyperlink{class_term}{Term} $\ast$ \hyperlink{class_term_a94ed9995429f2c6fd6d0b9556cc61ff7}{get\+\_\+next} ()
+\item 
+int \hyperlink{class_term_a3b708fc85a3b272d67558600711aca05}{get\+\_\+spread} ()
+\item 
+int \hyperlink{class_term_a41a8474eb94c1e2e951d23fe164aecd6}{get\+\_\+total\+Freq} ()
+\item 
+double \hyperlink{class_term_aae2effee196de73962a33d85aeca914c}{get\+\_\+tdidf\+\_\+for\+\_\+page} (int page\+I\+D)
+\item 
+void \hyperlink{class_term_a2f963514bfacc52e654c94793e25e3d4}{set\+\_\+next} (\hyperlink{class_term}{Term} $\ast$the\+Next)
+\item 
+void \hyperlink{class_term_ae0e0bd5c7411fa03aeb2c92464dd921b}{write\+\_\+term} (ofstream \&persistence)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{avltreeinterface_8h_afdba5c4962a1c0abdda6ca3e414a9a45}{page\+Map} \hyperlink{class_term_a8e3efcdc519a46da74930a8a4dba9398}{page\+Aprns}
+\item 
+string \hyperlink{class_term_a1ea7886ca15ad219ce8751bc30099483}{name}
+\item 
+\hyperlink{class_term}{Term} $\ast$ \hyperlink{class_term_a32dadebc2046b21eb097d56795a977a4}{next}
+\item 
+int \hyperlink{class_term_abb3f8b30ce0f7cb8a64b84084b822e43}{spread}
+\item 
+\hyperlink{term_8h_af4400159d8a0a2894541b3d38edabf6c}{tdidf\+Map} \hyperlink{class_term_a8a6d9637da60e1200bb91b5108c601b5}{tdidfs}
+\item 
+int \hyperlink{class_term_a075587aedd4009c7c207dc3fdd5b33cd}{total\+Freq}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_term}{Term} creates the terms for the persistent index creates a page map of aprns to get relevancy. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_term_a6943005db5b7e5ca84afcb54a5862d42}{}\index{Term@{Term}!Term@{Term}}
+\index{Term@{Term}!Term@{Term}}
+\subsubsection[{Term}]{\setlength{\rightskip}{0pt plus 5cm}Term\+::\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a6943005db5b7e5ca84afcb54a5862d42}
+\hypertarget{class_term_af684aafab11ec6442aed0866b4973afc}{}\index{Term@{Term}!````~Term@{$\sim$\+Term}}
+\index{````~Term@{$\sim$\+Term}!Term@{Term}}
+\subsubsection[{$\sim$\+Term}]{\setlength{\rightskip}{0pt plus 5cm}Term\+::$\sim$\+Term (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_af684aafab11ec6442aed0866b4973afc}
+\hypertarget{class_term_aa67dd812957ad124bb6306960dd8709c}{}\index{Term@{Term}!Term@{Term}}
+\index{Term@{Term}!Term@{Term}}
+\subsubsection[{Term}]{\setlength{\rightskip}{0pt plus 5cm}Term\+::\+Term (
+\begin{DoxyParamCaption}
+\item[{string}]{the\+Name}
+\end{DoxyParamCaption}
+)}\label{class_term_aa67dd812957ad124bb6306960dd8709c}
+\hypertarget{class_term_ae97a04d16b87ac6bebe1057481f962c8}{}\index{Term@{Term}!Term@{Term}}
+\index{Term@{Term}!Term@{Term}}
+\subsubsection[{Term}]{\setlength{\rightskip}{0pt plus 5cm}Term\+::\+Term (
+\begin{DoxyParamCaption}
+\item[{string}]{the\+Name, }
+\item[{{\bf page\+Map} \&}]{the\+Aprns}
+\end{DoxyParamCaption}
+)}\label{class_term_ae97a04d16b87ac6bebe1057481f962c8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_term_a30b1bfc816bf5a495937476bf56fd567}{}\index{Term@{Term}!add\+\_\+page\+Aprn@{add\+\_\+page\+Aprn}}
+\index{add\+\_\+page\+Aprn@{add\+\_\+page\+Aprn}!Term@{Term}}
+\subsubsection[{add\+\_\+page\+Aprn}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::add\+\_\+page\+Aprn (
+\begin{DoxyParamCaption}
+\item[{int}]{freq, }
+\item[{int}]{page\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_term_a30b1bfc816bf5a495937476bf56fd567}
+\hypertarget{class_term_aba11aacf87334a460aae98148699dc46}{}\index{Term@{Term}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!Term@{Term}}
+\subsubsection[{get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}string Term\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_aba11aacf87334a460aae98148699dc46}
+\hypertarget{class_term_a94ed9995429f2c6fd6d0b9556cc61ff7}{}\index{Term@{Term}!get\+\_\+next@{get\+\_\+next}}
+\index{get\+\_\+next@{get\+\_\+next}!Term@{Term}}
+\subsubsection[{get\+\_\+next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Term} $\ast$ Term\+::get\+\_\+next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a94ed9995429f2c6fd6d0b9556cc61ff7}
+\hypertarget{class_term_a3f33daab2cf50371f191c75656aabb66}{}\index{Term@{Term}!get\+\_\+page\+Aprns@{get\+\_\+page\+Aprns}}
+\index{get\+\_\+page\+Aprns@{get\+\_\+page\+Aprns}!Term@{Term}}
+\subsubsection[{get\+\_\+page\+Aprns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+Map} Term\+::get\+\_\+page\+Aprns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a3f33daab2cf50371f191c75656aabb66}
+\hypertarget{class_term_a3b708fc85a3b272d67558600711aca05}{}\index{Term@{Term}!get\+\_\+spread@{get\+\_\+spread}}
+\index{get\+\_\+spread@{get\+\_\+spread}!Term@{Term}}
+\subsubsection[{get\+\_\+spread}]{\setlength{\rightskip}{0pt plus 5cm}int Term\+::get\+\_\+spread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a3b708fc85a3b272d67558600711aca05}
+\hypertarget{class_term_aae2effee196de73962a33d85aeca914c}{}\index{Term@{Term}!get\+\_\+tdidf\+\_\+for\+\_\+page@{get\+\_\+tdidf\+\_\+for\+\_\+page}}
+\index{get\+\_\+tdidf\+\_\+for\+\_\+page@{get\+\_\+tdidf\+\_\+for\+\_\+page}!Term@{Term}}
+\subsubsection[{get\+\_\+tdidf\+\_\+for\+\_\+page}]{\setlength{\rightskip}{0pt plus 5cm}double Term\+::get\+\_\+tdidf\+\_\+for\+\_\+page (
+\begin{DoxyParamCaption}
+\item[{int}]{page\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_term_aae2effee196de73962a33d85aeca914c}
+\hypertarget{class_term_a41a8474eb94c1e2e951d23fe164aecd6}{}\index{Term@{Term}!get\+\_\+total\+Freq@{get\+\_\+total\+Freq}}
+\index{get\+\_\+total\+Freq@{get\+\_\+total\+Freq}!Term@{Term}}
+\subsubsection[{get\+\_\+total\+Freq}]{\setlength{\rightskip}{0pt plus 5cm}int Term\+::get\+\_\+total\+Freq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a41a8474eb94c1e2e951d23fe164aecd6}
+\hypertarget{class_term_a40b76759d6a08c027142527f86d85256}{}\index{Term@{Term}!incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D@{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}}
+\index{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D@{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}!Term@{Term}}
+\subsubsection[{incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::incrm\+\_\+aprn\+\_\+for\+\_\+page\+I\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{curr\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_term_a40b76759d6a08c027142527f86d85256}
+\hypertarget{class_term_a2cd7415c99700d9b038517207e1d2738}{}\index{Term@{Term}!init\+\_\+spread\+\_\+and\+\_\+total\+Freq@{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}}
+\index{init\+\_\+spread\+\_\+and\+\_\+total\+Freq@{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}!Term@{Term}}
+\subsubsection[{init\+\_\+spread\+\_\+and\+\_\+total\+Freq}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::init\+\_\+spread\+\_\+and\+\_\+total\+Freq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_term_a2cd7415c99700d9b038517207e1d2738}
+\hypertarget{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}{}\index{Term@{Term}!init\+\_\+tdidfs@{init\+\_\+tdidfs}}
+\index{init\+\_\+tdidfs@{init\+\_\+tdidfs}!Term@{Term}}
+\subsubsection[{init\+\_\+tdidfs}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::init\+\_\+tdidfs (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Interface} \&}]{index}
+\end{DoxyParamCaption}
+)}\label{class_term_a3a48a3273c4bb8755c4623efbf3ebf51}
+\hypertarget{class_term_a2f963514bfacc52e654c94793e25e3d4}{}\index{Term@{Term}!set\+\_\+next@{set\+\_\+next}}
+\index{set\+\_\+next@{set\+\_\+next}!Term@{Term}}
+\subsubsection[{set\+\_\+next}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::set\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{{\bf Term} $\ast$}]{the\+Next}
+\end{DoxyParamCaption}
+)}\label{class_term_a2f963514bfacc52e654c94793e25e3d4}
+\hypertarget{class_term_ae0e0bd5c7411fa03aeb2c92464dd921b}{}\index{Term@{Term}!write\+\_\+term@{write\+\_\+term}}
+\index{write\+\_\+term@{write\+\_\+term}!Term@{Term}}
+\subsubsection[{write\+\_\+term}]{\setlength{\rightskip}{0pt plus 5cm}void Term\+::write\+\_\+term (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{persistence}
+\end{DoxyParamCaption}
+)}\label{class_term_ae0e0bd5c7411fa03aeb2c92464dd921b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_term_a1ea7886ca15ad219ce8751bc30099483}{}\index{Term@{Term}!name@{name}}
+\index{name@{name}!Term@{Term}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string Term\+::name\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_a1ea7886ca15ad219ce8751bc30099483}
+\hypertarget{class_term_a32dadebc2046b21eb097d56795a977a4}{}\index{Term@{Term}!next@{next}}
+\index{next@{next}!Term@{Term}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Term}$\ast$ Term\+::next\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_a32dadebc2046b21eb097d56795a977a4}
+\hypertarget{class_term_a8e3efcdc519a46da74930a8a4dba9398}{}\index{Term@{Term}!page\+Aprns@{page\+Aprns}}
+\index{page\+Aprns@{page\+Aprns}!Term@{Term}}
+\subsubsection[{page\+Aprns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf page\+Map} Term\+::page\+Aprns\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_a8e3efcdc519a46da74930a8a4dba9398}
+\hypertarget{class_term_abb3f8b30ce0f7cb8a64b84084b822e43}{}\index{Term@{Term}!spread@{spread}}
+\index{spread@{spread}!Term@{Term}}
+\subsubsection[{spread}]{\setlength{\rightskip}{0pt plus 5cm}int Term\+::spread\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_abb3f8b30ce0f7cb8a64b84084b822e43}
+\hypertarget{class_term_a8a6d9637da60e1200bb91b5108c601b5}{}\index{Term@{Term}!tdidfs@{tdidfs}}
+\index{tdidfs@{tdidfs}!Term@{Term}}
+\subsubsection[{tdidfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tdidf\+Map} Term\+::tdidfs\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_a8a6d9637da60e1200bb91b5108c601b5}
+\hypertarget{class_term_a075587aedd4009c7c207dc3fdd5b33cd}{}\index{Term@{Term}!total\+Freq@{total\+Freq}}
+\index{total\+Freq@{total\+Freq}!Term@{Term}}
+\subsubsection[{total\+Freq}]{\setlength{\rightskip}{0pt plus 5cm}int Term\+::total\+Freq\hspace{0.3cm}{\ttfamily [private]}}\label{class_term_a075587aedd4009c7c207dc3fdd5b33cd}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term_8h}{term.\+h}\item 
+\hyperlink{term_8cpp}{term.\+cpp}\end{DoxyCompactItemize}

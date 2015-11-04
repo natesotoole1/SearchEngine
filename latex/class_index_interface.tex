@@ -1,0 +1,256 @@
+\hypertarget{class_index_interface}{}\section{Index\+Interface Class Reference}
+\label{class_index_interface}\index{Index\+Interface@{Index\+Interface}}
+
+
+A\+V\+L Node implementation for the A\+V\+L Tree structure.  
+
+
+
+
+{\ttfamily \#include $<$indexinterface.\+h$>$}
+
+Inheritance diagram for Index\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_index_interface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_index_interface_a7b1e7eae7faa652d2f63efeecf0ca2de}{Index\+Interface} ()
+\item 
+\hyperlink{class_index_interface_a3927fabe77a7da5845dc0495b2c1c2b2}{$\sim$\+Index\+Interface} ()
+\item 
+void \hyperlink{class_index_interface_a7f082789ce91eaaacc10a5c841b62cd4}{append\+\_\+page\+\_\+info} (\hyperlink{class_page_info}{Page\+Info} $\ast$curr\+Info)
+\item 
+double \hyperlink{class_index_interface_a8195aee88cd593c2e6ca2e2c48cbd068}{calc\+\_\+tdidf} (int page\+I\+D, int freq, int spread)
+\item 
+void \hyperlink{class_index_interface_a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa}{display\+\_\+result} (int rank, int page\+I\+D, double tdidf)
+\item 
+void \hyperlink{class_index_interface_a3d784385e028557312ef15d59574f9ed}{display\+\_\+page\+\_\+content} (int page\+I\+D)
+\item 
+void \hyperlink{class_index_interface_a5734b1488a787d47984bf97ffa5aff8d}{incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page} (int curr\+I\+D, int incr)
+\item 
+void \hyperlink{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}{read\+\_\+file} (string file\+Path)
+\item 
+void \hyperlink{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{read\+\_\+persistence\+\_\+files} ()
+\item 
+void \hyperlink{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{read\+\_\+pers\+\_\+file} (int index)
+\item 
+virtual void \hyperlink{class_index_interface_aa83b7083d107869e3519c5862bc71d0a}{add\+\_\+term\+\_\+to\+\_\+ii} (int letter\+Index, \hyperlink{class_term}{Term} $\ast$term)
+\item 
+virtual void \hyperlink{class_index_interface_ad7b88501f360ccfad0c1ee08d793ca25}{clear} ()
+\item 
+virtual \hyperlink{class_term}{Term} $\ast$ \hyperlink{class_index_interface_a851f0396f0b390cc9aa8cde270afffc9}{find\+\_\+term} (string term)
+\item 
+virtual void \hyperlink{class_index_interface_a0b4ec5fcc32c08959cffad3a3141dd4e}{write\+\_\+persistence\+\_\+files} ()
+\item 
+int \hyperlink{class_index_interface_a9a7539d9c7a48bf4d4fbe43961c0547f}{index\+\_\+for\+\_\+letter} (char letter)
+\item 
+\hyperlink{class_page_info}{Page\+Info} $\ast$ \hyperlink{class_index_interface_a2af7d88c3b2701be9164ba9f4a3bddb3}{info\+\_\+for\+\_\+page\+I\+D} (int page\+I\+D)
+\item 
+int \hyperlink{class_index_interface_a8a0132ad6e84c4340061496c615f581c}{get\+\_\+total\+Words\+In\+Corpus} ()
+\item 
+int \hyperlink{class_index_interface_af9edc24ac00bdf2c0e06384f890a1d8a}{get\+\_\+total\+Pages} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{ext} = \char`\"{}.txt\char`\"{}
+\item 
+\hyperlink{class_hash_table_index}{Hash\+Table\+Index} $\ast$ \hyperlink{class_index_interface_a8511509bb58da989f705ba75fd5dde2d}{letters}
+\item 
+vector$<$ \hyperlink{class_page_info}{Page\+Info} $\ast$ $>$ \hyperlink{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}{info\+For\+I\+Ds}
+\item 
+\hyperlink{class_doc_parser}{Doc\+Parser} \& \hyperlink{class_index_interface_a42b0d9eccd309185ed92976f72908bb9}{parser}
+\item 
+int \hyperlink{class_index_interface_a2df695d2b504f2e53a0bfdd6bfee31da}{total\+Pages}
+\item 
+int \hyperlink{class_index_interface_ab607b430e78528cdb8bb79ba4afa91d2}{total\+Words\+In\+Corpus}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+V\+L Node implementation for the A\+V\+L Tree structure. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_index_interface_a7b1e7eae7faa652d2f63efeecf0ca2de}{}\index{Index\+Interface@{Index\+Interface}!Index\+Interface@{Index\+Interface}}
+\index{Index\+Interface@{Index\+Interface}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{Index\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Index\+Interface\+::\+Index\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a7b1e7eae7faa652d2f63efeecf0ca2de}
+\hypertarget{class_index_interface_a3927fabe77a7da5845dc0495b2c1c2b2}{}\index{Index\+Interface@{Index\+Interface}!````~Index\+Interface@{$\sim$\+Index\+Interface}}
+\index{````~Index\+Interface@{$\sim$\+Index\+Interface}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{$\sim$\+Index\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Index\+Interface\+::$\sim$\+Index\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a3927fabe77a7da5845dc0495b2c1c2b2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_index_interface_aa83b7083d107869e3519c5862bc71d0a}{}\index{Index\+Interface@{Index\+Interface}!add\+\_\+term\+\_\+to\+\_\+ii@{add\+\_\+term\+\_\+to\+\_\+ii}}
+\index{add\+\_\+term\+\_\+to\+\_\+ii@{add\+\_\+term\+\_\+to\+\_\+ii}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{add\+\_\+term\+\_\+to\+\_\+ii}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::add\+\_\+term\+\_\+to\+\_\+ii (
+\begin{DoxyParamCaption}
+\item[{int}]{letter\+Index, }
+\item[{{\bf Term} $\ast$}]{term}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_index_interface_aa83b7083d107869e3519c5862bc71d0a}
+
+
+Reimplemented in \hyperlink{class_a_v_l_tree_interface_a2ff7466f1fd70ce6391330c04749fec7}{A\+V\+L\+Tree\+Interface}.
+
+\hypertarget{class_index_interface_a7f082789ce91eaaacc10a5c841b62cd4}{}\index{Index\+Interface@{Index\+Interface}!append\+\_\+page\+\_\+info@{append\+\_\+page\+\_\+info}}
+\index{append\+\_\+page\+\_\+info@{append\+\_\+page\+\_\+info}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{append\+\_\+page\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::append\+\_\+page\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf Page\+Info} $\ast$}]{curr\+Info}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a7f082789ce91eaaacc10a5c841b62cd4}
+\hypertarget{class_index_interface_a8195aee88cd593c2e6ca2e2c48cbd068}{}\index{Index\+Interface@{Index\+Interface}!calc\+\_\+tdidf@{calc\+\_\+tdidf}}
+\index{calc\+\_\+tdidf@{calc\+\_\+tdidf}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{calc\+\_\+tdidf}]{\setlength{\rightskip}{0pt plus 5cm}double Index\+Interface\+::calc\+\_\+tdidf (
+\begin{DoxyParamCaption}
+\item[{int}]{page\+I\+D, }
+\item[{int}]{freq, }
+\item[{int}]{spread}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a8195aee88cd593c2e6ca2e2c48cbd068}
+\hypertarget{class_index_interface_ad7b88501f360ccfad0c1ee08d793ca25}{}\index{Index\+Interface@{Index\+Interface}!clear@{clear}}
+\index{clear@{clear}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_index_interface_ad7b88501f360ccfad0c1ee08d793ca25}
+
+
+Reimplemented in \hyperlink{class_a_v_l_tree_interface_a748ffc895fb64aab3e2afac287f80630}{A\+V\+L\+Tree\+Interface}.
+
+\hypertarget{class_index_interface_a3d784385e028557312ef15d59574f9ed}{}\index{Index\+Interface@{Index\+Interface}!display\+\_\+page\+\_\+content@{display\+\_\+page\+\_\+content}}
+\index{display\+\_\+page\+\_\+content@{display\+\_\+page\+\_\+content}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{display\+\_\+page\+\_\+content}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::display\+\_\+page\+\_\+content (
+\begin{DoxyParamCaption}
+\item[{int}]{page\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a3d784385e028557312ef15d59574f9ed}
+\hypertarget{class_index_interface_a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa}{}\index{Index\+Interface@{Index\+Interface}!display\+\_\+result@{display\+\_\+result}}
+\index{display\+\_\+result@{display\+\_\+result}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{display\+\_\+result}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::display\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{int}]{rank, }
+\item[{int}]{page\+I\+D, }
+\item[{double}]{tdidf}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a7e4d5fe8c31cfc9aa02c2dd1d7e1d3aa}
+\hypertarget{class_index_interface_a851f0396f0b390cc9aa8cde270afffc9}{}\index{Index\+Interface@{Index\+Interface}!find\+\_\+term@{find\+\_\+term}}
+\index{find\+\_\+term@{find\+\_\+term}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{find\+\_\+term}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Term} $\ast$ Index\+Interface\+::find\+\_\+term (
+\begin{DoxyParamCaption}
+\item[{string}]{term}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_index_interface_a851f0396f0b390cc9aa8cde270afffc9}
+
+
+Reimplemented in \hyperlink{class_a_v_l_tree_interface_a35ee941b125e65cf0b5783a687503d83}{A\+V\+L\+Tree\+Interface}.
+
+\hypertarget{class_index_interface_af9edc24ac00bdf2c0e06384f890a1d8a}{}\index{Index\+Interface@{Index\+Interface}!get\+\_\+total\+Pages@{get\+\_\+total\+Pages}}
+\index{get\+\_\+total\+Pages@{get\+\_\+total\+Pages}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{get\+\_\+total\+Pages}]{\setlength{\rightskip}{0pt plus 5cm}int Index\+Interface\+::get\+\_\+total\+Pages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_af9edc24ac00bdf2c0e06384f890a1d8a}
+\hypertarget{class_index_interface_a8a0132ad6e84c4340061496c615f581c}{}\index{Index\+Interface@{Index\+Interface}!get\+\_\+total\+Words\+In\+Corpus@{get\+\_\+total\+Words\+In\+Corpus}}
+\index{get\+\_\+total\+Words\+In\+Corpus@{get\+\_\+total\+Words\+In\+Corpus}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{get\+\_\+total\+Words\+In\+Corpus}]{\setlength{\rightskip}{0pt plus 5cm}int Index\+Interface\+::get\+\_\+total\+Words\+In\+Corpus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a8a0132ad6e84c4340061496c615f581c}
+\hypertarget{class_index_interface_a5734b1488a787d47984bf97ffa5aff8d}{}\index{Index\+Interface@{Index\+Interface}!incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page@{incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page}}
+\index{incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page@{incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::incr\+\_\+total\+\_\+words\+\_\+on\+\_\+page (
+\begin{DoxyParamCaption}
+\item[{int}]{curr\+I\+D, }
+\item[{int}]{incr}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a5734b1488a787d47984bf97ffa5aff8d}
+\hypertarget{class_index_interface_a9a7539d9c7a48bf4d4fbe43961c0547f}{}\index{Index\+Interface@{Index\+Interface}!index\+\_\+for\+\_\+letter@{index\+\_\+for\+\_\+letter}}
+\index{index\+\_\+for\+\_\+letter@{index\+\_\+for\+\_\+letter}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{index\+\_\+for\+\_\+letter}]{\setlength{\rightskip}{0pt plus 5cm}int Index\+Interface\+::index\+\_\+for\+\_\+letter (
+\begin{DoxyParamCaption}
+\item[{char}]{letter}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a9a7539d9c7a48bf4d4fbe43961c0547f}
+\hypertarget{class_index_interface_a2af7d88c3b2701be9164ba9f4a3bddb3}{}\index{Index\+Interface@{Index\+Interface}!info\+\_\+for\+\_\+page\+I\+D@{info\+\_\+for\+\_\+page\+I\+D}}
+\index{info\+\_\+for\+\_\+page\+I\+D@{info\+\_\+for\+\_\+page\+I\+D}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{info\+\_\+for\+\_\+page\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Page\+Info} $\ast$ Index\+Interface\+::info\+\_\+for\+\_\+page\+I\+D (
+\begin{DoxyParamCaption}
+\item[{int}]{page\+I\+D}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a2af7d88c3b2701be9164ba9f4a3bddb3}
+\hypertarget{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{read\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{string}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a229f1eb93f38d85d78e64e579c46c98a}
+\hypertarget{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}}
+\index{read\+\_\+pers\+\_\+file@{read\+\_\+pers\+\_\+file}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{read\+\_\+pers\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+pers\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_a0ca6250b71da3983ca31afdf3ee6dd88}
+\hypertarget{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}{}\index{Index\+Interface@{Index\+Interface}!read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}}
+\index{read\+\_\+persistence\+\_\+files@{read\+\_\+persistence\+\_\+files}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{read\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::read\+\_\+persistence\+\_\+files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_index_interface_aebcf89c2fd27b815b697c8e9d29e0c3a}
+\hypertarget{class_index_interface_a0b4ec5fcc32c08959cffad3a3141dd4e}{}\index{Index\+Interface@{Index\+Interface}!write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}}
+\index{write\+\_\+persistence\+\_\+files@{write\+\_\+persistence\+\_\+files}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{write\+\_\+persistence\+\_\+files}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Interface\+::write\+\_\+persistence\+\_\+files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_index_interface_a0b4ec5fcc32c08959cffad3a3141dd4e}
+
+
+Reimplemented in \hyperlink{class_a_v_l_tree_interface_abd7f70746611a3982dc07a1b1880e7b5}{A\+V\+L\+Tree\+Interface}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}{}\index{Index\+Interface@{Index\+Interface}!ext@{ext}}
+\index{ext@{ext}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{ext}]{\setlength{\rightskip}{0pt plus 5cm}const string Index\+Interface\+::ext = \char`\"{}.txt\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_acd76893126e9fd5dc63cb4ea8f56265c}
+\hypertarget{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}{}\index{Index\+Interface@{Index\+Interface}!info\+For\+I\+Ds@{info\+For\+I\+Ds}}
+\index{info\+For\+I\+Ds@{info\+For\+I\+Ds}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{info\+For\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Page\+Info}$\ast$$>$ Index\+Interface\+::info\+For\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_a8400a62750faa69ff35308ff731d9ee5}
+\hypertarget{class_index_interface_a8511509bb58da989f705ba75fd5dde2d}{}\index{Index\+Interface@{Index\+Interface}!letters@{letters}}
+\index{letters@{letters}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{letters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\+Table\+Index}$\ast$ Index\+Interface\+::letters\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_a8511509bb58da989f705ba75fd5dde2d}
+\hypertarget{class_index_interface_a42b0d9eccd309185ed92976f72908bb9}{}\index{Index\+Interface@{Index\+Interface}!parser@{parser}}
+\index{parser@{parser}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Doc\+Parser}\& Index\+Interface\+::parser\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_a42b0d9eccd309185ed92976f72908bb9}
+\hypertarget{class_index_interface_a2df695d2b504f2e53a0bfdd6bfee31da}{}\index{Index\+Interface@{Index\+Interface}!total\+Pages@{total\+Pages}}
+\index{total\+Pages@{total\+Pages}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{total\+Pages}]{\setlength{\rightskip}{0pt plus 5cm}int Index\+Interface\+::total\+Pages\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_a2df695d2b504f2e53a0bfdd6bfee31da}
+\hypertarget{class_index_interface_ab607b430e78528cdb8bb79ba4afa91d2}{}\index{Index\+Interface@{Index\+Interface}!total\+Words\+In\+Corpus@{total\+Words\+In\+Corpus}}
+\index{total\+Words\+In\+Corpus@{total\+Words\+In\+Corpus}!Index\+Interface@{Index\+Interface}}
+\subsubsection[{total\+Words\+In\+Corpus}]{\setlength{\rightskip}{0pt plus 5cm}int Index\+Interface\+::total\+Words\+In\+Corpus\hspace{0.3cm}{\ttfamily [protected]}}\label{class_index_interface_ab607b430e78528cdb8bb79ba4afa91d2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{indexinterface_8h}{indexinterface.\+h}\item 
+\hyperlink{hashtableinterface_8cpp}{hashtableinterface.\+cpp}\item 
+\hyperlink{indexinterface_8cpp}{indexinterface.\+cpp}\end{DoxyCompactItemize}
