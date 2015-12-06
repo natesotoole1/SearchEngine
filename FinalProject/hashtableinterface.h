@@ -9,11 +9,12 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <unordered_map>
+// #include <unordered_map>
+#include <mapping.cpp>
 
 using namespace std;
 
-typedef unordered_map<int, int> pageMap;
+typedef _map<int, int> pageMap;
 /*! \brief
  * Holds 26 HashTableIndexes, one for each letter of the alphabet.
  * Inherits from IndexInterface.

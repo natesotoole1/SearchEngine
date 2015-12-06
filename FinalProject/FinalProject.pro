@@ -38,5 +38,6 @@ HEADERS += \
     hashtableindex.h \
     hashtableinterface.h \
     interface.h \
+    mapping.h \
     timer.h
 

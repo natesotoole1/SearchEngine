@@ -1,0 +1,26 @@
+! seem 3 1
+! size 0 5
+! serv 3 1
+! space 0 1
+! stage 4 9
+! solid 3 1
+! studi 4 1 3 1
+! style 0 15
+! start 3 1
+! short 4 9
+! solut 3 1
+! scienc 3 1 2 1 0 4
+! social 0 2
+! sister 0 1
+! succeed 3 1
+! special 0 1
+! subject 3 5 0 13
+! schewek 2 2
+! struggl 3 1
+! success 3 1
+! section 4 1
+! student 3 3
+! substanc 3 1
+! superior 3 1
+! structur 4 4
+! superstit 3 2

@@ -5,7 +5,8 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <unordered_map>
+// #include <unordered_map>
+#include "mapping.h"
 #include <utility>
 #include <vector>
 
@@ -18,7 +19,9 @@ using namespace std;
 // First = pageID; total = TD-IDF across all queried terms.
 typedef pair<int, double> resultPair;
 
-typedef unordered_map<int, double> relevancyMap;
+// typedef unordered_map<int, double> relevancyMap;
+typedef _map<int, double> relevancyMap;
+
 /*! \brief
  * Holds a relevancyMap (unordered_map_map<int, double>) that stores the total TD/IDF values
  * that a pageID has for the current query.  Keywords AND and OR will find the intersection and
@@ -30,10 +33,11 @@ class QueryProcessor
 public:
     //QueryProcessor();
     ~QueryProcessor();
-    QueryProcessor(IndexInterface &theIndex);
+    QueryProcessor(IndexInterface &theIndex, bool multi);
 
-    void answer_query(istringstream& query, bool intersection); ///< Start writing to "results".
+    void answer_query(istringstream& query, string full_query, bool intersection); ///< Start writing to "results".
 
+    void display_only_multi_word(string search_string);
     void display_best_fifteen_results(); ///< Display results in descending order of summed TD/IDF value.
 
     void initiate_query(string query); ///< Get input from the user.
@@ -41,14 +45,14 @@ public:
     void init_relev_map(Term* term); ///< Fill "results" with an initial candidate set.
     void intersection_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
     void union_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
-
-    void sort_results(); /// Sort results in descending order of TD/IDF value.
+    void sort_results(bool multi_word); /// Sort results in descending order of TD/IDF value.
 
 private:
     relevancyMap results; ///< A relevancyMap holding total TD/IDF values for pageIDs regarding the whole query.
     vector<resultPair> sortedResults; ///< To copy in finding the instersection
 
     IndexInterface& index;
+    bool multiWord;
 };
 
 #endif // QUERYPROCESSOR_H

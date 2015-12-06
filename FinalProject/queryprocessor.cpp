@@ -72,6 +72,58 @@ void QueryProcessor::display_best_fifteen_results()
     }
 }
 
+void QueryProcessor::display_only_multi_word(string full_query)
+{
+    int max;
+    int numResults = sortedResults.size();
+    if (numResults == 0)
+    {
+        cout<<"Sorry, there were no results for your query.\n";
+        return;
+    }
+    if (numResults < 15) max = numResults;
+    else max = 15;
+
+    cout<<"Results\n";
+    for (int i=1; i<=max; ++i)
+    {
+        cout << "====" << endl;
+        index.display_result_multi_word(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second, full_query);
+    }
+    cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
+    string input;
+    cin >> input;
+    transform(input.begin(), input.end(), input.begin(), ::tolower);
+    while((input.compare("yes") != 0)
+          && (input.compare("no") != 0))
+    {
+        cout<<"Invalid command\n";
+        cout<<"Would you like to read the text of (one of) the result(s)?\n";
+        cin >> input;
+    }
+    if (input.compare("no") == 0) return;
+    else
+    {
+        if (numResults == 1){
+            index.display_page_content_multi_word(sortedResults.at(0).first, full_query);
+            return;
+        }
+        cout<<"Which document?  Enter a rank #:\n";
+        cin>>input;
+        int numInput = stoi(input);
+        while (!((numInput > 0)
+               && (numInput <= max)))
+        {
+            cout<<"Invalid command\n";
+            cout<<"Which document?  Enter a rank #\n";
+            cin >> input;
+            numInput = stoi(input);
+        }
+
+        index.display_page_content_multi_word(sortedResults.at(numInput-1).first, full_query);
+    }
+}
+
 void QueryProcessor::init_relev_map(Term* term)
 {
     for (auto & page : term->get_pageAprns())
@@ -132,9 +184,10 @@ void QueryProcessor::union_incr_relev_map(Term* term)
     }
 }
 
-void QueryProcessor::answer_query(istringstream& query, bool intersection)
+void QueryProcessor::answer_query(istringstream& query, string full_query, bool intersection)
 {
     string currTerm;
+    string search_string = full_query;
 
     // Find the intersection of all queried terms,
     // adding the TD/IDF values from each term.
@@ -158,6 +211,7 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
         {
             // Get the next word.
             query >> currTerm;
+             cout << "CurrTerm: Next Word " << currTerm << endl;
             Porter2Stemmer::stem(currTerm);
 
             foundTerm = index.find_term(currTerm);
@@ -196,8 +250,19 @@ void QueryProcessor::answer_query(istringstream& query, bool intersection)
             }
         }
     }
-    sort_results();
-    display_best_fifteen_results();
+    bool multi_word = false;
+
+    if (search_string.find(' ') < search_string.length())
+    {
+        cout << "This is a multi-word query" << endl;
+        sort_results(true);
+        display_only_multi_word(search_string);
+    }
+    else
+    {
+        sort_results(false);
+        display_best_fifteen_results();
+    }
 }
 
 void QueryProcessor::initiate_query(string query)
@@ -218,23 +283,31 @@ void QueryProcessor::initiate_query(string query)
     string mode;
     stream >> mode;
 
-    if (mode.compare("and") == 0) answer_query(stream, true);
-    else if (mode.compare("or") == 0) answer_query(stream, false);
+    if (mode.compare("and") == 0) answer_query(stream, fullQuery, true);
+    else if (mode.compare("or") == 0) answer_query(stream, fullQuery, false);
     else
         // Regular query.  Treat is as an AND query because
         // the section where the instersection variable matters will never be reached.
     {
+        cout << "Initiating query:  " << fullQuery << endl;
         stream = istringstream(fullQuery);
-        answer_query(stream, true);
+        answer_query(stream, fullQuery, true);
     }
 }
 
-void QueryProcessor::sort_results()
+void QueryProcessor::sort_results(bool multi_word)
 {
     // To find the top results, some
     relevancyMap resultsToSort = results;
+    int number_to_sort;
 
-    while (resultsToSort.size() != 0 && sortedResults.size() < 6)
+ /*   if (multi_word)
+        number_to_sort = 10,000;
+    else */
+        number_to_sort = 16;
+
+
+    while (resultsToSort.size() != 0 && ((sortedResults.size() < number_to_sort) || multi_word))
     {
         int maxKey = 0;
 

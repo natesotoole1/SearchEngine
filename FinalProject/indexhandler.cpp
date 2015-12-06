@@ -24,12 +24,13 @@ IndexHandler::IndexHandler(bool asHashTable)
 
 void IndexHandler::read_file(string filePath)
 {
+    cout << "Reading file: " << filePath << endl;
     index->read_file(filePath);
 }
 
-void IndexHandler::run_queries(string query)
+void IndexHandler::run_queries(string query, bool multi)
 {
-    QueryProcessor processor = QueryProcessor(*index);
+    QueryProcessor processor = QueryProcessor(*index, multi);
     processor.initiate_query(query);
 }
 void IndexHandler::clear_index(){

@@ -1,0 +1,19 @@
+! tri 3 2
+! top 0 4
+! take 3 2
+! tabl 3 2
+! tobi 1 1
+! test 3 2
+! text 3 1 0 2
+! trend 3 1
+! topic 4 1
+! typic 3 2
+! thing 3 3
+! treat 3 1
+! think 3 1
+! truth 3 1
+! theori 3 1
+! thorough 3 1
+! textbook 3 1 2 1 0 1
+! transport 3 1
+! tobybartel 1 1

@@ -1,0 +1,6 @@
+! help 3 3 0 3
+! http 2 1 1 1
+! hous 3 1
+! human 0 2
+! habit 3 1
+! histori 4 2

@@ -1,0 +1,30 @@
+! can 3 3 0 1
+! card 0 1
+! cram 3 1
+! clear 0 2
+! coval 3 1
+! close 3 1
+! color 0 3
+! cours 3 3
+! critic 3 1
+! carbon 3 1
+! condit 3 1
+! center 3 2 0 2
+! comput 3 1 0 2
+! cellpad 3 1
+! complic 3 1
+! catalog 0 1
+! collect 0 1
+! conveni 3 1
+! chapter 3 1
+! concept 4 9 3 1
+! complet 3 1
+! content 4 1 3 2 0 3
+! chemist 3 1
+! context 3 1
+! categori 0 1
+! compound 3 2
+! concentr 3 1
+! chemistri 4 25 3 17
+! contribut 0 1
+! comprehens 3 1

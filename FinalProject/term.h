@@ -4,16 +4,19 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <unordered_map>
+// #include <unordered_map>
 #include <utility>
 #include <vector>
-
+#include "mapping.cpp"
 #include "indexinterface.h"
 
 using namespace std;
 
-typedef unordered_map<int, int> pageMap;
-typedef unordered_map<int, double> tdidfMap;
+// typedef unordered_map<int, int> pageMap;
+// typedef unordered_map<int, double> tdidfMap;
+
+typedef _map<int, int> pageMap;
+typedef _map<int, double> tdidfMap;
 
 class IndexInterface;
 /*! \brief

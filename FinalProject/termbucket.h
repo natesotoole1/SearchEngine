@@ -9,7 +9,9 @@
 
 using namespace std;
 
-typedef unordered_map<int, int> pageMap;
+// typedef unordered_map<int, int> pageMap;
+typedef _map<int, int> pageMap;
+
 /*! \brief
  * A linked list of Term*s (b/c HashTableIndex handles collisions by chanining).
  */

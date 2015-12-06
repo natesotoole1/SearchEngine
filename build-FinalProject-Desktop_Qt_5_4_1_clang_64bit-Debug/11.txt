@@ -1,0 +1,8 @@
+! life 3 3
+! like 2 2 0 1
+! line 3 1
+! less 3 1
+! list 3 1
+! learn 3 1
+! light 3 1
+! languag 2 1 0 2

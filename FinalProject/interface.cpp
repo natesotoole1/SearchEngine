@@ -235,6 +235,72 @@ void Interface::run_maintenance(){
 }
 
 void Interface::search(){
+   string sQuery = "";
+   string mQuery = "";
+   string input = "";
+   cout<< "You Chose Search!" << endl;
+   cout << "      Use 'AND' at the beginnign of your query to docs with both words in them" << endl;
+   cout << "      Use 'OR' at the beginning of your query to get docs that have any of the words in them" << endl;
+   cout << "      Use 'NOT' in between results with words to exclude results" << endl;
+   cout << "      Enclose two words in '[' and ']' delimited by a space" << endl;
+   cout << "      If you enclose more then two words for search, you'll be asked to put new criteria for search" << endl;
+   cout << "      Examples: AND Boston NOT Pig"<< endl;
+   cout << "                OR Boston Pig"<< endl;
+   cout << "                Boston" << endl;
+   cout << "Please enter your query here: " << endl;
+   cin >> input;
+
+   getline(cin, sQuery);
+   sQuery = input +=  sQuery ;
+   istringstream streamQuery(sQuery);
+   string fWord;
+    streamQuery >> fWord;
+    transform(streamQuery.begin(), streamQuery.end(), streamQuery.begin(), ::tolower);
+   if (fWord == "AND" || fWord == "OR")
+
+   //  Check for two-word
+    bool multi = false;
+   if (sQuery[0] == '[')
+   {
+       //  Check if more then two words
+       int i = 0;
+       int numb_of_words = 1;
+       while (sQuery[i] != ']')
+       {
+           if (sQuery[i] == ' ')
+               numb_of_words ++;
+
+           if (numb_of_words > 2)
+           {
+               cout << "Multi-words can only be two words" << endl;
+               search();
+           }
+
+           i++;
+       }
+      multi = true;
+      // mQuery = sQuery.substr(1, sQuery.length()-2);
+      // sQuery = mQuery;
+   }
+
+   cout << "Searching for " << sQuery << endl;
+   handler.run_queries(sQuery, multi);
+
+   search();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*void Interface::search(){
     string sQuery = "";
     string input = "";
     cout<< "You Chose Search!" << endl;
@@ -252,7 +318,7 @@ void Interface::search(){
     
     re_command();
 }
-
+*/
 void Interface::run_AVL(){
     Timer t = Timer("AVL Tree");
     if(built == true){

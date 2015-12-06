@@ -11,7 +11,9 @@
 
 using namespace std;
 
-typedef unordered_map<int, int> pageMap;
+// typedef unordered_map<int, int> pageMap;
+typedef _map<int, int> pageMap;
+
 /*! \brief
  * Holds 1024 TermBuckets.  Hashes strings to map to Term* values.
  * Handles collisions with chaining.

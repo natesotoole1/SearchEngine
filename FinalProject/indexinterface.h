@@ -12,7 +12,8 @@
 #include <thread>
 #include <vector>
 
-#include <unordered_map>
+// #include <unordered_map>
+#include "mapping.h"
 #include "docparser.h"
 #include "pageinfo.h"
 #include "term.h"
@@ -22,8 +23,8 @@ class DocParser;
 class HashTableIndex;
 class Term;
 
-typedef unordered_map<int, int> pageMap;
-typedef unordered_map<string, pageMap> termMap;
+typedef _map<int, int> pageMap;
+typedef _map<string, pageMap> termMap;
 
 using namespace std;
 /*! \brief
@@ -43,7 +44,9 @@ public:
     void append_page_info(PageInfo* currInfo); ///< Each time the DocParser finds info for a new page, push it back to infoForIDs.
     double calc_tdidf(int pageID, int freq, int spread); ///< Each Term has a TD/IDF value for each page.  Calculate those as doubles.
     void display_result(int rank, int pageID, double tdidf); ///< cout the top results found my QueryProcessor.
+    void display_result_multi_word(int rank, int pageID, double tdidf, string multi_word);
     void display_page_content(int pageID); ///< Access infoForIDs for a pageID.  cout its title.
+    void display_page_content_multi_word(int pageID, string string_search);
     void incr_total_words_on_page(int currID, int incr); /// Increase a totalWords for a pageID.
     void read_file(string filePath); ///< Pass control to the parser.
     void read_persistence_files(); ///< When the program launches or when the inverted index is cleared, read the inverted index in from the persistence files.

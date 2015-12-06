@@ -18,7 +18,7 @@ int main()
     start = clock();
     */
 
-    //IndexHandler handler = IndexHandler(false);
+    //IndexHandler handler = IndexHandler(true);
 
     // Only happens when the persistence index needs to be written
     // or rewritten (for add_file).  This takes about 30 minutes.
@@ -31,7 +31,7 @@ int main()
 
 
     // To write the persistence index.
-    // handler->index_document("WikiBooks.xml");
+   //  handler->index_document("WikiBooks.xml");
 
     // It is assumed that the WikiBooks are written to a persistence file
     // before the program ever starts for the user.

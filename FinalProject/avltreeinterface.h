@@ -10,8 +10,8 @@
 #include <sstream>
 
 using namespace std;
-typedef unordered_map<int, int> pageMap;
-
+// typedef unordered_map<int, int> pageMap;
+typedef _map<int, int> pageMap;
 /*! \brief
  * AVL Tree Interface implements 26 different AVLTreeIndex's.
  */

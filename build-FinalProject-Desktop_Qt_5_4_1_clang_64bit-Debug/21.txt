@@ -1,0 +1,7 @@
+! vis 3 2
+! vari 3 1
+! valu 3 1
+! vsepr 3 1
+! vertic 0 3
+! visual 4 2
+! various 3 1

@@ -15,7 +15,8 @@
 #include <sstream>
 #include <iostream>
 #include <string>
-#include <unordered_map>
+// #include <unordered_map>
+#include <mapping.h>
 
 #include "indexinterface.h"
 #include "pageinfo.h"
@@ -28,9 +29,14 @@ class Term;
 using namespace rapidxml;
 using namespace std;
 
-typedef unordered_map<int, int> pageMap;
-typedef unordered_map<string, string> stopWordMap;
-typedef unordered_map<string, pageMap> termMap;
+// typedef unordered_map<int, int> pageMap;
+// typedef unordered_map<string, string> stopWordMap;
+// typedef unordered_map<string, pageMap> termMap;
+
+typedef _map<int, int> pageMap;
+typedef _map<string, string> stopWordMap;
+typedef _map<string, pageMap> termMap;
+
 /*! \brief
  * Handles the text of files, primarily that of WikiBooks.xml.
  * Uses RapidXML libraries.

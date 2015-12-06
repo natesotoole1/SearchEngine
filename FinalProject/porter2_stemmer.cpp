@@ -31,7 +31,8 @@
 #include <utility>
 #include <iostream>
 #include <sstream>
-#include <unordered_map>
+#include "mapping.h"
+// #include <unordered_map>
 #include "porter2_stemmer.h"
 
 using namespace Porter2Stemmer::internal;
@@ -423,7 +424,7 @@ bool Porter2Stemmer::internal::isShort(const string & word)
 
 bool Porter2Stemmer::internal::special(string & word)
 {
-    static const std::unordered_map<string, string> exceptions = {
+    static const std::_map<string, string> exceptions = {
         {"skis", "ski"}, {"skies", "sky"}, {"dying", "die"}, {"lying", "lie"},
         {"tying", "tie"}, {"idly", "idl"}, {"gently", "gentl"}, {"ugly", "ugli"},
         {"early", "earli"}, {"only", "onli"}, {"singly", "singl"}
