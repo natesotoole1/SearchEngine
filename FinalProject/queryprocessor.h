@@ -13,6 +13,7 @@
 #include "docparser.h"
 #include "porter2_stemmer.h"
 #include "term.h"
+#include "runquery.h"
 
 using namespace std;
 
@@ -33,26 +34,44 @@ class QueryProcessor
 public:
     //QueryProcessor();
     ~QueryProcessor();
-    QueryProcessor(IndexInterface &theIndex, bool multi);
-
-    void answer_query(istringstream& query, string full_query, bool intersection); ///< Start writing to "results".
-
-    void display_only_multi_word(string search_string);
-    void display_best_fifteen_results(); ///< Display results in descending order of summed TD/IDF value.
+    QueryProcessor(IndexInterface &theIndex);
 
     void initiate_query(string query); ///< Get input from the user.
-
+    void answer_query(); ///< Start writing to "results".
+    void andQuery(int type);
+    void orQuery(int type);
+    void notQuery(int type);
+    void singleQuery(string, int, int);
     void init_relev_map(Term* term); ///< Fill "results" with an initial candidate set.
-    void intersection_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
-    void union_incr_relev_map(Term* term); ///< Explained in QueryProcessor.cpp.
-    void sort_results(bool multi_word); /// Sort results in descending order of TD/IDF value.
+    void intersection_incr_relev_map(Term* term); ///< Explained in RunQuery.cpp.
+    void union_incr_relev_map(Term* term); ///< Explained in RunQuery.cpp.
+    void sort_results(); /// Sort results in descending order of TD/IDF value.
+    void display_only_multi_word(string search_string);
+    void display_best_fifteen_results(); ///< Display results in descending order of summed TD/IDF value.
+    void multiAndWordQuery(string, int type);
+    //void multiOrWordQuery(string);
+    void multiWord(string, int, int);
+    void displayResults();
+
+
+
+
 
 private:
     relevancyMap results; ///< A relevancyMap holding total TD/IDF values for pageIDs regarding the whole query.
     vector<resultPair> sortedResults; ///< To copy in finding the instersection
-
+    relevancyMap regularResults;
+    relevancyMap notResults;
+    relevancyMap orMultiResults;
     IndexInterface& index;
-    bool multiWord;
+    //bool multiWord;
+    int totalWords;
+    int totalMultiWords;
+    vector<string> multiWords;
+    vector<string> singleWords;
+    vector<string> multiNotWords;
+    vector<string> singleNotWords;
+    int queryTypeNum = -1;
 };
 
 #endif // QUERYPROCESSOR_H

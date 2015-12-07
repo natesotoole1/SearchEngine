@@ -24,73 +24,6 @@ void IndexInterface::append_page_info(PageInfo* currInfo)
     infoForIDs.push_back(currInfo);
 }
 
-void IndexInterface::display_result_multi_word(int rank, int pageID, double tdidf, string string_search)
-{
-   PageInfo* resultInfo = infoForIDs.at(pageID);
-    string word1;
-    stringstream _found_stream;
-    _found_stream << NULL;
-    string _output;
-   _found_stream << infoForIDs.at(pageID)->get_content();
-   _output = _found_stream.str();
-//   for(int i = 0; i < string_search.size(); i ++){
-//       if (sQuery[i] == ' '){
-//           string word1 = string_search.substr(0, i);
-//       }
-//   }
-
-//   //cout << "*****Output: " << _output << endl;
-//   string curr;
-//   while(curr != word1){
-//       curr _
-//   }
-  // cout << _output.find
-   if (_output.find(string_search) != -1)
-   {
-    cout<<"#"<<rank<<": \""<<resultInfo->get_title()<<"\"\n";
-    cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
-    cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
-    cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
-
-   }
-}
-
-void IndexInterface::display_result(int rank, int pageID, double tdidf)
-{
-
-    PageInfo* resultInfo = infoForIDs.at(pageID);
-    cout<<"#"<<rank<<": \""<<resultInfo->get_title()<<"\"\n";
-    cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
-    cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
-    cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
-}
-
-void IndexInterface::display_page_content(int pageID)
-{
-    cout<<"Text displayed below:\n=======================\n";
-   stringstream _found_stream;
-   _found_stream << NULL;
-   string _output;
-  _found_stream << infoForIDs.at(pageID)->get_content();
-
-    cout<<infoForIDs.at(pageID)->get_content()<<endl;
-}
-
-void IndexInterface::display_page_content_multi_word(int pageID, string string_search)
-{
-    cout<<"Text displayed below:\n=======================\n";
-   stringstream _found_stream;
-   _found_stream << NULL;
-   string _output;
-  _found_stream << infoForIDs.at(pageID)->get_content();
-    _output = _found_stream.str();
-    if (_output.find(string_search) != -1)
-        cout<<infoForIDs.at(pageID)->get_content()<<endl;
-    else
-        cout << "cannot find: " << string_search << endl;
-
-    // cout<<infoForIDs.at(pageID)->get_content()<<endl;
-}
 int IndexInterface::index_for_letter(char letter)
 {
     // Get the raw ASCII value of the letter.
@@ -116,28 +49,6 @@ void IndexInterface::read_file(string filePath)
     parser.read_file(filePath);
 }
 
-double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
-{
-    // In case the persistence index grew through read_file.
-    try
-    {
-        infoForIDs.at(pageID);
-    }
-    catch (out_of_range& notInPageIDs)
-    {
-        return 0;
-    }
-
-    // Calculate TF value.
-    int totalWords = infoForIDs.at(pageID)->get_totalWords();
-    double tf = (double)freq/totalWords;
-
-    // Calculate IDF value.
-    int totalDocsInCorpus = infoForIDs.size();
-    double idf = log((double)totalDocsInCorpus/spread);
-
-    return tf*idf;
-}
 
 void IndexInterface::incr_total_words_on_page(int currID, int incr)
 {
@@ -152,14 +63,27 @@ void IndexInterface::incr_total_words_on_page(int currID, int incr)
     infoForIDs.at(currID)->incr_totalWords(incr);
 }
 
-void IndexInterface::read_pers_file(int index)
+struct thread_data {
+    int thread_id;
+    IndexInterface * ind_int_obj;
+};
+
+//void IndexInterface::read_pers_file(int index)
+
+void *read_pers_file(void *threadid)
 {
-  //  long index;
-  //  index = (long) threadid;
+  int index;
+  IndexInterface* local_index_obj;
+
+  struct thread_data *my_data;
+  my_data = (struct thread_data *) threadid;
+  index = my_data->thread_id;
+  local_index_obj = my_data->ind_int_obj;
+
     cout<<"("<<index+1<<"/26)...\n";
 
     ifstream ifs;
-    string filePath = to_string(index) + ext;
+    string filePath = to_string(index) + ".txt";
     ifs.open(filePath);
 
     // Load two words at a time.
@@ -189,18 +113,96 @@ void IndexInterface::read_pers_file(int index)
                 pageAprns.emplace(make_pair(num1, num2));
 
                 // Increment the totalWords for currID by the freq.
-                incr_total_words_on_page(num1, num2);
+                local_index_obj->incr_total_words_on_page(num1, num2);
                 ifs >> word1 >> word2;
             }
 
-            add_term_to_ii(index, new Term(name, pageAprns));
+            local_index_obj->add_term_to_ii(index, new Term(name, pageAprns));
         }
     }
     ifs.close();
+    pthread_exit(NULL);
 }
+double IndexInterface::calc_tdidf(int pageID, int freq, int spread)
+{
+    // In case the persistence index grew through read_file.
+    try
+    {
+        infoForIDs.at(pageID);
+    }
+    catch (out_of_range& notIninfoForIDs)
+    {
+        return 0;
+    }
+
+    // Calculate TF value.
+    int totalWords = infoForIDs.at(pageID)->get_totalWords();
+    double tf = (double)freq/totalWords;
+
+    // Calculate IDF value.
+    int totalDocsInCorpus = infoForIDs.size();
+    double idf = log((double)totalDocsInCorpus/spread);
+
+    return tf*idf;
+}
+
+//struct thread_data{
+//    int thread_id;
+//    IndexInterface * ind_int_obj;
+//};
+
 
 void IndexInterface::read_persistence_files()
 {
+   static const int num_threads = 26;
+    pthread_t t[num_threads];
+    pthread_attr_t attr;
+     void *status;
+   struct thread_data td[26];
+
+    int rc;
+
+    //Launch a group of threads
+    for (int i = 0; i < num_threads; ++i) {
+
+        td[i].thread_id     = i;
+        td[i].ind_int_obj   = this;
+
+        cout << "Opening a new thread for " << i << endl;
+        rc = pthread_create(&t[i], NULL, read_pers_file, (void *)&td[i]);
+        cout << "Thread id: " << rc << endl;
+    }
+
+
+
+  // free attribute and wait for the other threads
+    pthread_attr_destroy(&attr);
+    for(int i=0; i < 26; i++ ){
+       rc = pthread_join(t[i], &status);
+       if (rc){
+          cout << "Error:unable to join," << rc << endl;
+          exit(-1);
+       }
+       cout << "Main: completed thread id :" << i ;
+         cout << "  exiting with status :" << status << endl;
+
+    }
+
+
+    pthread_exit(NULL);
+
+
+//    cout<<"Reading persistence documents...\n";
+//    for (int i=0; i<26; ++i) read_pers_file(i);
+
+
+/*
+
+//    cout << "All files are created"  << endl;
+// }
+
+//void IndexInterface::read_persistence_files()
+//{
  /*   static const int num_threads = 26;
     thread t[num_threads];
 
@@ -217,10 +219,10 @@ void IndexInterface::read_persistence_files()
     }
 */
 
-    cout<<"Reading persistence documents...\n";
-    for (int i=0; i<26; ++i) read_pers_file(i);
+//    cout<<"Reading persistence documents...\n";
+//    for (int i=0; i<26; ++i) read_pers_file(i);
+//}
 }
-
 int IndexInterface::get_totalPages(){
     return infoForIDs.size();
 }
@@ -233,3 +235,29 @@ int IndexInterface::get_totalWordsInCorpus()
     }
     return totalWordsInCorpus;
 }
+vector<PageInfo*> IndexInterface::getPages(){
+    return infoForIDs;
+}
+
+
+void IndexInterface::display_result(int rank, int pageID, double tdidf)
+{
+
+    PageInfo* resultInfo = infoForIDs.at(pageID);
+    cout<<"#"<<rank<<": \""<<resultInfo->get_title()<<"\"\n";
+    cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
+    cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
+    cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
+}
+
+void IndexInterface::display_page_content(int pageID)
+{
+    cout<<"Text displayed below:\n=======================\n";
+//   stringstream _found_stream;
+//   _found_stream << NULL;
+//   string _output;
+//  _found_stream << infoForIDs.at(pageID)->get_content();
+
+    cout<<infoForIDs.at(pageID)->get_content()<<endl;
+}
+

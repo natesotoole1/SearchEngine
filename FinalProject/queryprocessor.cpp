@@ -1,9 +1,11 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
+ * 12/06/15
  * Nate O'Toole
- * Kiko Whiteley
+ * Brandon McFarland
+ * Ashvin Asava
  **/
+
 
 #include "queryprocessor.h"
 
@@ -20,110 +22,1107 @@ QueryProcessor::~QueryProcessor()
 QueryProcessor::QueryProcessor(IndexInterface& theIndex) : index(theIndex)
 {
     sortedResults = vector<resultPair>();
+    //queries = new QueryProcessor(index);
 }
 
-void QueryProcessor::display_best_fifteen_results()
+
+void QueryProcessor::initiate_query(string query)
 {
-    int max;
-    int numResults = sortedResults.size();
-    if (numResults == 0)
-    {
-        cout<<"Sorry, there were no results for your query.\n";
-        return;
-    }
-    if (numResults < 15) max = numResults;
-    else max = 15;
+    // Used later to remake the stream with the first word added back in.
+    string fullQuery = query;
 
-    cout<<"Results\n";
-    for (int i=1; i<=max; ++i)
-    {
-        index.display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
-    }
-    cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
-    string input;
-    cin >> input;
-    transform(input.begin(), input.end(), input.begin(), ::tolower);
-    while((input.compare("yes") != 0)
-          && (input.compare("no") != 0))
-    {
-        cout<<"Invalid command\n";
-        cout<<"Would you like to read the text of (one of) the result(s)?\n";
-        cin >> input;
-    }
-    if (input.compare("no") == 0) return;
-    else
-    {
-        if (numResults == 1){
-            index.display_page_content(sortedResults.at(0).first);
-            return;
+
+    // Make all letters lowercase.
+    transform(query.begin(), query.end(), query.begin(), ::tolower);
+
+
+
+
+    istringstream stream(query);
+
+    // Initiate the proper kind of query.
+    string mode;
+    stream >> mode;
+    string currString = query;
+    string notQueryString;
+    string queryString;
+    string queryType;
+    int typeBool;
+    string oneWord;
+
+
+    if (mode.compare("and") == 0){
+        typeBool = 0;
+        queryType = currString.substr(0,3);
+        int x = 3;
+        while(currString[x] == ' '){
+            x++;
         }
-        cout<<"Which document?  Enter a rank #:\n";
-        cin>>input;
-        int numInput = stoi(input);
-        while (!((numInput > 0)
-               && (numInput <= max)))
+        currString = currString.erase(0,x);
+        if(currString.find("not") == -1){
+             queryTypeNum = 0;
+
+            //  Check for two-word
+            if (currString.find('[') != -1)
+            {
+                int i = currString.find_first_of('[');
+                while(i < currString.length()){
+                    int j = currString.find_first_of(']');
+
+
+                    multiWords.push_back(currString.substr(i+1, j-i-1));
+                    while(currString[j + 1] == ' '){
+                        j++;
+                    }
+                    if(currString[i-1] != ' '){
+                        j--;
+                    }
+                    while(currString[i-2] == ' '){
+                        i--;
+                    }
+
+                    currString = currString.erase(i, j - i + 1);
+                    i = currString.find_first_of('[');
+                }
+
+            }
+            if(currString.length() > 2){
+                istringstream oneWords(currString);
+                oneWords >> oneWord;
+
+                singleWords.push_back(oneWord);
+                while(oneWords >> oneWord){
+
+                    singleWords.push_back(oneWord);
+                }
+            }
+        }else{
+                queryTypeNum = 1;
+                int numForNot = currString.find("not");
+                while(currString[numForNot] == ' '){
+                    numForNot ++;
+                }
+                queryString = currString.substr(0, numForNot);
+
+                notQueryString = currString.substr(numForNot);
+                int x = 3;
+
+                while(notQueryString[x] == ' '){
+                    x++;
+                }
+                notQueryString = notQueryString.erase(0, x);
+                if (notQueryString.find('[') != -1)
+                {
+                    int i = notQueryString.find_first_of('[');
+                    while(i < notQueryString.length()){
+                        int j = notQueryString.find_first_of(']');
+                        multiNotWords.push_back(notQueryString.substr(i+1, j-i-1));
+                        while(notQueryString[j + 1] == ' '){
+                            j++;
+                        }
+                        if(notQueryString[i-1] != ' '){
+                            j--;
+                        }
+                        while(notQueryString[i-2] == ' '){
+                            i--;
+                        }
+
+                        notQueryString = notQueryString.erase(i, j - i + 1);
+                        i = notQueryString.find_first_of('[');
+                    }
+
+                }
+                if(notQueryString.length() > 2){
+                    istringstream oneWords(notQueryString);
+                    oneWords >> oneWord;
+                    singleNotWords.push_back(oneWord);
+                    while(oneWords >> oneWord){
+                        singleNotWords.push_back(oneWord);
+                    }
+                }
+
+                if (queryString.find('[') != -1)
+                {
+                    int i = queryString.find_first_of('[');
+                    while(i < queryString.length()){
+                        int j = queryString.find_first_of(']');
+                        multiWords.push_back(queryString.substr(i+1, j-i-1));
+                        while(queryString[j + 1] == ' '){
+                            j++;
+                        }
+                        if(queryString[i-1] != ' '){
+                            j--;
+                        }
+                        while(queryString[i-2] == ' '){
+                            i--;
+                        }
+
+                        queryString = queryString.erase(i, j - i + 1);
+                        i = queryString.find_first_of('[');
+                    }
+
+                }
+                if(queryString.length() > 2){
+                    istringstream oneWords(queryString);
+                    oneWords >> oneWord;
+                    singleWords.push_back(oneWord);
+                    while(oneWords >> oneWord){
+                    singleWords.push_back(oneWord);
+                }
+                }
+       }
+
+
+    }
+    else if (mode.compare("or") == 0){
+        typeBool = 1;
+        queryType = currString.substr(0, 2);
+        int x = 2;
+        while(currString[x] == ' ' ){
+            x++;
+        }
+        currString = currString.erase(0,x);
+        if(currString.find("not") == -1){
+            queryTypeNum = 2;
+            //  Check for two-word
+            if (currString.find('[') != -1)
+            {
+                int i = currString.find_first_of('[');
+                while(i < currString.length()){
+                    int j = currString.find_first_of(']');
+                    multiWords.push_back(currString.substr(i+1, j-i-1));
+                    while(currString[j + 1] == ' '){
+                        j++;
+                    }
+                    if(currString[i-1] != ' '){
+                        j--;
+                    }
+                    while(currString[i-2] == ' '){
+                        i--;
+                    }
+
+                    currString = currString.erase(i, j - i + 1);
+                    i = currString.find_first_of('[');
+                }
+
+            }
+            if(currString.length() > 2){
+                istringstream oneWords(currString);
+                oneWords >> oneWord;
+                singleWords.push_back(oneWord);
+                while(oneWords >> oneWord){
+                    singleWords.push_back(oneWord);
+                }
+
+            }
+        }else{
+            queryTypeNum = 3;
+                int numForNot = currString.find("not");
+                queryString = currString.substr(0, numForNot);
+                notQueryString = currString.substr(numForNot);
+                int x = 3;
+
+                while(notQueryString[x] == ' '){
+                    x++;
+                }
+                notQueryString = notQueryString.erase(0, x);
+                if (notQueryString.find('[') != -1)
+                {
+                    int i = notQueryString.find_first_of('[');
+                    while(i < notQueryString.length()){
+                        int j = notQueryString.find_first_of(']');
+                        multiNotWords.push_back(notQueryString.substr(i+1, j-i-1));
+                        while(notQueryString[j + 1] == ' '){
+                            j++;
+                        }
+                        if(notQueryString[i-1] != ' '){
+                            j--;
+                        }
+                        while(notQueryString[i-2] == ' '){
+                            i--;
+                        }
+
+                        notQueryString = notQueryString.erase(i, j - i + 1);
+                        i = notQueryString.find_first_of('[');
+                    }
+
+                }
+                if(notQueryString.length() > 2){
+                    istringstream oneWords(notQueryString);
+                    oneWords >> oneWord;
+                    singleNotWords.push_back(oneWord);
+                    while(oneWords >> oneWord){
+                        singleNotWords.push_back(oneWord);
+                    }
+                }
+
+                if (queryString.find('[') != -1)
+                {
+                    int i = queryString.find_first_of('[');
+                    while(i < queryString.length()){
+                        int j = queryString.find_first_of(']');
+                        multiWords.push_back(queryString.substr(i+1, j-i-1));
+                        while(queryString[j + 1] == ' '){
+                            j++;
+                        }
+                        if(queryString[i-1] != ' '){
+                            j--;
+                        }
+                        while(queryString[i-2] == ' '){
+                            i--;
+                        }
+
+                        queryString = queryString.erase(i, j - i + 1);
+                        i = queryString.find_first_of('[');
+                    }
+
+                }
+                if(currString.length() > 2){
+                    istringstream oneWords(queryString);
+                    oneWords >> oneWord;
+                    singleWords.push_back(oneWord);
+                    while(oneWords >> oneWord){
+                        singleWords.push_back(oneWord);
+                    }
+               }
+       }
+    }
+
+    else if(query.find("not") != -1){
+        typeBool = 0;
+        int nt = query.find("not");
+        string newQuery = fullQuery;
+        newQuery = newQuery.erase(nt,3);
+        queryTypeNum = 5;
+        int wordCount = 0;
+        while(wordCount != 2){
+
+            if(wordCount == 0){
+                if (newQuery.find('[') != -1){
+                      int i = newQuery.find('[');
+                      int j = newQuery.find(']');
+                      multiWords.push_back(newQuery.substr(i + 1, j-1));
+                      while(newQuery[j+1] == ' '){
+                        j++;
+                      }
+                      wordCount ++;
+                      newQuery.erase(i, j+1);
+                }if(newQuery.length() > 2){
+                    istringstream f(newQuery);
+                    string temp;
+                    f >>  temp;
+                    singleWords.push_back(temp);
+                    wordCount ++;
+                }
+            }else{
+                if (newQuery.find('[') != -1){
+                      int i = newQuery.find('[');
+                      int j = newQuery.find(']');
+                      multiNotWords.push_back(newQuery.substr(i + 1, j-1));
+                      while(newQuery[j+1] == ' '){
+                        j++;
+                      }
+                      wordCount ++;
+                      newQuery.erase(i, j+1);
+
+                }
+                if(newQuery.length() > 2){
+                    istringstream f(newQuery);
+                    string temp;
+                    f >>  temp;
+                    singleNotWords.push_back(temp);
+                    wordCount++;
+                }
+            }
+       }
+    }
+    else{
+        typeBool == 0;
+        if (fullQuery.find('[') != -1){
+            queryTypeNum = 4;
+              int i = fullQuery.find('[');
+              int j = fullQuery.find(']');
+              multiWords.push_back(fullQuery.substr(i + 1, j-1));
+              fullQuery.erase(i, j);
+        }
+        if(fullQuery.length() > 2){
+            queryTypeNum = 4;
+            istringstream f(fullQuery);
+            string temp;
+            f >>  temp;
+            singleWords.push_back(temp);
+        }
+    }
+    totalWords = singleWords.size() + multiWords.size() + singleNotWords.size() + multiNotWords.size();
+    totalMultiWords = multiWords.size() + multiNotWords.size();
+    for(int j = 0; j < multiWords.size(); j++){
+        multiWord(multiWords.at(j), 0, typeBool);
+    }
+    for(int i = 0; i < singleWords.size(); i++){
+        singleQuery(singleWords.at(i), 0, typeBool);
+    }
+    for(int k = 0; k < multiNotWords.size(); k++){
+        multiWord(multiNotWords.at(k), 1,typeBool );
+    }
+    for(int i = 0; i < singleNotWords.size(); i++){
+        singleQuery(singleNotWords.at(i), 1, typeBool);
+    }
+
+    answer_query();
+}
+void QueryProcessor::answer_query()
+{ 
+//    if(queryTypeNum == 0){
+//        andQuery(0);
+//    }
+//    else if(queryTypeNum == 1){
+//        notQuery(queryTypeNum);
+//    }
+//    else if(queryTypeNum == 2){
+//        orQuery(0);
+//    }
+//    else if(queryTypeNum == 3){
+//        notQuery(queryTypeNum);
+//    }
+//    else if(queryTypeNum == 4){
+//        singleQuery();
+//    }
+//    else if(queryTypeNum == 5){
+//        notQuery(queryTypeNum);
+//    }
+
+    sort_results();
+    display_best_fifteen_results();
+
+
+}
+
+
+//void QueryProcessor::andQuery(int type){
+//    string currWord;
+//    Term* foundTerm;
+
+
+//    //  No single words "and" with multi-word
+
+//        if(singleWords.size() == 0 && multiWords.size() != 0){
+//            for(int i = 0; i < multiWords.size(); i++){
+//                  multiAndWordQuery(currWord =  multiWords.at(i), type);
+
+//            }
+
+
+//       }
+//        //  Single words && no multi-words
+
+//        else if(singleWords.size()!= 0 &&  multiWords.size() == 0){
+
+//            //  Loop thru all the single words
+//            //  Stores in currWord
+//            //  Cleans up each word in Porter2Stemmer
+//            //  Finds them in index ...  stores pointer in foundterm
+//            //  If foundterm == NULL, no words appeared
+
+//            for(int i = 0; i < singleWords.size(); i ++){
+//              currWord =  singleWords.at(i);
+//              Porter2Stemmer::stem(currWord);
+//              foundTerm = index.find_term(currWord);
+//              if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//              else
+//              {
+//                  foundTerm->init_tdidfs(index);
+//                  init_relev_map(foundTerm);
+//              }
+//            }
+//        }else{
+//            for(int i = 0; i < multiWords.size(); i++){
+//                multiAndWordQuery(currWord =  multiWords.at(i), type);
+//            }
+//            singleQuery();
+//            for(int i = 0; i < singleWords.size(); i ++){
+//              currWord =  singleWords.at(i);
+//              Porter2Stemmer::stem(currWord);
+//              foundTerm = index.find_term(currWord);
+//              if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//              else
+//              {
+//                  foundTerm->init_tdidfs(index);
+//                  intersection_incr_relev_map(foundTerm);
+//              }
+//            }
+
+
+//        }
+//        int pageID;
+//        vector<PageInfo*> pageIDs = index.getPages();
+
+
+//}
+
+//void QueryProcessor::orQuery(int type){
+//    string currWord;
+//    Term* foundTerm;
+//    if(singleWords.size() == 0 && multiWords.size() != 0){
+//        for(int i = 0; i < multiWords.size(); i++){
+//            //multiOrWordQuery(currWord =  multiWords.at(i), type);
+//        }
+//    }
+//    else if(singleWords.size()!= 0 &&  multiWords.size() == 0){
+//        for(int i = 0; i < singleWords.size(); i ++){
+//          currWord =  singleWords.at(i);
+//          Porter2Stemmer::stem(currWord);
+//          foundTerm = index.find_term(currWord);
+//          if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//          else
+//          {
+//              foundTerm->init_tdidfs(index);
+//              init_relev_map(foundTerm);
+//          }
+//        }
+//    }else{
+
+//        for(int i = 0; i < multiWords.size(); i++){
+//            //multiOrWordQuery(currWord =  multiWords.at(i), type);
+
+//        }
+//        for(int i = 0; i < singleWords.size(); i ++){
+//            currWord =  singleWords.at(i);
+//            Porter2Stemmer::stem(currWord);
+//            foundTerm = index.find_term(currWord);
+//            if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//            else
+//            {
+//                foundTerm->init_tdidfs(index);
+//                union_incr_relev_map(foundTerm);
+//            }
+//        }
+//    }
+//}
+
+////  notQuery
+
+//void QueryProcessor::notQuery(int type){
+//    string currWord;
+//    Term* foundTerm;
+//    if(type == 1){
+//        andQuery(0);
+//        //code for erase
+//    }else if(type == 3){
+//        orQuery(0);
+//        //code for erase
+//    }else if(type == 5){
+//        singleQuery();
+
+//    }
+
+
+//        //  No single words "and" with multi-word
+
+//        if(singleNotWords.size() == 0 && multiNotWords.size() != 0){
+//            for(int i = 0; i < multiNotWords.size(); i++){
+//                multiAndWordQuery(currWord =  multiNotWords.at(i), 1);
+//            }
+
+
+//        }
+//        //  Single words && no multi-words
+
+//        else if(singleNotWords.size()!= 0 &&  multiNotWords.size() == 0){
+
+//            //  Loop thru all the single words
+//            //  Stores in currWord
+//            //  Cleans up each word in Porter2Stemmer
+//            //  Finds them in index ...  stores pointer in foundterm
+//            //  If foundterm == NULL, no words appeared
+
+//            for(int i = 0; i < singleNotWords.size(); i ++){
+//                currWord =  singleNotWords.at(i);
+//                Porter2Stemmer::stem(currWord);
+//                foundTerm = index.find_term(currWord);
+//                if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//                else
+//                {
+//                    foundTerm->init_tdidfs(index);
+//                    init_relev_map(foundTerm);
+//                    for (auto& page : foundTerm->get_pageAprns()){
+//                        try
+//                        {
+//                            results.at(page.first);
+//                        }
+//                        catch (const out_of_range& notInResults)
+//                        {
+//                            continue;
+//                        }
+//                        // If it is in results, remove that entry.
+//                        results.erase(page.first);
+//                    }
+//                }
+
+//            }
+//        }else{
+//            for(int i = 0; i < multiNotWords.size(); i++){
+//                multiAndWordQuery(currWord =  multiNotWords.at(i), 1);
+//            }
+//            for(int i = 0; i < singleNotWords.size(); i ++){
+//                currWord =  singleNotWords.at(i);
+//                Porter2Stemmer::stem(currWord);
+//                foundTerm = index.find_term(currWord);
+//                if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//                else
+//                {
+//                    foundTerm->init_tdidfs(index);
+//                    intersection_incr_relev_map(foundTerm);
+
+//                    for (auto& page : foundTerm->get_pageAprns()){
+//                        try
+//                        {
+//                            results.at(page.first);
+//                        }
+//                        catch (const out_of_range& notInResults)
+//                        {
+//                            continue;
+//                        }
+//                        // If it is in results, remove that entry.
+//                        results.erase(page.first);
+//                    }
+//                }
+
+//            }
+
+
+
+
+//            currWord =  singleNotWords.at(0);
+//            Porter2Stemmer::stem(currWord);
+//            foundTerm = index.find_term(currWord);
+//            if (!foundTerm) cout<<"The term \""<< currWord <<"\" never appeared in the corpus\n";
+//            else
+//            {
+//                foundTerm->init_tdidfs(index);
+//                init_relev_map(foundTerm);
+//                for (auto& page : foundTerm->get_pageAprns()){
+//                    try
+//                    {
+//                        results.at(page.first);
+//                    }
+//                    catch (const out_of_range& notInResults)
+//                    {
+//                        continue;
+//                    }
+//                    // If it is in results, remove that entry.
+//                    results.erase(page.first);
+//                }
+//            }
+//        }
+
+//}
+
+void QueryProcessor::singleQuery(string word, int typeNot, int typeBool){
+    Term* foundTerm;
+    if(results.size() != 0){
+        if(typeNot == 0){
+            if(typeBool == 0){
+                Porter2Stemmer::stem(word);
+                foundTerm = index.find_term(word);
+                if (!foundTerm) cout<<"The term \""<< word <<"\" never appeared in the corpus\n";
+                else
+                {
+                   foundTerm->init_tdidfs(index);
+                   intersection_incr_relev_map(foundTerm);
+                }
+            }else if(typeBool == 1){
+                Porter2Stemmer::stem(word);
+                foundTerm = index.find_term(word);
+                if (!foundTerm) cout<<"The term \""<< word <<"\" never appeared in the corpus\n";
+                else
+                {
+                   foundTerm->init_tdidfs(index);
+                   union_incr_relev_map(foundTerm);
+                }
+            }
+        }else if(typeNot ==1){
+            if(typeBool == 0){
+                Porter2Stemmer::stem(word);
+                foundTerm = index.find_term(word);
+                if (!foundTerm) cout<<"The term \""<< word <<"\" never appeared in the corpus\n";
+                else
+                {
+                   foundTerm->init_tdidfs(index);
+                   for(auto& page : foundTerm->get_pageAprns()){
+                       try{
+                           results.at(page.first);
+                       }
+                       catch(const out_of_range& notInResults){
+                           continue;
+                       }
+                       results.erase(page.first);
+                   }
+                }
+            }else if(typeBool == 1){
+                Porter2Stemmer::stem(word);
+                foundTerm = index.find_term(word);
+                if (!foundTerm) cout<<"The term \""<< word <<"\" never appeared in the corpus\n";
+                else
+                {
+                   foundTerm->init_tdidfs(index);
+                   union_incr_relev_map(foundTerm);
+                }
+            }
+        }
+    }
+    else{
+
+        Porter2Stemmer::stem(word);
+        foundTerm = index.find_term(word);
+        if (!foundTerm) cout<<"The term \""<< word <<"\" never appeared in the corpus\n";
+        else
         {
-            cout<<"Invalid command\n";
-            cout<<"Which document?  Enter a rank #\n";
-            cin >> input;
-            numInput = stoi(input);
+            foundTerm->init_tdidfs(index);
+            init_relev_map(foundTerm);
         }
-        index.display_page_content(sortedResults.at(numInput-1).first);
+
     }
 }
 
-void QueryProcessor::display_only_multi_word(string full_query)
-{
-    int max;
-    int numResults = sortedResults.size();
-    if (numResults == 0)
-    {
-        cout<<"Sorry, there were no results for your query.\n";
-        return;
-    }
-    if (numResults < 15) max = numResults;
-    else max = 15;
 
-    cout<<"Results\n";
-    for (int i=1; i<=max; ++i)
-    {
-        cout << "====" << endl;
-        index.display_result_multi_word(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second, full_query);
-    }
-    cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
-    string input;
-    cin >> input;
-    transform(input.begin(), input.end(), input.begin(), ::tolower);
-    while((input.compare("yes") != 0)
-          && (input.compare("no") != 0))
-    {
-        cout<<"Invalid command\n";
-        cout<<"Would you like to read the text of (one of) the result(s)?\n";
-        cin >> input;
-    }
-    if (input.compare("no") == 0) return;
-    else
-    {
-        if (numResults == 1){
-            index.display_page_content_multi_word(sortedResults.at(0).first, full_query);
-            return;
-        }
-        cout<<"Which document?  Enter a rank #:\n";
-        cin>>input;
-        int numInput = stoi(input);
-        while (!((numInput > 0)
-               && (numInput <= max)))
-        {
-            cout<<"Invalid command\n";
-            cout<<"Which document?  Enter a rank #\n";
-            cin >> input;
-            numInput = stoi(input);
+void QueryProcessor::multiWord(string multi,  int typeNot, int typeBool){
+    Term* foundTerm;
+    Term* foundTerm2;
+    string word1, word2;
+    int j;
+    double tdidf;
+    int multPageID;
+    j = multi.find(' ');
+    word1= multi.substr(0,j);
+    word2=multi.substr(j+1);
+    vector<PageInfo*> pageIDs = index.getPages();
+    int pageID;
+    PageInfo* resultInfo;
+
+    Porter2Stemmer::stem(word1);
+    foundTerm = index.find_term(word1);
+
+    Porter2Stemmer::stem(word2);
+    foundTerm2 = index.find_term(word2);
+
+    if(typeNot == 0){
+        if(typeBool == 0){
+
+            if (!foundTerm){
+
+                cout<<"The term \""<< word1 <<"\" never appeared in the corpus\n";
+
+            }else if (!foundTerm2){
+
+                cout<<"The term \""<< word2 <<"\" never appeared in the corpus\n";
+
+            }
+            else{
+                foundTerm->init_tdidfs(index);
+                foundTerm2->init_tdidfs(index);
+                for (auto & page : foundTerm->get_pageAprns())
+                {
+                    try{
+                       page.first;
+                    }
+                    catch( const out_of_range& notInResults){
+                        continue;
+                    }
+                    regularResults.emplace(make_pair(page.first, foundTerm->get_tdidf_for_page(page.first)));
+
+
+                }
+                relevancyMap intersection;
+
+                for (auto& page : foundTerm2->get_pageAprns())
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        regularResults.at(page.first);
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    // If it is, add the two TD/IDF values together and emplace the
+                    // new value in the intersection relevancyMap.
+                    tdidf = regularResults.at(page.first);
+                    tdidf += index.calc_tdidf(page.first, page.second, foundTerm2->get_spread());
+                    intersection.emplace(make_pair(page.first, tdidf));
+                }
+                regularResults = intersection;
+
+                for(auto& x: regularResults) {
+                    try{
+                        pageID = x.first;
+                    //    tdidf = x.second;
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    resultInfo = pageIDs.at(pageID);
+                    stringstream _found_stream;
+                     _found_stream << NULL;
+                     string _output;
+                    _found_stream << pageIDs.at(pageID)->get_content();
+                    _output = _found_stream.str();
+                    if (_output.find(multi) == -1)
+                    {
+                        cout<< "not found" << endl;
+                        regularResults.erase(pageID);
+                    }
+                }
+                for (auto& a : regularResults)
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        results.at(a.first);
+
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        results = regularResults;
+                        continue;
+                    }
+
+                    regularResults.emplace(make_pair(a.first, a.second));
+                }
+
+                results = regularResults;
+
+            }
+        }else if(typeBool == 1){
+
+            if (!foundTerm){
+
+                cout<<"The term \""<< word1 <<"\" never appeared in the corpus\n";
+
+            }else if (!foundTerm2){
+
+                cout<<"The term \""<< word2 <<"\" never appeared in the corpus\n";
+
+            }
+            else{
+                foundTerm->init_tdidfs(index);
+                foundTerm2->init_tdidfs(index);
+                for (auto & page : foundTerm->get_pageAprns())
+                {
+                    try{
+                       page.first;
+                    }
+                    catch( const out_of_range& notInResults){
+                        continue;
+                    }
+                    regularResults.emplace(make_pair(page.first, foundTerm->get_tdidf_for_page(page.first)));
+
+
+                }
+                relevancyMap intersection;
+
+                for (auto& page : foundTerm2->get_pageAprns())
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        regularResults.at(page.first);
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    // If it is, add the two TD/IDF values together and emplace the
+                    // new value in the intersection relevancyMap.
+                    tdidf = regularResults.at(page.first);
+                    tdidf += index.calc_tdidf(page.first, page.second, foundTerm2->get_spread());
+                    intersection.emplace(make_pair(page.first, tdidf));
+                }
+                regularResults = intersection;
+                orMultiResults = regularResults;
+                for(auto& x: regularResults){
+                    try{
+                        pageID = x.first;
+                    //    tdidf = x.second;
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    resultInfo = pageIDs.at(pageID);
+                    stringstream _found_stream;
+                     _found_stream << NULL;
+                     string _output;
+                    _found_stream << pageIDs.at(pageID)->get_content();
+                    _output = _found_stream.str();
+                    if (_output.find(multi) == -1)
+                    {
+                        cout<< "not found" << endl;
+                        regularResults.erase(pageID);
+                    }
+                }
+                for(auto&x: regularResults){
+                    try{
+                        pageID = x.first;
+
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    for(auto&x: orMultiResults){
+                        try{
+                            multPageID = x.first;
+                            tdidf = x.second;
+                        }
+                        catch (const out_of_range& notInResults)
+                        {
+                            continue;
+                        }
+                        if(pageID != multPageID){
+                            regularResults.emplace(make_pair(multPageID, tdidf));
+                        }
+
+                    }
+                }
+                for (auto& a : regularResults)
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        results.at(a.first);
+
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        results.emplace(make_pair(a.first, a.second));
+                        continue;
+                    }
+
+
+                    results.at(a.first)+= a.second;
+                }
+
+                results = regularResults;
+                displayResults();
         }
 
-        index.display_page_content_multi_word(sortedResults.at(numInput-1).first, full_query);
+        }
+    }if(typeNot == 1){
+        if(typeBool == 0){
+
+            if (!foundTerm){
+
+                cout<<"The term \""<< word1 <<"\" never appeared in the corpus\n";
+
+            }else if (!foundTerm2){
+
+                cout<<"The term \""<< word2 <<"\" never appeared in the corpus\n";
+
+            }
+            else{
+                foundTerm->init_tdidfs(index);
+                foundTerm2->init_tdidfs(index);
+                for (auto & page : foundTerm->get_pageAprns())
+                {
+                    try{
+                       page.first;
+                    }
+                    catch( const out_of_range& notInResults){
+                        continue;
+                    }
+                    regularResults.emplace(make_pair(page.first, foundTerm->get_tdidf_for_page(page.first)));
+
+
+                }
+                relevancyMap intersection;
+
+                for (auto& page : foundTerm2->get_pageAprns())
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        regularResults.at(page.first);
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    // If it is, add the two TD/IDF values together and emplace the
+                    // new value in the intersection relevancyMap.
+                    tdidf = regularResults.at(page.first);
+                    tdidf += index.calc_tdidf(page.first, page.second, foundTerm2->get_spread());
+                    intersection.emplace(make_pair(page.first, tdidf));
+                }
+                regularResults = intersection;
+
+                for(auto& x: regularResults) {
+                    try{
+                        pageID = x.first;
+                    //    tdidf = x.second;
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    resultInfo = pageIDs.at(pageID);
+                    stringstream _found_stream;
+                     _found_stream << NULL;
+                     string _output;
+                    _found_stream << pageIDs.at(pageID)->get_content();
+                    _output = _found_stream.str();
+                    if (_output.find(multi) != -1)
+                    {
+                        cout<< "not found" << endl;
+                        regularResults.erase(pageID);
+                    }
+                }
+                for (auto& a : regularResults)
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        results.at(a.first);
+
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        results = regularResults;
+                        continue;
+                    }
+
+                    regularResults.emplace(make_pair(a.first, a.second));
+                }
+
+                results = regularResults;
+
+            }
+        }else if(typeBool == 1){
+
+            if (!foundTerm){
+
+                cout<<"The term \""<< word1 <<"\" never appeared in the corpus\n";
+
+            }else if (!foundTerm2){
+
+                cout<<"The term \""<< word2 <<"\" never appeared in the corpus\n";
+
+            }
+            else{
+                foundTerm->init_tdidfs(index);
+                foundTerm2->init_tdidfs(index);
+                for (auto & page : foundTerm->get_pageAprns())
+                {
+                    try{
+                       page.first;
+                    }
+                    catch( const out_of_range& notInResults){
+                        continue;
+                    }
+                    regularResults.emplace(make_pair(page.first, foundTerm->get_tdidf_for_page(page.first)));
+
+
+                }
+                relevancyMap intersection;
+
+                for (auto& page : foundTerm2->get_pageAprns())
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        regularResults.at(page.first);
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    // If it is, add the two TD/IDF values together and emplace the
+                    // new value in the intersection relevancyMap.
+                    tdidf = regularResults.at(page.first);
+                    tdidf += index.calc_tdidf(page.first, page.second, foundTerm2->get_spread());
+                    intersection.emplace(make_pair(page.first, tdidf));
+                }
+                regularResults = intersection;
+                orMultiResults = regularResults;
+                for(auto& x: regularResults){
+                    try{
+                        pageID = x.first;
+                    //    tdidf = x.second;
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    resultInfo = pageIDs.at(pageID);
+                    stringstream _found_stream;
+                     _found_stream << NULL;
+                     string _output;
+                    _found_stream << pageIDs.at(pageID)->get_content();
+                    _output = _found_stream.str();
+                    if (_output.find(multi) != -1)
+                    {
+                        cout<< "not found" << endl;
+                        regularResults.erase(pageID);
+                    }
+                }
+                for(auto&x: regularResults){
+                    try{
+                        pageID = x.first;
+
+                    }
+                    catch (const out_of_range& notInResults)
+                    {
+                        continue;
+                    }
+                    for(auto&x: orMultiResults){
+                        try{
+                            multPageID = x.first;
+                            tdidf = x.second;
+                        }
+                        catch (const out_of_range& notInResults)
+                        {
+                            continue;
+                        }
+                        if(pageID != multPageID){
+                            regularResults.emplace(make_pair(multPageID, tdidf));
+                        }
+
+                    }
+                }
+                for (auto& a : regularResults)
+                {
+                    // See if the pageID is in results.
+                    try
+                    {
+                        results.at(a.first);
+
+                    }
+                    // If not, skip this page.
+                    catch (const out_of_range& notInResults)
+                    {
+                        results.emplace(make_pair(a.first, a.second));
+                        continue;
+                    }
+
+
+                    results.at(a.first)+= a.second;
+                }
+
+                results = regularResults;
+
+        }
+
+        }
     }
 }
-
 void QueryProcessor::init_relev_map(Term* term)
 {
     for (auto & page : term->get_pageAprns())
@@ -131,6 +1130,7 @@ void QueryProcessor::init_relev_map(Term* term)
         results.emplace(make_pair(page.first, term->get_tdidf_for_page(page.first)));
     }
 }
+
 
 void QueryProcessor::intersection_incr_relev_map(Term* term)
 {
@@ -184,118 +1184,7 @@ void QueryProcessor::union_incr_relev_map(Term* term)
     }
 }
 
-void QueryProcessor::answer_query(istringstream& query, string full_query, bool intersection)
-{
-    string currTerm;
-    string search_string = full_query;
-
-    // Find the intersection of all queried terms,
-    // adding the TD/IDF values from each term.
-
-    // Add functioanlity for NOT
-
-    // Put the first queried term into results.
-    query >> currTerm;
-    Porter2Stemmer::stem(currTerm);
-    Term* foundTerm = index.find_term(currTerm);
-    if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
-    else
-    {
-        foundTerm->init_tdidfs(index);
-        init_relev_map(foundTerm);
-    }
-
-    while (query >> currTerm)
-    {
-        if (currTerm.compare("not") == 0)
-        {
-            // Get the next word.
-            query >> currTerm;
-             cout << "CurrTerm: Next Word " << currTerm << endl;
-            Porter2Stemmer::stem(currTerm);
-
-            foundTerm = index.find_term(currTerm);
-            if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
-            else
-            {
-                foundTerm->init_tdidfs(index);
-                // For each pageID in foundTerm, remove it from results
-                // if that pageID is in results.
-                for (auto& page : foundTerm->get_pageAprns())
-                {
-                    try
-                    {
-                        results.at(page.first);
-                    }
-                    catch (const out_of_range& notInResults)
-                    {
-                        continue;
-                    }
-                    // If it is in results, remove that entry.
-                    results.erase(page.first);
-                }
-            }
-        }
-        else
-        {
-            // Find the intersection of the words, adding together the TD/IDF
-            // values so far and the TD/IDF values for this term.
-            foundTerm = index.find_term(currTerm);
-            if (!foundTerm) cout<<"The term \""<<currTerm<<"\" never appeared in the corpus\n";
-            else
-            {
-                foundTerm->init_tdidfs(index);
-                if (intersection) intersection_incr_relev_map(foundTerm);
-                else union_incr_relev_map(foundTerm);
-            }
-        }
-    }
-    bool multi_word = false;
-
-    if (search_string.find(' ') < search_string.length())
-    {
-        cout << "This is a multi-word query" << endl;
-        sort_results(true);
-        display_only_multi_word(search_string);
-    }
-    else
-    {
-        sort_results(false);
-        display_best_fifteen_results();
-    }
-}
-
-void QueryProcessor::initiate_query(string query)
-{
-    // Used later to remake the stream with the first word added back in.
-    string fullQuery = query;
-
-    // Remove all non-letters from the query.
-    replace_if(query.begin(), query.end(), is_not_alpha, ' ');
-
-    // Make all letters lowercase.
-    transform(query.begin(), query.end(), query.begin(), ::tolower);
-
-
-    istringstream stream(query);
-
-    // Initiate the proper kind of query.
-    string mode;
-    stream >> mode;
-
-    if (mode.compare("and") == 0) answer_query(stream, fullQuery, true);
-    else if (mode.compare("or") == 0) answer_query(stream, fullQuery, false);
-    else
-        // Regular query.  Treat is as an AND query because
-        // the section where the instersection variable matters will never be reached.
-    {
-        cout << "Initiating query:  " << fullQuery << endl;
-        stream = istringstream(fullQuery);
-        answer_query(stream, fullQuery, true);
-    }
-}
-
-void QueryProcessor::sort_results(bool multi_word)
+void QueryProcessor::sort_results()
 {
     // To find the top results, some
     relevancyMap resultsToSort = results;
@@ -307,7 +1196,7 @@ void QueryProcessor::sort_results(bool multi_word)
         number_to_sort = 16;
 
 
-    while (resultsToSort.size() != 0 && ((sortedResults.size() < number_to_sort) || multi_word))
+    while (resultsToSort.size() != 0 && ((sortedResults.size() < number_to_sort)))
     {
         int maxKey = 0;
 
@@ -339,3 +1228,70 @@ void QueryProcessor::sort_results(bool multi_word)
         resultsToSort.erase(maxKey);
     }
 }
+
+void QueryProcessor::display_best_fifteen_results()
+{
+    int max;
+    int numResults = sortedResults.size();
+    if (numResults == 0)
+    {
+        cout<<"Sorry, there were no results for your query.\n";
+        return;
+    }
+    if (numResults < 15) max = numResults;
+    else max = 15;
+
+    cout<<"Results\n";
+    for (int i=1; i<=max; ++i)
+    {
+        index.display_result(i, sortedResults.at(i-1).first, sortedResults.at(i-1).second);
+    }
+    cout<<"Would you like to read the text of one of the results?\n=>\tYes\n=>\tNo\n";
+    string input;
+    cin >> input;
+    transform(input.begin(), input.end(), input.begin(), ::tolower);
+    while((input.compare("yes") != 0)
+          && (input.compare("no") != 0))
+    {
+        cout<<"Invalid command\n";
+        cout<<"Would you like to read the text of (one of) the result(s)?\n";
+        cin >> input;
+    }
+    if (input.compare("no") == 0) return;
+    else
+    {
+        if (numResults == 1){
+            index.display_page_content(sortedResults.at(0).first);
+            return;
+        }
+        cout<<"Which document?  Enter a rank #:\n";
+        cin>>input;
+        int numInput = stoi(input);
+        while (!((numInput > 0)
+               && (numInput <= max)))
+        {
+            cout<<"Invalid command\n";
+            cout<<"Which document?  Enter a rank #\n";
+            cin >> input;
+            numInput = stoi(input);
+        }
+        index.display_page_content(sortedResults.at(numInput-1).first);
+    }
+}
+void QueryProcessor::displayResults(){
+    int pageID;
+    vector<PageInfo*> pageIDs = index.getPages();
+    for(auto& x: results){
+        try{
+            pageID = x.first;
+
+        }
+        catch (const out_of_range& notInResults){
+            continue;
+        }
+        cout << "Winning" << endl;
+        cout << pageIDs.at(pageID)->get_content() << endl;
+
+    }
+}
+

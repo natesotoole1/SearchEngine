@@ -1,8 +1,9 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
+ * 12/06/15
  * Nate O'Toole
- * Kiko Whiteley
+ * Brandon McFarland
+ * Ashvin Asava
  **/
 
 #include "interface.h"
@@ -10,7 +11,9 @@
 Interface::Interface()
     : built(false), endProgram(false), mode(0), wikiPath("WikiBooks.xml")
 {
-    cout << "\nWelcome to KITESearch!\n" << endl;
+    cout << "\nWelcome to a WikiBooks Search Engine!\n" << endl;
+    run_hash();
+    search();
     choose_structure();
 }
 
@@ -252,73 +255,41 @@ void Interface::search(){
 
    getline(cin, sQuery);
    sQuery = input +=  sQuery ;
-   istringstream streamQuery(sQuery);
-   string fWord;
-    streamQuery >> fWord;
-    transform(streamQuery.begin(), streamQuery.end(), streamQuery.begin(), ::tolower);
-   if (fWord == "AND" || fWord == "OR")
+
 
    //  Check for two-word
-    bool multi = false;
-   if (sQuery[0] == '[')
+   if (sQuery.compare("[") == 0)
    {
+       int numb_of_words = 1;
+       for(int i  = 0; i < sQuery.length(); i++){
+           if (sQuery[i] == '['){
+               if (sQuery[i] != ']'){
+                   if (sQuery[i] == ' ')
+                       numb_of_words ++;
+
+                   if (numb_of_words > 2)
+                   {
+                       cout << "Multi-words can only be two words" << endl;
+                       search();
+                   }
+               }
+           }
+       }
        //  Check if more then two words
        int i = 0;
-       int numb_of_words = 1;
-       while (sQuery[i] != ']')
-       {
-           if (sQuery[i] == ' ')
-               numb_of_words ++;
 
-           if (numb_of_words > 2)
-           {
-               cout << "Multi-words can only be two words" << endl;
-               search();
-           }
 
-           i++;
-       }
-      multi = true;
       // mQuery = sQuery.substr(1, sQuery.length()-2);
       // sQuery = mQuery;
    }
 
    cout << "Searching for " << sQuery << endl;
-   handler.run_queries(sQuery, multi);
+   handler.get_queries(sQuery);
 
    search();
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/*void Interface::search(){
-    string sQuery = "";
-    string input = "";
-    cout<< "You Chose Search!" << endl;
-    cout << "      Use 'AND' at the beginnign of your query to docs with both words in them" << endl;
-    cout << "      Use 'OR' at the beginning of your query to get docs that have any of the words in them" << endl;
-    cout << "      Use 'NOT' in between results with words to exclude results" << endl;
-    cout << "      Examples: AND Boston NOT Pig"<< endl;
-    cout << "                OR Boston Pig"<< endl;
-    cout << "                Boston" << endl;
-    cout << "Please enter your query here: " << endl;
-    cin >> input;
-    getline(cin, sQuery);
-    sQuery = input +=  sQuery ;
-    handler.run_queries(sQuery);
-    
-    re_command();
-}
-*/
 void Interface::run_AVL(){
     Timer t = Timer("AVL Tree");
     if(built == true){
@@ -327,7 +298,7 @@ void Interface::run_AVL(){
     cout<< "Building AVL Tree" << endl;
     cout<< "Building..." << endl;
     handler = IndexHandler(false);
-    handler.read_file(wikiPath);
+     handler.read_file(wikiPath);
     cout<< "AVL Tree Built" << endl;
     built = true;
     dsBuilt = "AVL Tree";

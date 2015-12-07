@@ -18,7 +18,8 @@ SOURCES += main.cpp \
     hashtableindex.cpp \
     hashtableinterface.cpp \
     interface.cpp \
-    timer.cpp
+    timer.cpp \
+    runquery.cpp
 
 
 include(deployment.pri)
@@ -39,5 +40,6 @@ HEADERS += \
     hashtableinterface.h \
     interface.h \
     mapping.h \
-    timer.h
+    timer.h \
+    runquery.h
 

@@ -28,9 +28,9 @@ void IndexHandler::read_file(string filePath)
     index->read_file(filePath);
 }
 
-void IndexHandler::run_queries(string query, bool multi)
+void IndexHandler::get_queries(string query)
 {
-    QueryProcessor processor = QueryProcessor(*index, multi);
+    QueryProcessor processor = QueryProcessor(*index);
     processor.initiate_query(query);
 }
 void IndexHandler::clear_index(){

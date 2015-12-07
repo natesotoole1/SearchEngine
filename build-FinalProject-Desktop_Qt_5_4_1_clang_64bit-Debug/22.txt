@@ -1,10 +1,7 @@
 ! web 3 1
 ! wiki 2 3
-! well 3 2
-! will 3 2
 ! world 3 1
 ! width 0 10
-! wherea 3 1
 ! welcom 3 1 0 3
 ! wikibook 0 8
 ! wikipedia 2 2

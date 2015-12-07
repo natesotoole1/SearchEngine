@@ -7,7 +7,7 @@
 
 HashTableIndex::HashTableIndex()
 {
-    cout << "Creating buckets: " << arrSize << endl;
+   //cout << "Creating buckets: " << arrSize << endl;
     buckets = new TermBucket[arrSize];
 }
 
