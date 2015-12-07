@@ -12,8 +12,6 @@ Interface::Interface()
     : built(false), endProgram(false), mode(0), wikiPath("WikiBooks.xml")
 {
     cout << "\nWelcome to a WikiBooks Search Engine!\n" << endl;
-    run_hash();
-    search();
     choose_structure();
 }
 

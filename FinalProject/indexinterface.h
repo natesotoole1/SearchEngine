@@ -23,7 +23,7 @@ class DocParser;
 class HashTableIndex;
 class Term;
 
-void *read_pers_file(void *index);
+//void *read_pers_file(void *index);
 
 typedef _map<int, int> pageMap;
 typedef _map<string, pageMap> termMap;
@@ -47,7 +47,7 @@ public:
     void incr_total_words_on_page(int currID, int incr); /// Increase a totalWords for a pageID.
     void read_file(string filePath); ///< Pass control to the parser.
     void read_persistence_files(); ///< When the program launches or when the inverted index is cleared, read the inverted index in from the persistence files.
-    //void read_pers_file(int index); ///< Read a single persistence file.
+    void read_pers_file(int index); ///< Read a single persistence file.
 
     virtual void add_term_to_ii(int letterIndex, Term *term); /// Add a term to the inverted index.
     virtual void clear(); ///< Deallocate data members.
