@@ -23,7 +23,7 @@ public:
 
     void read_file(string filePath); ///< Reads info for a given filePath.
 
-    void run_queries(string query); ///< Call run_queries in IndexInterface.
+    void get_queries(string query); ///< Call run_queries in IndexInterface.
 
     void clear_index(); ///< Deallocate data members.
 

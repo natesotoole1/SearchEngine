@@ -1,7 +1,9 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
- * Kiko Whiteley
+ * 12/06/15
+ * Nate O'Toole
+ * Brandon McFarland
+ * Ashvin Asava
  **/
 #include "hashtableinterface.h"
 

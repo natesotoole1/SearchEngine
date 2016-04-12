@@ -1,8 +1,9 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
+ * 12/06/15
  * Nate O'Toole
- * Kiko Whiteley
+ * Brandon McFarland
+ * Ashvin Asava
  **/
 #include "term.h"
 

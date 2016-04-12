@@ -179,6 +179,8 @@ void DocParser::read_file(string filePath)
         init_file_page_infos(currNode, true);
         index.write_persistence_files();
     }
+//    init_file_page_infos(currNode, true);
+//    index.write_persistence_files();
 }
 
 bool DocParser::is_stop_word(string term)

@@ -1,8 +1,9 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
+ * 12/06/15
  * Nate O'Toole
- * Kiko Whiteley
+ * Brandon McFarland
+ * Ashvin Asava
  **/
 #include "indexhandler.h"
 
@@ -28,9 +29,9 @@ void IndexHandler::read_file(string filePath)
     index->read_file(filePath);
 }
 
-void IndexHandler::run_queries(string query, bool multi)
+void IndexHandler::get_queries(string query)
 {
-    QueryProcessor processor = QueryProcessor(*index, multi);
+    QueryProcessor processor = QueryProcessor(*index);
     processor.initiate_query(query);
 }
 void IndexHandler::clear_index(){

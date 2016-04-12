@@ -1,8 +1,9 @@
 /* Search Engine Project
  * CSE 2341: Data Stuctures
- * 05/03/2015
+ * 12/06/15
  * Nate O'Toole
- * Kiko Whiteley
+ * Brandon McFarland
+ * Ashvin Asava
  **/
 #include "indexinterface.h"
 
@@ -24,36 +25,7 @@ void IndexInterface::append_page_info(PageInfo* currInfo)
     infoForIDs.push_back(currInfo);
 }
 
-void IndexInterface::display_result_multi_word(int rank, int pageID, double tdidf, string string_search)
-{
-   PageInfo* resultInfo = infoForIDs.at(pageID);
-    string word1;
-    stringstream _found_stream;
-    _found_stream << NULL;
-    string _output;
-   _found_stream << infoForIDs.at(pageID)->get_content();
-   _output = _found_stream.str();
-//   for(int i = 0; i < string_search.size(); i ++){
-//       if (sQuery[i] == ' '){
-//           string word1 = string_search.substr(0, i);
-//       }
-//   }
 
-//   //cout << "*****Output: " << _output << endl;
-//   string curr;
-//   while(curr != word1){
-//       curr _
-//   }
-  // cout << _output.find
-   if (_output.find(string_search) != -1)
-   {
-    cout<<"#"<<rank<<": \""<<resultInfo->get_title()<<"\"\n";
-    cout<<"\tTotal TDF/IDF value: "<<tdidf<<endl;
-    cout<<"\tTimestamp: "<<resultInfo->get_timestamp()<<endl;
-    cout<<"\tContributor name or IP Address: "<<resultInfo->get_contributor()<<endl;
-
-   }
-}
 
 void IndexInterface::display_result(int rank, int pageID, double tdidf)
 {
@@ -201,21 +173,7 @@ void IndexInterface::read_pers_file(int index)
 
 void IndexInterface::read_persistence_files()
 {
- /*   static const int num_threads = 26;
-    thread t[num_threads];
 
-    //Launch a group of threads
-    for (int i = 0; i < num_threads; ++i) {
-        t[i] = thread(read_pers_file, i);
-    }
-
-    std::cout << "Launched from the main\n";
-
-    //Join the threads with the main thread
-    for (int i = 0; i < num_threads; ++i) {
-        t[i].join();
-    }
-*/
 
     cout<<"Reading persistence documents...\n";
     for (int i=0; i<26; ++i) read_pers_file(i);
@@ -232,4 +190,7 @@ int IndexInterface::get_totalWordsInCorpus()
         for (int i=0; i<infoForIDs.size(); ++i) totalWordsInCorpus += infoForIDs.at(i)->get_totalWords();
     }
     return totalWordsInCorpus;
+}
+vector<PageInfo*> IndexInterface::getPages(){
+    return infoForIDs;
 }
